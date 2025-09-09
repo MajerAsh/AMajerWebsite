@@ -6,7 +6,7 @@ export default function Home() {
     <section className="hero container">
       <div className="hero__text">
         <h1 className="h1">
-          Hi, I’m Ashley Majer<span className="underline">Your Name</span>.
+          Hi, I’m <span className="underline">Ashley Majer</span>.
         </h1>
         <p className="lead">
           I build useful, accessible web experiences. Currently exploring React,

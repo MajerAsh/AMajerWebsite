@@ -15,7 +15,7 @@ export default function About() {
         <article className="card">
           <h3 className="h4">Snapshot</h3>
           <ul className="list-dots">
-            <li>Based in City, Country</li>
+            <li>Based in Atlanta, Georgia</li>
             <li>Currently learning: TypeScript & testing</li>
             <li>Open to roles & freelance</li>
           </ul>

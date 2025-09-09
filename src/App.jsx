@@ -7,7 +7,7 @@ export default function App() {
       <header className="site__header" role="banner">
         <nav className="nav" aria-label="Primary">
           <a className="brand" href="/">
-            Your Name
+            Ashley Majer
           </a>
           <button
             className="nav__toggle"
@@ -41,20 +41,28 @@ export default function App() {
       </main>
 
       <footer className="site__footer" role="contentinfo">
-        <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Ashley Majer. All rights reserved.</p>
         <ul className="social">
           <li>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/MajerAsh"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/ashley-majer-8b3978362"
+              target="_blank"
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
           </li>
           <li>
-            <a href="mailto:you@example.com">Email</a>
+            <a href="mailto:majerash@gmail.com">Email</a>
           </li>
         </ul>
       </footer>
