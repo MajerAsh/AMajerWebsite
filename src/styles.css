@@ -182,6 +182,7 @@ a:hover {
 }
 
 .nav__toggle {
+  margin-left: auto;
   display: inline-flex;
   background: transparent;
   border: 1px solid var(--border);
