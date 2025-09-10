@@ -38,7 +38,11 @@ ${message}`);
             </a>
           </li>
           <li>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/MajerAsh"
+              target="_blank"
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </li>
