@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function App() {
-  {
-    /*const [menuOpen, setMenuOpen] = useState(false);*/
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setMenuOpen((prev) => !prev);
   }
-  {
-    /*function toggleMenu() {
-    setMenuOpen((open) => !open);
-  */
-  }
+
   return (
     <div className="site">
       <header className="site__header" role="banner">
@@ -31,8 +29,7 @@ export default function App() {
             <span className="sr-only">Menu</span>☰
           </button>
           {/* Nav menu */}
-          <ul id="nav-menu" className="nav__list" data-collapsed="true">
-            {/*data-collapsed={!menuOpen}*/}
+          <ul id="nav-menu" className="nav__list" data-collapsed={!menuOpen}>
             <li>
               <NavLink to="/" end>
                 Home
@@ -85,9 +82,7 @@ export default function App() {
   );
 }
 
-{
-  /*cut below?*/
-}
+/*
 function toggleMenu(e) {
   const btn = e.currentTarget;
   const list = document.getElementById("nav-menu");
@@ -95,3 +90,4 @@ function toggleMenu(e) {
   list.setAttribute("data-collapsed", String(!isCollapsed));
   btn.setAttribute("aria-expanded", String(isCollapsed));
 }
+*/
