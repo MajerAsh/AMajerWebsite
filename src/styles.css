@@ -178,6 +178,7 @@ a:hover {
 .nav__list[data-collapsed="true"] {
   display: none;
 }
+
 @media (min-width: 768px) {
   .nav__toggle {
     display: none;
