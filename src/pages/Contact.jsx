@@ -26,10 +26,14 @@ ${message}`);
         </p>
         <ul className="list-dots">
           <li>
-            <a href="mailto:you@example.com">you@example.com</a>
+            <a href="mailto:majerash@gmail.com">Send me a email</a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer">
+            <a
+              href="www.linkedin.com/in/ashley-majer-8b3978362"
+              target="_blank"
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
           </li>

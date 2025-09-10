@@ -2,6 +2,14 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function App() {
+  {
+    /*const [menuOpen, setMenuOpen] = useState(false);*/
+  }
+  {
+    /*function toggleMenu() {
+    setMenuOpen((open) => !open);
+  */
+  }
   return (
     <div className="site">
       <header className="site__header" role="banner">
@@ -9,15 +17,22 @@ export default function App() {
           <a className="brand" href="/">
             Ashley Majer
           </a>
+          {/*<NavLink to="/" className="brand">
+            Ashley Majer
+          </NavLink> ...tried in place of <a> but it didn't work */}
+
+          {/* Mobile nav toggle */}
           <button
             className="nav__toggle"
             aria-controls="nav-menu"
-            aria-expanded="false"
+            aria-expanded="false" /*={menuOpen}*/
             onClick={toggleMenu}
           >
             <span className="sr-only">Menu</span>☰
           </button>
+          {/* Nav menu */}
           <ul id="nav-menu" className="nav__list" data-collapsed="true">
+            {/*data-collapsed={!menuOpen}*/}
             <li>
               <NavLink to="/" end>
                 Home
@@ -70,6 +85,9 @@ export default function App() {
   );
 }
 
+{
+  /*cut below?*/
+}
 function toggleMenu(e) {
   const btn = e.currentTarget;
   const list = document.getElementById("nav-menu");

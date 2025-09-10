@@ -2,20 +2,24 @@
 * {
   box-sizing: border-box;
 }
+
 html:focus-within {
   scroll-behavior: smooth;
 }
+
 html,
 body,
 #root {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
     Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.6;
 }
+
 :root {
   --bg: #0b0c0f; /* dark background (good contrast) */
   --fg: #e8e9ee; /* light foreground */
@@ -24,6 +28,7 @@ body {
   --border: #262937;
   --accent: #7aa2ff; /* accessible blue */
 }
+
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #ffffff;
@@ -34,6 +39,7 @@ body {
     --accent: #2b59ff;
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -47,10 +53,12 @@ body {
   background: var(--bg);
   color: var(--fg);
 }
+
 img {
   max-width: 100%;
   display: block;
 }
+
 a {
   color: var(--accent);
   text-decoration: none;
@@ -76,10 +84,24 @@ a:hover {
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
 }
+
 .skip-link:focus {
   left: 0.75rem;
   top: 0.75rem;
   z-index: 1000;
+}
+
+/* Screen-reader only UTILITY (used by the nav button) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ===== Layout ===== */
@@ -87,22 +109,27 @@ a:hover {
   width: min(1100px, 100% - 2rem);
   margin-inline: auto;
 }
+
 .stack-sm > * + * {
   margin-top: 0.5rem;
 }
+
 .stack-lg > * + * {
   margin-top: 1rem;
 }
+
 .grid-2 {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
 }
+
 .grid-3 {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
 }
+
 @media (min-width: 768px) {
   .grid-2 {
     grid-template-columns: 1fr 1fr;
@@ -117,6 +144,7 @@ a:hover {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
 .site__header {
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -124,9 +152,11 @@ a:hover {
   backdrop-filter: blur(6px);
   background: color-mix(in oklab, var(--bg) 85%, transparent);
 }
+
 .site__main {
   padding-block: 2rem;
 }
+
 .site__footer {
   border-top: 1px solid var(--border);
   padding: 1.5rem;
@@ -145,10 +175,12 @@ a:hover {
   gap: 0.75rem;
   padding: 0.75rem 1rem;
 }
+
 .brand {
   font-weight: 700;
   color: var(--fg);
 }
+
 .nav__toggle {
   display: inline-flex;
   background: transparent;
@@ -157,6 +189,8 @@ a:hover {
   padding: 0.4rem 0.6rem;
   border-radius: 0.5rem;
 }
+
+/* Base nav list styles */
 .nav__list {
   display: grid;
   grid-template-rows: 1fr;
@@ -164,7 +198,17 @@ a:hover {
   margin: 0;
   padding: 0.5rem 0 0;
   list-style: none;
+  /* Animation-friendly collapse defaults */
+  overflow: hidden; /* required for max-height animation */
+  max-height: 0; /* collapsed height */
+  opacity: 0; /* fade when collapsed */
+  pointer-events: none; /* avoid tab stops when closed */
+  transform: translateY(-0.25rem);
+  transition: max-height 300ms ease, opacity 200ms ease, transform 200ms ease;
+  will-change: max-height, opacity, transform;
 }
+
+/* Link styling */
 .nav__list a {
   display: block;
   padding: 0.5rem 0.75rem;
@@ -172,22 +216,49 @@ a:hover {
   color: var(--fg);
   text-decoration: none;
 }
+
 .nav__list a.active {
   background: var(--card);
 }
-.nav__list[data-collapsed="true"] {
+
+/*.nav__list[data-collapsed="true"] {
   display: none;
+}*/
+
+/* Expanded state (mobile) */
+.nav__list[data-collapsed="false"] {
+  max-height: 12rem;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Desktop: always visible, no collapsing */
 @media (min-width: 768px) {
   .nav__toggle {
     display: none;
   }
+
   .nav__list {
-    display: flex;
+    display: flex !important;
     align-items: center;
     gap: 0.25rem;
     padding: 0;
+    /* reset animation props so layout is stable on desktop */
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    pointer-events: auto;
+    transform: none;
+    transition: none;
+    background: none;
+    border: none;
+    border-radius: 0;
   }
 }
 
