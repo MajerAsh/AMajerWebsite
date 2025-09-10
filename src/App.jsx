@@ -54,14 +54,16 @@ export default function App() {
 
       <footer className="site__footer" role="contentinfo">
         <p>© {new Date().getFullYear()} Ashley Majer. All rights reserved.</p>
-        <ul className="social">
+        <ul className="social" role="list">
           <li>
             <a
               href="https://github.com/MajerAsh"
               target="_blank"
               rel="noreferrer"
+              aria-label="GitHub"
             >
-              GitHub
+              <img src="/icons/github.svg" alt="" aria-hidden="true" />
+              <span className="sr-only">GitHub</span>
             </a>
           </li>
           <li>
@@ -69,25 +71,20 @@ export default function App() {
               href="https://www.linkedin.com/in/ashley-majer-8b3978362"
               target="_blank"
               rel="noreferrer"
+              aria-label="LinkedIn"
             >
-              LinkedIn
+              <img src="/icons/linkedin.svg" alt="" aria-hidden="true" />
+              <span className="sr-only">LinkedIn</span>
             </a>
           </li>
           <li>
-            <a href="mailto:majerash@gmail.com">Email</a>
+            <a href="mailto:majerash@gmail.com" aria-label="Email">
+              <img src="/icons/mail.svg" alt="" aria-hidden="true" />
+              <span className="sr-only">Email</span>
+            </a>
           </li>
         </ul>
       </footer>
     </div>
   );
 }
-
-/*
-function toggleMenu(e) {
-  const btn = e.currentTarget;
-  const list = document.getElementById("nav-menu");
-  const isCollapsed = list.getAttribute("data-collapsed") === "true";
-  list.setAttribute("data-collapsed", String(!isCollapsed));
-  btn.setAttribute("aria-expanded", String(isCollapsed));
-}
-*/

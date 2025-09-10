@@ -26,7 +26,7 @@ body {
   --muted: #a7adbb; /* muted text */
   --card: #12141a;
   --border: #262937;
-  --accent: #7aa2ff; /* accessible blue */
+  --accent: #4f7de9;
 }
 
 @media (prefers-color-scheme: light) {
@@ -167,6 +167,40 @@ a:hover {
   flex-wrap: wrap;
 }
 
+/* Footer social icons */
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* 3) horizontal row */
+  flex-wrap: wrap; /* wrap on small screens */
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social a {
+  display: inline-flex; /* tidy click target */
+  align-items: center;
+  justify-content: center;
+  width: 38px; /* icon button size */
+  height: 38px;
+  color: var(--fg); /* icon color via currentColor */
+  border-radius: 0.5rem; /* optional: subtle rounding */
+}
+
+.social a:hover,
+.social a:focus-visible {
+  color: var(--accent);
+  text-decoration: none;
+  background: var(--card);
+}
+
+.social svg {
+  width: 22px; /* icon size */
+  height: 22px;
+  display: block;
+}
+
 /* ===== Nav ===== */
 .nav {
   display: flex;
@@ -283,7 +317,7 @@ a:hover {
   border: 1px solid var(--border);
 }
 .underline {
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.25em;
   text-decoration-color: color-mix(in oklab, var(--accent) 50%, transparent);
 }
