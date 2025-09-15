@@ -15,7 +15,7 @@ export default function ProjectCard({
       rel="noreferrer"
     >
       <figure className="project__media">
-        <img src={image} alt="" loading="lazy" />
+        <img src={image} alt={`image of ${title}`} loading="lazy" />
       </figure>
       <div className="project__body">
         <h3 className="h4">{title}</h3>

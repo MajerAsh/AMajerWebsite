@@ -3,28 +3,44 @@ import ProjectCard from "../components/ProjectCard.jsx";
 
 const projects = [
   {
-    title: "Project One",
-    description: "One-liner about what it does and the impact.",
-    tags: ["React", "Node", "Postgres"],
-    image:
-      "https://images.unsplash.com/photo-1527430253228-e93688616381?q=80&w=1600&auto=format&fit=crop",
+    title: "Myco Map",
+    description:
+      "MycoMap is a full-stack web app that lets foragers log and share mushroom finds on an interactive map, balancing community knowledge-sharing with habitat protection through privacy controls and gamified badges.",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "Postgres",
+      "Mapbox",
+      "JWT Auth",
+      "Multer",
+    ],
+    image: "/assets/MycoMap.png",
     href: "#",
   },
   {
-    title: "Project Two",
-    description: "Crisp summary focused on outcome.",
-    tags: ["Next.js", "Tailwind"],
-    image:
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop",
+    title: "Page Pal Library App",
+    description:
+      "Page Pal is a full-stack library app built with React, Node.js, Express, and PostgreSQL. Features include secure authentication, book reservation timeline, responsive UI, and robust error handling. Sole developer responsible for design, implementation, and deployment.",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT Auth",
+      "CSS",
+      "GitHub Pages",
+    ],
+    image: "/assets/PagePal.png",
     href: "#",
   },
   {
-    title: "Project Three",
-    description: "Why it matters and what you built.",
-    tags: ["Python", "FastAPI", "Docker"],
-    image:
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1600&auto=format&fit=crop",
-    href: "#",
+    title: "Whack-A-Mole Game",
+    description:
+      "Players race against the clock to whack as many moles as possible before time runs out. Features include a retro scoreboard, sound effects, custom cursor, and persistent high scores.",
+    tags: ["React", "JavaScript", "CSS", "Custom Hooks"],
+    image: "/assets/whackAmole.png",
+    href: "https://majerash.github.io/whackAmole/",
   },
 ];
 
