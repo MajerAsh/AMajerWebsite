@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard.jsx";
 
 const projects = [
   {
-    title: "Myco Map",
+    title: "MycoMap",
     description:
       "MycoMap is a full-stack web app that lets foragers log and share mushroom finds on an interactive map, balancing community knowledge-sharing with habitat protection through privacy controls and gamified badges.",
     tags: [
@@ -32,13 +32,22 @@ const projects = [
       "GitHub Pages",
     ],
     image: "/assets/PagePal.png",
-    href: "#",
+    href: "https://majerash.github.io/PagePal",
   },
   {
     title: "Whack-A-Mole Game",
     description:
-      "Players race against the clock to whack as many moles as possible before time runs out. Features include a retro scoreboard, sound effects, custom cursor, and persistent high scores.",
-    tags: ["React", "JavaScript", "CSS", "Custom Hooks"],
+      "A fast-paced browser game where players race against the clock to whack as many moles as possible across multiple levels. Features custom SVG graphics, playful sound effects, animated UI, and persistent high scores. Built solo with React, Context API, and custom hooks for state and timing logic.",
+    tags: [
+      "React",
+      "JavaScript",
+      "Context API",
+      "Custom Hooks",
+      "CSS",
+      "Vite",
+      "GitHub Pages",
+      "Procreate",
+    ],
     image: "/assets/whackAmole.png",
     href: "https://majerash.github.io/whackAmole/",
   },
