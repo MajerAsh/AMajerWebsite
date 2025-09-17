@@ -1,4 +1,5 @@
 import React from "react";
+import Badge from "../components/Badge";
 
 export default function About() {
   return (
@@ -25,15 +26,44 @@ export default function About() {
 
         <article className="card">
           <h3 className="h4">Skills</h3>
-          <p className="chips" aria-label="Skill tags">
-            {"HTML CSS JavaScript React Node Express SQL Git APIs"
-              .split(" ")
-              .map((s) => (
-                <span key={s} className="chip">
-                  {s}
-                </span>
-              ))}
-          </p>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "0.5em" }}
+          >
+            <div>
+              <strong>Languages & Tools:</strong>
+              <div className="chips" aria-label="Languages and Tools">
+                <Badge name="HTML" icon="html" />
+                <Badge name="CSS" icon="css" />
+                <Badge name="JavaScript" icon="javascript" />
+                <Badge name="SQL" icon="sql" />
+                <Badge name="Git" icon="git" />
+                <Badge name="Vite" icon="vite" />
+              </div>
+            </div>
+            <div>
+              <strong>Frameworks & Libraries:</strong>
+              <div className="chips" aria-label="Frameworks and Libraries">
+                <Badge name="React" icon="react" />
+                <Badge name="Node.js" icon="nodejs" />
+                <Badge name="Express" icon="express" />
+                <Badge name="Mapbox" icon="mapbox" />
+                <Badge name="Multer" icon="multer" />
+                <Badge name="Context API" icon="context" />
+                <Badge name="Custom Hooks" icon="hooks" />
+              </div>
+            </div>
+            <div>
+              <strong>Core Concepts:</strong>
+              <div className="chips" aria-label="Core Concepts">
+                <Badge name="REST APIs" icon="api" />
+                <Badge name="JWT Auth" icon="jwt" />
+                <Badge name="Accessibility" icon="accessibility" />
+                <Badge name="Responsive Design" icon="responsive" />
+                <Badge name="Testing" icon="testing" />
+                <Badge name="Automated Tests" icon="automation" />
+              </div>
+            </div>
+          </div>
         </article>
       </div>
 
