@@ -5,20 +5,23 @@ const projects = [
   {
     title: "MycoMap",
     description:
-      "MycoMap is a full-stack web app that lets foragers log and share mushroom finds on an interactive map, balancing community knowledge-sharing with habitat protection through privacy controls and gamified badges.",
+      "Full-stack app for mushroom foragers to log, map, and share their finds. Features secure authentication, image uploads, interactive Mapbox maps, and advanced search. Role-based marker visibility: public users see all finds (no usernames), logged-in users see usernames, and secret locations are protected. Built solo with React, Node.js, Express, PostgreSQL, and Mapbox. Highlights: RESTful API, robust validation, JWT auth, Multer file uploads, automated backend tests, and responsive, accessible UI.",
     tags: [
       "React",
       "Node.js",
       "Express",
-      "Postgres",
+      "PostgreSQL",
       "Mapbox",
       "JWT Auth",
       "Multer",
+      "CSS",
+      "Vite",
+      "Automated Testing",
     ],
     image: "/assets/MycoMap.png",
     href: "#",
   },
-  
+
   {
     title: "Page Pal Library App",
     description:
@@ -60,7 +63,7 @@ export default function Projects() {
     <section className="container stack-lg">
       <header className="stack-sm">
         <h2 className="h2">Projects</h2>
-        <p className="muted">A curated selection. Quality over quantity.</p>
+        <p className="muted"></p>
       </header>
       <div className="grid-3">
         {projects.map((p) => (
