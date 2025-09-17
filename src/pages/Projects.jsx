@@ -18,6 +18,7 @@ const projects = [
     image: "/assets/MycoMap.png",
     href: "#",
   },
+  
   {
     title: "Page Pal Library App",
     description:
@@ -34,6 +35,7 @@ const projects = [
     image: "/assets/PagePal.png",
     href: "https://majerash.github.io/PagePal",
   },
+
   {
     title: "Whack-A-Mole Game",
     description:
