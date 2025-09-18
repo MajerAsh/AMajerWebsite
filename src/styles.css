@@ -20,6 +20,8 @@
   transform: translateY(-80px) translateX(60vw);
   animation: heroHiIn 1.1s 0.1s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
     shine 2.5s linear infinite alternate;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
   background-size: 200% auto;
   color: transparent;
   background-clip: text;
@@ -390,6 +392,7 @@ a:hover {
   letter-spacing: 0.03em;
   text-decoration: none;
   transition: color 0.2s;
+  font-size: 1.18rem;
 }
 
 .nav__list a:hover,
@@ -398,9 +401,8 @@ a:hover {
 }
 
 .nav__list a.active {
-  background: linear-gradient(90deg, #4f7de9 60%, #b6adf0 100%);
-  color: #fff !important;
-  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.08);
+  background: none;
+  color: #8c9eff !important;
   font-weight: 700;
 }
 
