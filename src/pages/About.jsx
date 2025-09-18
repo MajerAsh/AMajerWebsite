@@ -48,8 +48,8 @@ export default function About() {
                 <Badge name="Express" icon="express" />
                 <Badge name="Mapbox" icon="mapbox" />
                 <Badge name="Multer" icon="multer" />
-                <Badge name="Context API" icon="context" />
-                <Badge name="Custom Hooks" icon="hooks" />
+                <Badge name="Context API"/>
+                <Badge name="Custom Hooks"/>
               </div>
             </div>
             <div>

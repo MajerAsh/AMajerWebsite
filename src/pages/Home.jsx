@@ -8,8 +8,8 @@ export default function Home() {
           Hi, I’m <span className="underline">Ashley Majer</span>.
         </h1>
         <p className="lead">
-          I build useful, accessible web experiences. Currently exploring React,
-          APIs, and delightful UIs.
+          I build useful, accessible web experiences. Currently exploring
+          accessibility, tests, and delightful UIs.
         </p>
         <div className="cta">
           <a className="btn" href="#projects">

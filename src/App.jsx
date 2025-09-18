@@ -17,14 +17,18 @@ export default function App() {
   // Scrollspy effect
   useEffect(() => {
     function onScroll() {
-      const scrollY = window.scrollY + 120; // offset for sticky nav
+      const sections = sectionIds.map((id) => document.getElementById(id));
       let current = sectionIds[0];
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollY) {
-          current = id;
+      const scrollY = window.scrollY;
+      sections.forEach((section) => {
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - sectionHeight / 3) {
+            current = section.id;
+          }
         }
-      }
+      });
       setActiveSection(current);
     }
     window.addEventListener("scroll", onScroll);
@@ -102,23 +106,35 @@ export default function App() {
       </header>
 
       <main id="main" className="site__main" role="main">
-        <section id="home" style={{ scrollMarginTop: "100px" }}>
+        <section
+          id="home"
+          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
+        >
           <Home />
         </section>
-        <section id="about" style={{ scrollMarginTop: "100px" }}>
+        <section
+          id="about"
+          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
+        >
           <About />
         </section>
-        <section id="projects" style={{ scrollMarginTop: "100px" }}>
+        <section
+          id="projects"
+          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
+        >
           <Projects />
         </section>
-        <section id="contact" style={{ scrollMarginTop: "100px" }}>
+        <section
+          id="contact"
+          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
+        >
           <Contact />
         </section>
       </main>
 
-      <footer className="site__footer" role="contentinfo">
-        <p>© {new Date().getFullYear()} Ashley Majer. All rights reserved.</p>
-        <ul className="social" role="list">
+      {/* Floating social sidebar */}
+      <aside className="sidebar-social">
+        <ul className="sidebar-social__list">
           <li>
             <a
               href="https://github.com/MajerAsh"
@@ -127,7 +143,6 @@ export default function App() {
               aria-label="GitHub"
             >
               <img src="/icons/github.svg" alt="" aria-hidden="true" />
-              <span className="sr-only">GitHub</span>
             </a>
           </li>
           <li>
@@ -138,17 +153,15 @@ export default function App() {
               aria-label="LinkedIn"
             >
               <img src="/icons/linkedin.svg" alt="" aria-hidden="true" />
-              <span className="sr-only">LinkedIn</span>
             </a>
           </li>
           <li>
             <a href="mailto:majerash@gmail.com" aria-label="Email">
               <img src="/icons/mail.svg" alt="" aria-hidden="true" />
-              <span className="sr-only">Email</span>
             </a>
           </li>
         </ul>
-      </footer>
+      </aside>
     </div>
   );
 }
