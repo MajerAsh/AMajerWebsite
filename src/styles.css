@@ -1,13 +1,77 @@
-/* ===== Animated Text for Home ===== */
-.animated-text {
-  display: inline-block;
-  background: linear-gradient(90deg, var(--accent), #a7adbb, var(--accent));
+/* ===== Hero Animated Header ===== */
+.hero-animated {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 60vh;
+}
+.hero-header-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.hero-hi {
+  opacity: 0;
+  transform: translateY(-80px) translateX(60vw);
+  animation: heroHiIn 1.1s 0.1s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
   background-size: 200% auto;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 2.5s linear infinite alternate;
+}
+.hero-name {
+  opacity: 0;
+  transform: translateY(-80px) translateX(-60vw);
+  animation: heroNameIn 1.1s 0.3s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-lead {
+  opacity: 0;
+  transform: translateX(-60vw);
+  animation: heroLeadIn 1.1s 1.2s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-size: 1.25rem;
+  max-width: 40ch;
+  text-align: right;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes heroHiIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes heroNameIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes heroLeadIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes shine {
@@ -277,14 +341,15 @@ a:hover {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 0.75rem;
   padding: 0.75rem 1rem;
 }
 
-.brand {
-  font-weight: 700;
-  color: var(--fg);
+/* Center nav list horizontally */
+.nav__list--centered {
+  justify-content: center;
+  width: 100%;
 }
 
 .nav__toggle {
@@ -318,14 +383,25 @@ a:hover {
 /* Link styling */
 .nav__list a {
   display: block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
-  color: var(--fg);
+  color: #4f7de9;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav__list a:hover,
+.nav__list a:focus-visible {
+  color: #8c9eff;
 }
 
 .nav__list a.active {
-  background: var(--card);
+  background: linear-gradient(90deg, #4f7de9 60%, #b6adf0 100%);
+  color: #fff !important;
+  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.08);
+  font-weight: 700;
 }
 
 /*.nav__list[data-collapsed="true"] {
@@ -418,9 +494,6 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
-.chip {
-  /* legacy chip style, not used for new badges */
 }
 
 .badge {

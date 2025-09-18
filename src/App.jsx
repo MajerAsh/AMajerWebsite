@@ -49,13 +49,7 @@ export default function App() {
     <div className="site">
       <header className="site__header" role="banner">
         <nav className="nav" aria-label="Primary">
-          <a
-            className="brand"
-            href="#home"
-            onClick={(e) => handleNavClick(e, "home")}
-          >
-            Ashley Majer
-          </a>
+          {/* Removed brand for centered nav */}
           <button
             className="nav__toggle"
             aria-controls="nav-menu"
@@ -64,7 +58,11 @@ export default function App() {
           >
             <span className="sr-only">Menu</span>☰
           </button>
-          <ul id="nav-menu" className="nav__list" data-collapsed={!menuOpen}>
+          <ul
+            id="nav-menu"
+            className="nav__list nav__list--centered"
+            data-collapsed={!menuOpen}
+          >
             <li>
               <a
                 href="#home"
