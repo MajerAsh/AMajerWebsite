@@ -20,7 +20,7 @@ ${message}`);
   return (
     <section className="container grid-2 contact">
       <div className="stack-sm">
-        <h2 className="h2">Contact</h2>
+        <h2 className="h2 teal-header">Contact</h2>
         <p className="muted">
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
@@ -52,7 +52,13 @@ ${message}`);
       <form className="card form" onSubmit={onSubmit} noValidate>
         <div className="field">
           <label htmlFor="name">Name</label>
-          <input id="name" name="name" autoComplete="name" required />
+          <input
+            id="name"
+            name="name"
+            autoComplete="name"
+            required
+            className="muted"
+          />
         </div>
         <div className="field">
           <label htmlFor="email">Email</label>
@@ -62,11 +68,18 @@ ${message}`);
             type="email"
             autoComplete="email"
             required
+            className="muted"
           />
         </div>
         <div className="field">
           <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            className="muted"
+          ></textarea>
         </div>
         <button className="btn" type="submit">
           Send

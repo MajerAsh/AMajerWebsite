@@ -62,12 +62,19 @@ export default function Projects() {
   return (
     <section className="container stack-lg">
       <header className="stack-sm">
-        <h2 className="h2">Projects</h2>
+        <h2 className="h2 teal-header">Projects</h2>
         <p className="muted"></p>
       </header>
-      <div className="grid-3">
-        {projects.map((p) => (
-          <ProjectCard key={p.title} {...p} />
+      <div className="projects-vertical-list">
+        {projects.map((p, i) => (
+          <div
+            className={`project-outer ${
+              i % 2 === 0 ? "project-outer--left" : "project-outer--right"
+            }`}
+            key={p.title}
+          >
+            <ProjectCard {...p} imageAlign={i % 2 === 0 ? "left" : "right"} />
+          </div>
         ))}
       </div>
     </section>

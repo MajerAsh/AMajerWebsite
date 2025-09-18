@@ -6,16 +6,18 @@ export default function About() {
     <section className="container stack-lg">
       <header className="stack-sm">
         <h2 className="h2">About</h2>
-        <p className="muted">
-          Junior developer with a passion for building clean, user-friendly
-          applications and a creative eye for design. I love solving problems,
-          learning new tools, and creating projects that make a real impact.
-        </p>
       </header>
 
-      <div className="grid-2">
-        <article className="card">
-          <h3 className="h4">Snapshot</h3>
+      <div className="about-cards-vertical">
+        <div className="about-header-row about-header-row--left">
+          <h3 className="about-section-header teal-header">Snapshot</h3>
+        </div>
+        <article className="card about-card about-card--left">
+          <p className="muted" style={{ marginBottom: "1.2rem" }}>
+            Junior developer with a passion for building clean, user-friendly
+            applications and a creative eye for design. I love solving problems,
+            learning new tools, and creating projects that make a real impact.
+          </p>
           <ul className="list-dots">
             <li>Based in Atlanta, Georgia</li>
             <li>Currently learning: TypeScript & testing</li>
@@ -24,8 +26,10 @@ export default function About() {
           </ul>
         </article>
 
-        <article className="card">
-          <h3 className="h4">Skills</h3>
+        <div className="about-header-row about-header-row--right">
+          <h3 className="about-section-header teal-header">Skills</h3>
+        </div>
+        <article className="card about-card about-card--right">
           <div
             style={{ display: "flex", flexDirection: "column", gap: "0.5em" }}
           >
@@ -48,8 +52,8 @@ export default function About() {
                 <Badge name="Express" icon="express" />
                 <Badge name="Mapbox" icon="mapbox" />
                 <Badge name="Multer" icon="multer" />
-                <Badge name="Context API"/>
-                <Badge name="Custom Hooks"/>
+                <Badge name="Context API" />
+                <Badge name="Custom Hooks" />
               </div>
             </div>
             <div>
@@ -65,33 +69,35 @@ export default function About() {
             </div>
           </div>
         </article>
-      </div>
 
-      <article className="card">
-        <h3 className="h4">Story</h3>
-        <p>
-          My career began in nutrition and human services, where I developed
-          strong communication, problem-solving, and data management skills
-          while guiding diverse clients through complex systems. Over time, I
-          discovered that what I loved most—breaking down problems, finding
-          efficient solutions, and learning new tools—aligned closely with
-          software engineering.
-        </p>
-        <p>
-          This led me to complete a Software Engineering Immersive at Fullstack
-          Academy, where I gained expertise in modern web technologies like
-          React, Node, Express, and PostgreSQL. Now, I bring a unique
-          perspective to engineering: the empathy and adaptability gained from
-          serving people, combined with the technical skills to design and
-          deliver user-focused applications.
-        </p>
-        <p>
-          Outside of tech, I love hiking creeks and finding waterfalls, foraging
-          gourmet mushrooms, and watching hummingbirds at my many feeders. I’m
-          energized by learning, creating, and building things that bring
-          clarity and value to others.
-        </p>
-      </article>
+        <div className="about-header-row about-header-row--left">
+          <h3 className="about-section-header teal-header">Story</h3>
+        </div>
+        <article className="card about-card about-card--left">
+          <p className="muted">
+            My career began in nutrition and human services, where I developed
+            strong communication, problem-solving, and data management skills
+            while guiding diverse clients through complex systems. Over time, I
+            discovered that what I loved most—breaking down problems, finding
+            efficient solutions, and learning new tools—aligned closely with
+            software engineering.
+          </p>
+          <p className="muted">
+            This led me to complete a Software Engineering Immersive at
+            Fullstack Academy, where I gained expertise in modern web
+            technologies like React, Node, Express, and PostgreSQL. Now, I bring
+            a unique perspective to engineering: the empathy and adaptability
+            gained from serving people, combined with the technical skills to
+            design and deliver user-focused applications.
+          </p>
+          <p className="muted">
+            Outside of tech, I love hiking creeks and finding waterfalls,
+            foraging gourmet mushrooms, and watching hummingbirds at my many
+            feeders. I’m energized by learning, creating, and building things
+            that bring clarity and value to others.
+          </p>
+        </article>
+      </div>
 
       <article className="card">
         <h3 className="h4">Timeline</h3>

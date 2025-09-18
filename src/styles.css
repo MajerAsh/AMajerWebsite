@@ -1,3 +1,189 @@
+/* Larger font for all sections except Home */
+.container:not(.hero):not(.hero-animated),
+.about-card,
+.project-card-vertical__body,
+.contact-card {
+  font-size: 1.18rem;
+}
+
+/* Larger headers except Home */
+.container:not(.hero):not(.hero-animated) h2,
+.container:not(.hero):not(.hero-animated) h3,
+.container:not(.hero):not(.hero-animated) h4,
+.about-section-header,
+.teal-header,
+.project-card-vertical__body h3,
+.contact-card h2 {
+  font-size: 2.2rem;
+  line-height: 1.13;
+}
+/* Shared card and header styles for About, Projects, Contact */
+.teal-header,
+.h2.teal-header {
+  color: #055b5c;
+  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.about-card,
+.project-card-vertical__body,
+.contact-card {
+  border: 2px solid #6ec6ca;
+  box-shadow: 0 0 24px 0 #6ec6ca33, 0 4px 32px 0 rgba(79, 125, 233, 0.07);
+}
+
+.muted,
+.about-card .muted,
+.project-card-vertical__body .muted,
+.contact-card .muted {
+  color: #d6cfff;
+  opacity: 1;
+}
+/* About section header rows and teal headers */
+.about-header-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.about-card {
+  margin-top: 0 !important;
+}
+.about-header-row--left {
+  justify-content: flex-start;
+  padding-left: 2vw;
+}
+.about-header-row--right {
+  justify-content: flex-end;
+  padding-right: 2vw;
+}
+.about-section-header {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+.teal-header {
+  color: #055b5c;
+  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Modern vertical project cards layout */
+.projects-vertical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12vh;
+  margin: 10vh 0 14vh 0;
+}
+.project-outer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.project-outer--right {
+  justify-content: flex-end;
+}
+.project-card-vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1100px;
+  width: 100%;
+  min-height: 44vh;
+}
+.project-card-vertical--reverse {
+  flex-direction: row-reverse;
+}
+.project-card-vertical__media {
+  flex: 0 0 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  background: color-mix(in oklab, var(--card) 90%, transparent);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
+  overflow: hidden;
+}
+.project-card-vertical__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+}
+.project-card-vertical__body {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.04);
+  transition: box-shadow 0.2s;
+}
+@media (max-width: 900px) {
+  .project-card-vertical,
+  .project-card-vertical--reverse {
+    flex-direction: column !important;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .project-card-vertical__media {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 0.5rem;
+  }
+}
+/* Modern vertical About cards layout */
+.about-cards-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+  margin: 8vh 0 10vh 0;
+}
+.about-card {
+  max-width: 700px;
+  width: 90%;
+  min-height: 38vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
+  transition: box-shadow 0.2s;
+}
+.about-card--left {
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+}
+.about-card--right {
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+}
+@media (min-width: 900px) {
+  .about-cards-vertical {
+    gap: 18vh;
+    margin: 12vh 0 18vh 0;
+  }
+  .about-card {
+    min-height: 48vh;
+    max-width: 900px;
+    font-size: 1.13rem;
+  }
+}
 /* ===== Hero Animated Header ===== */
 .hero-animated {
   position: relative;
