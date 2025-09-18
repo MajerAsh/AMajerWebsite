@@ -1,55 +1,119 @@
-import React, { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+  const sectionIds = ["home", "about", "projects", "contact"];
+  const sectionRefs = useRef({});
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
+  }
+
+  // Scrollspy effect
+  useEffect(() => {
+    function onScroll() {
+      const scrollY = window.scrollY + 120; // offset for sticky nav
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollY) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    }
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Smooth scroll for nav links
+  function handleNavClick(e, id) {
+    e.preventDefault();
+    setMenuOpen(false);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   return (
     <div className="site">
       <header className="site__header" role="banner">
         <nav className="nav" aria-label="Primary">
-          <a className="brand" href="/">
+          <a
+            className="brand"
+            href="#home"
+            onClick={(e) => handleNavClick(e, "home")}
+          >
             Ashley Majer
           </a>
-          {/*<NavLink to="/" className="brand">
-            Ashley Majer
-          </NavLink> ...tried in place of <a> but it didn't work */}
-
-          {/* Mobile nav toggle */}
           <button
             className="nav__toggle"
             aria-controls="nav-menu"
-            aria-expanded="false" /*={menuOpen}*/
+            aria-expanded={menuOpen}
             onClick={toggleMenu}
           >
             <span className="sr-only">Menu</span>☰
           </button>
-          {/* Nav menu */}
           <ul id="nav-menu" className="nav__list" data-collapsed={!menuOpen}>
             <li>
-              <NavLink to="/" end>
+              <a
+                href="#home"
+                className={activeSection === "home" ? "active" : undefined}
+                onClick={(e) => handleNavClick(e, "home")}
+              >
                 Home
-              </NavLink>
+              </a>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <a
+                href="#about"
+                className={activeSection === "about" ? "active" : undefined}
+                onClick={(e) => handleNavClick(e, "about")}
+              >
+                About
+              </a>
             </li>
             <li>
-              <NavLink to="/projects">Projects</NavLink>
+              <a
+                href="#projects"
+                className={activeSection === "projects" ? "active" : undefined}
+                onClick={(e) => handleNavClick(e, "projects")}
+              >
+                Projects
+              </a>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <a
+                href="#contact"
+                className={activeSection === "contact" ? "active" : undefined}
+                onClick={(e) => handleNavClick(e, "contact")}
+              >
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
       </header>
 
       <main id="main" className="site__main" role="main">
-        <Outlet />
+        <section id="home" style={{ scrollMarginTop: "100px" }}>
+          <Home />
+        </section>
+        <section id="about" style={{ scrollMarginTop: "100px" }}>
+          <About />
+        </section>
+        <section id="projects" style={{ scrollMarginTop: "100px" }}>
+          <Projects />
+        </section>
+        <section id="contact" style={{ scrollMarginTop: "100px" }}>
+          <Contact />
+        </section>
       </main>
 
       <footer className="site__footer" role="contentinfo">

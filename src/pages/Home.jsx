@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -13,12 +12,12 @@ export default function Home() {
           APIs, and delightful UIs.
         </p>
         <div className="cta">
-          <Link className="btn" to="/projects">
+          <a className="btn" href="#projects">
             See my work →
-          </Link>
-          <Link className="btn btn--ghost" to="/contact">
+          </a>
+          <a className="btn btn--ghost" href="#contact">
             Contact me
-          </Link>
+          </a>
         </div>
       </div>
       <figure className="hero__visual" aria-hidden="true">
