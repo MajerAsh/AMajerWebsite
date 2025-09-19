@@ -4,9 +4,7 @@ import Badge from "../components/Badge";
 export default function About() {
   return (
     <section className="container stack-lg">
-      <header className="stack-sm">
-        <h2 className="h2">About</h2>
-      </header>
+      <header className="stack-sm">{/*<h2 className="h2">About</h2>*/}</header>
 
       <div className="about-cards-vertical">
         <div className="about-header-row about-header-row--left">
@@ -39,7 +37,7 @@ export default function About() {
                 <Badge name="HTML" icon="html" />
                 <Badge name="CSS" icon="css" />
                 <Badge name="JavaScript" icon="javascript" />
-                <Badge name="SQL" icon="sql" />
+                <Badge name="PostgreSQL" icon="sql" />
                 <Badge name="Git" icon="git" />
                 <Badge name="Vite" icon="vite" />
               </div>

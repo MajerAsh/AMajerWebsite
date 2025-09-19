@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [scrollProgress, setScrollProgress] = useState(0);
   const sectionIds = ["home", "about", "projects", "contact"];
   const sectionRefs = useRef({});
 
@@ -14,9 +15,10 @@ export default function App() {
     setMenuOpen((prev) => !prev);
   }
 
-  // Scrollspy effect
+  // Scrollspy effect and scroll progress
   useEffect(() => {
     function onScroll() {
+      // Scrollspy
       const sections = sectionIds.map((id) => document.getElementById(id));
       let current = sectionIds[0];
       const scrollY = window.scrollY;
@@ -30,8 +32,16 @@ export default function App() {
         }
       });
       setActiveSection(current);
+      // Scroll progress
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress =
+        docHeight > 0 ? Math.min(1, window.scrollY / docHeight) : 0;
+      setScrollProgress(progress);
     }
     window.addEventListener("scroll", onScroll);
+    // Set initial value
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -47,6 +57,18 @@ export default function App() {
 
   return (
     <div className="site">
+      {/* Single persistent vertical line with bioluminescent glow segment */}
+      <div className="glow-scrollbar" aria-hidden="true">
+        <div
+          className="glow-scrollbar__glow"
+          style={{
+            top: `calc(${
+              Math.max(0, Math.min(1, scrollProgress)) * 100
+            }% - 7vh)`,
+            height: "14vh",
+          }}
+        ></div>
+      </div>
       <header className="site__header" role="banner">
         <nav className="nav" aria-label="Primary">
           {/* Removed brand for centered nav */}
@@ -145,7 +167,7 @@ export default function App() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/ashley-majer-8b3978362"
+              href="www.linkedin.com/in/ashleymajer"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"

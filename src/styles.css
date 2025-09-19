@@ -1,3 +1,151 @@
+/* ===== Hero Animated Header ===== */
+.hero-animated {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 60vh;
+}
+.hero-header-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.hero-hi {
+  opacity: 0;
+  transform: translateY(-80px) translateX(60vw);
+  animation: heroHiIn 1.1s 0.1s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-name {
+  opacity: 0;
+  transform: translateY(-80px) translateX(-60vw);
+  animation: heroNameIn 1.1s 0.3s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-lead {
+  opacity: 0;
+  transform: translateX(-60vw);
+  animation: heroLeadIn 1.1s 1.2s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-size: 1.25rem;
+  max-width: 40ch;
+  text-align: right;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes heroHiIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes heroNameIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes heroLeadIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/*         SCROLL BAR          */
+
+/* Hide default browser scrollbar for all browsers */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+body {
+  -ms-overflow-style: none; /* IE 10+ */
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Opera */
+}
+
+/* persistent vertical line scroll with bioluminescent glow */
+.glow-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 2vw;
+  width: 0.25px;
+  height: 100vh;
+  z-index: 999;
+  pointer-events: none;
+  border-radius: 1px;
+  background: linear-gradient(
+    180deg,
+    #172142 10%,
+    #314385 50%,
+    #4b65c6 100%
+      /* track colors, i think only the glow is showing on both track and thumb*/
+  ) !important;
+  box-shadow: 0 0 4px 1px #4b65c6, 0 0 8px 2px #4f7de922;
+  overflow: visible;
+}
+
+/* thumb / slider */
+.glow-scrollbar__glow {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-radius: 1px;
+  background: linear-gradient(
+    180deg,
+    #92a6ee 0%,
+    #6f87df 60%,
+    #4b65c6 100%
+  ); /* thumb colors */
+  box-shadow: 0 0 12px 4px #ffffff, 0 0 24px 8px #adbfff;
+  opacity: 0.45;
+  transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+/*^box shadow is the aura glow, 
+background is the slider colors, no colors = black w aura*/
+
+/* Hide default browser scrollbar */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
 /* Larger font for all sections except Home */
 .container:not(.hero):not(.hero-animated),
 .about-card,
@@ -227,39 +375,29 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero-lead {
-  opacity: 0;
-  transform: translateX(-60vw);
-  animation: heroLeadIn 1.1s 1.2s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
-    shine 2.5s linear infinite alternate;
-  font-size: 1.25rem;
-  max-width: 40ch;
-  text-align: right;
-  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
-  background-size: 200% auto;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-@keyframes heroHiIn {
-  to {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
-  }
+/*======================More scroll w colors rendering=====*/
+.glow-scrollbar {
+  position: fixed;
+  width: 0.5px;
+  opacity: 40%;
 }
-@keyframes heroNameIn {
-  to {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
-  }
-}
-@keyframes heroLeadIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.glow-scrollbar::before {
+  content: "";
+  position: absolute;
+  width: 0.5px;
+  inset: 0;
+  opacity: 10%;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #3271e7, #6456e4, #3ba8b6);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
 }
 
 @keyframes shine {
@@ -470,7 +608,6 @@ a:hover {
 }
 
 .site__header {
-  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   backdrop-filter: blur(6px);
