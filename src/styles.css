@@ -182,22 +182,29 @@ html::-webkit-scrollbar {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: var(--card);
+  background: transparent;
   border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   color: var(--fg);
   transition: background 0.2s, color 0.2s, transform 0.15s;
 }
 .sidebar-social__list a:hover,
 .sidebar-social__list a:focus-visible {
-  background: var(--accent);
-  color: #fff;
+  background: transparent;
+  color: inherit;
   transform: translateY(-2px) scale(1.08);
+}
+.sidebar-social__list a:hover img,
+.sidebar-social__list a:focus-visible img {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(16%) saturate(7492%) hue-rotate(202deg) brightness(104%) contrast(101%);
+}
 }
 .sidebar-social__list img {
   width: 28px;
   height: 28px;
   display: block;
+  background: none;
+  border-radius: 0;
 }
 @media (max-width: 700px) {
   .sidebar-social {
