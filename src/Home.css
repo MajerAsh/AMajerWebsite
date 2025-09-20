@@ -1,0 +1,103 @@
+/* Home page styles */
+.hero-animated {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 60vh;
+}
+.hero-header-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.hero-hi {
+  opacity: 0;
+  transform: translateY(-80px) translateX(60vw);
+  animation: heroHiIn 1.1s 0.1s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-name {
+  opacity: 0;
+  transform: translateY(-80px) translateX(-60vw);
+  animation: heroNameIn 1.1s 0.3s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-lead {
+  opacity: 0;
+  transform: translateX(-60vw);
+  animation: heroLeadIn 1.1s 1.2s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+    shine 2.5s linear infinite alternate;
+  font-size: 1.25rem;
+  max-width: 40ch;
+  text-align: right;
+  background: linear-gradient(90deg, #4f7de9, #8c9eff, #b6adf0, #4f7de9);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes heroHiIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes heroNameIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+  }
+}
+@keyframes heroLeadIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.hero {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+.hero__text .h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+}
+.lead {
+  color: var(--muted);
+  max-width: 55ch;
+}
+.hero__visual {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+/* Styles specific to the Home page */

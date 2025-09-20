@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../Contact.css";
 
 export default function Contact() {
   const [status, setStatus] = useState("");
@@ -20,31 +21,39 @@ ${message}`);
   return (
     <section className="container grid-2 contact">
       <div className="stack-sm">
-        <h2 className="h2">Contact</h2>
+        <h2 className="h2 teal-header">Contact</h2>
         <p className="muted">
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
-        <ul className="list-dots">
-          <li>
-            <a href="mailto:you@example.com">you@example.com</a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </li>
-        </ul>
+        <div className="contact-links">
+          <a href="mailto:majerash@gmail.com">Send me a email</a>
+          <a
+            href="https://www.linkedin.com/in/ashley-majer-8b3978362"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/MajerAsh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
 
       <form className="card form" onSubmit={onSubmit} noValidate>
         <div className="field">
           <label htmlFor="name">Name</label>
-          <input id="name" name="name" autoComplete="name" required />
+          <input
+            id="name"
+            name="name"
+            autoComplete="name"
+            required
+            className="muted"
+          />
         </div>
         <div className="field">
           <label htmlFor="email">Email</label>
@@ -54,11 +63,18 @@ ${message}`);
             type="email"
             autoComplete="email"
             required
+            className="muted"
           />
         </div>
         <div className="field">
           <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            className="muted"
+          ></textarea>
         </div>
         <button className="btn" type="submit">
           Send

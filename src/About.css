@@ -1,0 +1,86 @@
+/* About page styles */
+.about-cards-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+  margin: 8vh 0 10vh 0;
+}
+.about-card {
+  max-width: 700px;
+  width: 90%;
+  min-height: 38vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
+  transition: box-shadow 0.2s;
+}
+.about-card--left {
+  align-items: flex-start;
+  margin-left: 0;
+  margin-right: auto;
+}
+.about-card--right {
+  align-items: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+}
+@media (min-width: 900px) {
+  .about-cards-vertical {
+    gap: 18vh;
+    margin: 12vh 0 18vh 0;
+  }
+  .about-card {
+    min-height: 48vh;
+    max-width: 900px;
+    font-size: 1.13rem;
+  }
+}
+.about-header-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.about-header-row--left {
+  justify-content: flex-start;
+  padding-left: 2vw;
+}
+.about-header-row--right {
+  justify-content: flex-end;
+  padding-right: 2vw;
+}
+.about-section-header {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+.teal-header {
+  color: #055b5c;
+  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.muted,
+.about-card .muted {
+  color: #d6cfff;
+  opacity: 1;
+}
+.list-dots {
+  padding-left: 1.2rem;
+}
+.list-dots li {
+  margin: 0.25rem 0;
+}
+.timeline {
+  padding-left: 1.2rem;
+  margin: 1rem 0 0 0;
+}
+.timeline li {
+  margin-bottom: 1.2rem;
+}
+/* Styles specific to the About page */
