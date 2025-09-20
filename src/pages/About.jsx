@@ -1,6 +1,7 @@
 import React from "react";
 import "../About.css";
 import Badge from "../components/Badge";
+import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
   return (
@@ -125,6 +126,12 @@ export default function About() {
           </li>
         </ol>
       </article>
+      <section className="github-activity container" style={{ marginTop: "2.5rem", textAlign: "center" }}>
+        <h2 className="h2" style={{ marginBottom: "1.5rem" }}>GitHub Activity</h2>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <GitHubCalendar username="majerash" blockSize={16} blockMargin={4} color="#4f7de9" fontSize={14} />
+        </div>
+      </section>
     </section>
   );
 }
