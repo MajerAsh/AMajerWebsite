@@ -196,8 +196,8 @@ html::-webkit-scrollbar {
 }
 .sidebar-social__list a:hover img,
 .sidebar-social__list a:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(16%) saturate(7492%) hue-rotate(202deg) brightness(104%) contrast(101%);
-}
+  filter: brightness(0) saturate(100%) invert(72%) sepia(16%) saturate(7492%)
+    hue-rotate(202deg) brightness(104%) contrast(101%);
 }
 .sidebar-social__list img {
   width: 28px;
@@ -476,6 +476,8 @@ a:hover {
 .nav__list a:hover,
 .nav__list a:focus-visible {
   color: #8c9eff;
+  transform: translateY(-2px) scale(1.08);
+  transition: color 0.2s, transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav__list a.active {
@@ -636,7 +638,9 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  display: block;
+  border-radius: 0.75rem 0.75rem 0 0;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project:hover .project__media img {
   transform: scale(1.04);
