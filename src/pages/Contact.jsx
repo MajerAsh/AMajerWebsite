@@ -24,29 +24,23 @@ ${message}`);
         <p className="muted">
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
-        <ul className="list-dots">
-          <li>
-            <a href="mailto:majerash@gmail.com">Send me a email</a>
-          </li>
-          <li>
-            <a
-              href="www.linkedin.com/in/ashley-majer-8b3978362"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/MajerAsh"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </li>
-        </ul>
+        <div className="contact-links">
+          <a href="mailto:majerash@gmail.com">Send me a email</a>
+          <a
+            href="https://www.linkedin.com/in/ashley-majer-8b3978362"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/MajerAsh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
 
       <form className="card form" onSubmit={onSubmit} noValidate>

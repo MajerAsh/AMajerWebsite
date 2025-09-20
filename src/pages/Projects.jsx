@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard.jsx";
 
 const projects = [
   {
-    title: "MycoMap",
+    title: "Myco Map",
     description:
       "Full-stack app for mushroom foragers to log, map, and share their finds. Features secure authentication, image uploads, interactive Mapbox maps, and advanced search. Role-based marker visibility: public users see all finds (no usernames), logged-in users see usernames, and secret locations are protected. Built solo with React, Node.js, Express, PostgreSQL, and Mapbox. Highlights: RESTful API, robust validation, JWT auth, Multer file uploads, automated backend tests, and responsive, accessible UI.",
     tags: [
