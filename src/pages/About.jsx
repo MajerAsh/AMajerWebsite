@@ -1,4 +1,5 @@
 import React from "react";
+import "../About.css";
 import Badge from "../components/Badge";
 
 export default function About() {

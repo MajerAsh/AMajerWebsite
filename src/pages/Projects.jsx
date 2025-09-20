@@ -1,4 +1,5 @@
 import React from "react";
+import "../Projects.css";
 import ProjectCard from "../components/ProjectCard.jsx";
 
 const projects = [
