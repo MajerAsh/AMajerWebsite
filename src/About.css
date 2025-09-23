@@ -42,6 +42,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .about-header-row--left {
   justify-content: flex-start;
@@ -52,11 +53,15 @@
   padding-right: 2vw;
 }
 .about-section-header {
-  font-size: 2.1rem;
-  font-weight: 800;
+  font-size: 2.7rem;
+  font-weight: 900;
   margin: 0;
   letter-spacing: 0.01em;
-  line-height: 1.1;
+  line-height: 1.08;
+}
+
+.teal-header {
+  font-size: 2.7rem;
 }
 .teal-header {
   color: #055b5c;

@@ -1,16 +1,48 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "../About.css";
 import Badge from "../components/Badge";
 import GitHubCalendar from "react-github-calendar";
+import Timeline from "../components/Timeline";
+
+function usePopInOnScroll(ref) {
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const onScroll = () => {
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        node.classList.add("visible");
+      } else {
+        node.classList.remove("visible");
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [ref]);
+}
 
 export default function About() {
+  const snapshotRef = useRef(null);
+  const skillsRef = useRef(null);
+  const storyRef = useRef(null);
+  const githubHeaderRef = useRef(null);
+  usePopInOnScroll(snapshotRef);
+  usePopInOnScroll(skillsRef);
+  usePopInOnScroll(storyRef);
+  usePopInOnScroll(githubHeaderRef);
   return (
     <section className="container stack-lg">
       <header className="stack-sm">{/*<h2 className="h2">About</h2>*/}</header>
 
       <div className="about-cards-vertical">
         <div className="about-header-row about-header-row--left">
-          <h3 className="about-section-header teal-header">Snapshot</h3>
+          <h3
+            ref={snapshotRef}
+            className="about-section-header teal-header pop-in"
+          >
+            At a Glance
+          </h3>
         </div>
         <article className="card about-card about-card--left">
           <p className="muted" style={{ marginBottom: "1.2rem" }}>
@@ -27,7 +59,12 @@ export default function About() {
         </article>
 
         <div className="about-header-row about-header-row--right">
-          <h3 className="about-section-header teal-header">Skills</h3>
+          <h3
+            ref={skillsRef}
+            className="about-section-header teal-header pop-in"
+          >
+            Skills
+          </h3>
         </div>
         <article className="card about-card about-card--right">
           <div
@@ -71,7 +108,12 @@ export default function About() {
         </article>
 
         <div className="about-header-row about-header-row--left">
-          <h3 className="about-section-header teal-header">Story</h3>
+          <h3
+            ref={storyRef}
+            className="about-section-header teal-header pop-in"
+          >
+            My Story
+          </h3>
         </div>
         <article className="card about-card about-card--left">
           <p className="muted">
@@ -99,37 +141,28 @@ export default function About() {
         </article>
       </div>
 
-      <article className="card">
-        <h3 className="h4">Timeline</h3>
-        <ol className="timeline">
-          <li>
-            <strong>{new Date().getFullYear()} — Present</strong>
-            <p>
-              Building portfolio projects, exploring TypeScript, and
-              contributing to open source.
-            </p>
-          </li>
-          <li>
-            <strong>{new Date().getFullYear() - 1}</strong>
-            <p>
-              Completed Fullstack Academy’s Software Engineering Immersive,
-              specializing in full-stack web development.
-            </p>
-          </li>
-          <li>
-            <strong>Prior Career</strong>
-            <p>
-              Nutritionist, outreach coordinator, and educator—focused on
-              solving problems, guiding clients, and implementing digital
-              systems.
-            </p>
-          </li>
-        </ol>
-      </article>
-      <section className="github-activity container" style={{ marginTop: "2.5rem", textAlign: "center" }}>
-        <h2 className="h2" style={{ marginBottom: "1.5rem" }}>GitHub Activity</h2>
+      <Timeline />
+      <section
+        className="github-activity container"
+        style={{ marginTop: "5rem", textAlign: "center" }}
+      >
+        <div className="about-header-row about-header-row--left">
+          <h2
+            ref={githubHeaderRef}
+            className="about-section-header teal-header pop-in"
+            style={{ marginBottom: "1.5rem" }}
+          >
+            GitHub Activity
+          </h2>
+        </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <GitHubCalendar username="majerash" blockSize={16} blockMargin={4} color="#4f7de9" fontSize={14} />
+          <GitHubCalendar
+            username="majerash"
+            blockSize={16}
+            blockMargin={4}
+            color="#4f7de9"
+            fontSize={14}
+          />
         </div>
       </section>
     </section>

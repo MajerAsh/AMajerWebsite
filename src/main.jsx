@@ -1,4 +1,4 @@
-//Main.jsx sets up all the react routes
+// react routes
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";

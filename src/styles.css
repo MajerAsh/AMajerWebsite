@@ -673,14 +673,30 @@ textarea {
 
 /* ===== Utilities ===== */
 .h1 {
-  font-size: 2rem;
+  font-size: 2.7rem;
+  font-weight: 900;
 }
 .h2 {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
+  font-weight: 800;
 }
 .h3 {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 .h4 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Pop-in animation for headers */
+.pop-in {
+  opacity: 0;
+  transform: scale(0.85) translateY(30px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pop-in.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }

@@ -1,8 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../Contact.css";
+
+function usePopInOnScroll(ref) {
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const onScroll = () => {
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        node.classList.add("visible");
+      } else {
+        node.classList.remove("visible");
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [ref]);
+}
 
 export default function Contact() {
   const [status, setStatus] = useState("");
+  const contactHeaderRef = useRef(null);
+  usePopInOnScroll(contactHeaderRef);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -21,7 +41,13 @@ ${message}`);
   return (
     <section className="container grid-2 contact">
       <div className="stack-sm">
-        <h2 className="h2 teal-header">Contact</h2>
+        <h2
+          ref={contactHeaderRef}
+          className="about-section-header teal-header pop-in"
+          style={{ marginBottom: "2rem" }}
+        >
+          Contact
+        </h2>
         <p className="muted">
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
@@ -49,16 +75,6 @@ ${message}`);
           <label htmlFor="name">Name</label>
           <input
             id="name"
-            name="name"
-            autoComplete="name"
-            required
-            className="muted"
-          />
-        </div>
-        <div className="field">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
             name="email"
             type="email"
             autoComplete="email"
