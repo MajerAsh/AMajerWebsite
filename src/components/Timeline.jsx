@@ -79,7 +79,14 @@ export default function Timeline() {
     >
       <div
         className="about-header-row about-header-row--left"
-        style={{ marginBottom: "8rem" }}
+        style={{
+          marginBottom: "8rem",
+          position: "sticky",
+          top: "64px",
+          zIndex: 100,
+          background: "none",
+          boxShadow: "none",
+        }}
       >
         <h3 ref={headerRef} className="about-section-header teal-header pop-in">
           Timeline
@@ -98,7 +105,7 @@ export default function Timeline() {
             key={idx}
             style={{
               position: "sticky",
-              top: `${idx * 40}px`,
+              top: `calc(${idx} * 40px + 144px)`, // 64px = nav bar + 80px header height
               zIndex: 10 + idx,
               marginBottom:
                 idx === timelineData.length

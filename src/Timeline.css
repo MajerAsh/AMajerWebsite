@@ -6,7 +6,19 @@
   position: relative;
   margin-left: 2rem;
   padding-left: 2rem;
-  border-left: 3px solid #8c9eff;
+  border-left: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, #055b5c 0%, #4f7de9 60%, #3ba8b6 100%);
+  border-radius: 2px;
+  z-index: 0;
 }
 
 .timeline-event {
