@@ -200,8 +200,8 @@ html::-webkit-scrollbar {
     hue-rotate(202deg) brightness(104%) contrast(101%);
 }
 .sidebar-social__list img {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   display: block;
   background: none;
   border-radius: 0;

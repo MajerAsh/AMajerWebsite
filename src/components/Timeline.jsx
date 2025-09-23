@@ -21,22 +21,51 @@ function usePopInOnScroll(ref) {
 
 const timelineData = [
   {
-    date: `${new Date().getFullYear()} — Present`,
-    title: "Building & Learning",
+    date: "2025",
+    title: "Myco Map (Project)",
     description:
-      "Building portfolio projects, exploring TypeScript, and contributing to open source.",
+      "Full-stack app for mushroom foragers. React, Node, Express, PostgreSQL, Mapbox.",
   },
   {
-    date: `August ${new Date().getFullYear()}`,
+    date: "2025",
+    title: "Page Pal (Project)",
+    description:
+      "Library reservation app. React, Node, Express, PostgreSQL, JWT, CSS.",
+  },
+  {
+    date: "2025",
     title: "Fullstack Academy",
     description:
-      "Completed Fullstack Academy’s Software Engineering Immersive, specializing in full-stack web development.",
+      "Software Engineering Immersive Certificate, Emory University.",
   },
   {
-    date: "Prior Career",
-    title: "Nutrition & Outreach",
+    date: "2024-2025",
+    title: "Benefits Outreach Coordinator",
     description:
-      "Nutritionist, outreach coordinator, and educator—focused on solving problems, guiding clients, and implementing digital systems.",
+      "Atlanta Community Food Bank. Guided clients through technical systems.",
+  },
+  {
+    date: "2023-2024",
+    title: "Cultivation Technician",
+    description:
+      "Southern Cap Mushrooms. Monitored growth cycles, process-driven tasks.",
+  },
+  {
+    date: "2015-2023",
+    title: "Nutritionist",
+    description:
+      "WIC Program. Data entry, care plans, client support, software navigation.",
+  },
+  {
+    date: "2014",
+    title: "English Teacher",
+    description:
+      "Golden Gate Academia, Ecuador. Lesson planning, teaching all ages.",
+  },
+  {
+    date: "2013",
+    title: "Saint Catherine University",
+    description: "Bachelor of Science in Dietetics.",
   },
 ];
 
@@ -44,15 +73,40 @@ export default function Timeline() {
   const headerRef = useRef(null);
   usePopInOnScroll(headerRef);
   return (
-    <section className="timeline-section">
-      <div className="about-header-row about-header-row--left">
+    <section
+      className="timeline-section"
+      style={{ marginBottom: "30rem", marginTop: "8rem" }}
+    >
+      <div
+        className="about-header-row about-header-row--left"
+        style={{ marginBottom: "8rem" }}
+      >
         <h3 ref={headerRef} className="about-section-header teal-header pop-in">
           Timeline
         </h3>
       </div>
-      <div className="timeline">
+      <div
+        className="timeline"
+        style={{
+          minHeight: `${timelineData.length * 220}px`, // ensure enough space for sticky stacking
+          position: "relative",
+        }}
+      >
         {timelineData.map((event, idx) => (
-          <div className="timeline-event" key={idx}>
+          <div
+            className="timeline-event"
+            key={idx}
+            style={{
+              position: "sticky",
+              top: `${idx * 120}px`, // 120px per event for visible gap
+              zIndex: 10 + idx,
+              marginBottom: "32px", // positive gap between cards
+              boxShadow: "0 2px 12px #8c9eff33",
+              borderRadius: "0.7rem",
+              background: "rgba(18,20,26,0.96)",
+              transition: "box-shadow 0.2s",
+            }}
+          >
             <div className="timeline-dot" />
             <div className="timeline-content">
               <div className="timeline-date">{event.date}</div>

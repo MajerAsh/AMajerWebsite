@@ -142,6 +142,7 @@ export default function About() {
       </div>
 
       <Timeline />
+      <div style={{ height: "10rem" }} />
       <section
         className="github-activity container"
         style={{ marginTop: "0", textAlign: "center" }}
