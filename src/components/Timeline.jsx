@@ -98,16 +98,16 @@ export default function Timeline() {
             key={idx}
             style={{
               position: "sticky",
-              top: `${idx * 120}px`, // 120px per event for visible gap
+              top: `${idx * 40}px`, // 120px per event for visible gap
               zIndex: 10 + idx,
-              marginBottom: "32px", // positive gap between cards
+              marginBottom: "200px", // positive gap between cards
               boxShadow: "0 2px 12px #8c9eff33",
               borderRadius: "0.7rem",
               background: "rgba(18,20,26,0.96)",
               transition: "box-shadow 0.2s",
             }}
           >
-            <div className="timeline-dot" />
+            {/* Removed timeline bullet point */}
             <div className="timeline-content">
               <div className="timeline-date">{event.date}</div>
               <div className="timeline-title">{event.title}</div>
