@@ -88,7 +88,7 @@ export default function Timeline() {
       <div
         className="timeline"
         style={{
-          minHeight: `${timelineData.length * 220}px`, // ensure enough space for sticky stacking
+          minHeight: `${timelineData.length * 320}px`, // more space for last sticky card
           position: "relative",
         }}
       >
@@ -98,9 +98,12 @@ export default function Timeline() {
             key={idx}
             style={{
               position: "sticky",
-              top: `${idx * 40}px`, // 120px per event for visible gap
+              top: `${idx * 40}px`,
               zIndex: 10 + idx,
-              marginBottom: "200px", // positive gap between cards
+              marginBottom:
+                idx === timelineData.length - 1
+                  ? "40px" // last card gets small margin to stick at end
+                  : "200px",
               boxShadow: "0 2px 12px #8c9eff33",
               borderRadius: "0.7rem",
               background: "rgba(18,20,26,0.96)",
