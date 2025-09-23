@@ -32,18 +32,18 @@ export default function About() {
   usePopInOnScroll(storyRef);
   usePopInOnScroll(githubHeaderRef);
   return (
-    <section className="container stack-lg">
+    <section className="container stack-lg" style={{ marginBottom: "6rem" }}>
       <header className="stack-sm">{/*<h2 className="h2">About</h2>*/}</header>
 
       <div className="about-cards-vertical">
-        <div className="about-header-row about-header-row--left">
+        <header className="about-header-row about-header-row--left">
           <h3
             ref={snapshotRef}
             className="about-section-header teal-header pop-in"
           >
             At a Glance
           </h3>
-        </div>
+        </header>
         <article className="card about-card about-card--left">
           <p className="muted" style={{ marginBottom: "1.2rem" }}>
             Junior developer with a passion for building clean, user-friendly
@@ -58,63 +58,78 @@ export default function About() {
           </ul>
         </article>
 
-        <div className="about-header-row about-header-row--right">
+        <header className="about-header-row about-header-row--right">
           <h3
             ref={skillsRef}
             className="about-section-header teal-header pop-in"
           >
             Skills
           </h3>
+        </header>
+        <div className="skills-row">
+          <strong style={{ marginBottom: "1.2rem", display: "block" }}>
+            Languages &amp; Tools:
+          </strong>
+          <div className="skills-icon-list" aria-label="Languages and Tools">
+            {[
+              { name: "HTML", icon: "html" },
+              { name: "CSS", icon: "css" },
+              { name: "JavaScript", icon: "javascript" },
+              { name: "PostgreSQL", icon: "sql" },
+              { name: "Git", icon: "git" },
+              { name: "Vite", icon: "vite" },
+            ].map((item) => (
+              <div className="skills-icon-card" key={item.name}>
+                <Badge icon={item.icon} />
+                <span className="skills-tooltip">{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="skills-row">
+          <strong style={{ marginBottom: "1.2rem", display: "block" }}>
+            Frameworks &amp; Libraries:
+          </strong>
+          <div
+            className="skills-icon-list"
+            aria-label="Frameworks and Libraries"
+          >
+            {[
+              { name: "React", icon: "react" },
+              { name: "Node.js", icon: "nodejs" },
+              { name: "Express", icon: "express" },
+              { name: "Mapbox", icon: "mapbox" },
+              { name: "Multer", icon: "multer" },
+              { name: "Context API" },
+              { name: "Custom Hooks" },
+            ].map((item) => (
+              <div className="skills-icon-card" key={item.name}>
+                <Badge icon={item.icon} />
+                <span className="skills-tooltip">{item.name}</span>
+              </div>
+            ))}
+          </div>
         </div>
         <article className="card about-card about-card--right">
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "0.5em" }}
-          >
-            <div>
-              <strong>Languages & Tools:</strong>
-              <div className="chips" aria-label="Languages and Tools">
-                <Badge name="HTML" icon="html" />
-                <Badge name="CSS" icon="css" />
-                <Badge name="JavaScript" icon="javascript" />
-                <Badge name="PostgreSQL" icon="sql" />
-                <Badge name="Git" icon="git" />
-                <Badge name="Vite" icon="vite" />
-              </div>
-            </div>
-            <div>
-              <strong>Frameworks & Libraries:</strong>
-              <div className="chips" aria-label="Frameworks and Libraries">
-                <Badge name="React" icon="react" />
-                <Badge name="Node.js" icon="nodejs" />
-                <Badge name="Express" icon="express" />
-                <Badge name="Mapbox" icon="mapbox" />
-                <Badge name="Multer" icon="multer" />
-                <Badge name="Context API" />
-                <Badge name="Custom Hooks" />
-              </div>
-            </div>
-            <div>
-              <strong>Core Concepts:</strong>
-              <div className="chips" aria-label="Core Concepts">
-                <Badge name="REST APIs" icon="api" />
-                <Badge name="JWT Auth" icon="jwt" />
-                <Badge name="Accessibility" icon="accessibility" />
-                <Badge name="Responsive Design" icon="responsive" />
-                <Badge name="Testing" icon="testing" />
-                <Badge name="Automated Tests" icon="automation" />
-              </div>
-            </div>
+          <strong>Core Concepts:</strong>
+          <div className="chips" aria-label="Core Concepts">
+            <Badge name="REST APIs" icon="api" />
+            <Badge name="JWT Auth" icon="jwt" />
+            <Badge name="Accessibility" icon="accessibility" />
+            <Badge name="Responsive Design" icon="responsive" />
+            <Badge name="Testing" icon="testing" />
+            <Badge name="Automated Tests" icon="automation" />
           </div>
         </article>
 
-        <div className="about-header-row about-header-row--left">
+        <header className="about-header-row about-header-row--left">
           <h3
             ref={storyRef}
             className="about-section-header teal-header pop-in"
           >
             My Story
           </h3>
-        </div>
+        </header>
         <article className="card about-card about-card--left">
           <p className="muted">
             My career began in nutrition and human services, where I developed
@@ -145,7 +160,7 @@ export default function About() {
       <div style={{ height: "10rem" }} />
       <section
         className="github-activity container"
-        style={{ marginTop: "0", textAlign: "center" }}
+        style={{ marginTop: "0", marginBottom: "6rem", textAlign: "center" }}
       >
         <div className="about-header-row about-header-row--left">
           <h2
@@ -163,6 +178,13 @@ export default function About() {
             blockMargin={4}
             color="#4f7de9"
             fontSize={14}
+            transformData={(contributions) => {
+              const sixMonthsAgo = new Date();
+              sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+              return contributions.filter(
+                (day) => new Date(day.date) >= sixMonthsAgo
+              );
+            }}
           />
         </div>
       </section>

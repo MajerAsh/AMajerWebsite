@@ -1,3 +1,65 @@
+/* Skills icon cards row */
+.skills-row {
+  margin-bottom: 3rem;
+}
+.skills-icon-list {
+  display: flex;
+  gap: 2.2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.skills-icon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.7rem;
+  width: auto;
+  height: auto;
+  transition: transform 0.18s;
+  cursor: pointer;
+  position: relative;
+  /* Make badge icons large */
+  .badge-icon {
+    width: 120px;
+    height: 140px;
+    display: block;
+  }
+}
+.skills-icon-card svg {
+  width: 72px;
+  height: 88px;
+}
+
+.skills-icon-card:hover {
+  box-shadow: 0 0 16px #4f7de9, 0 0 32px #8c9eff;
+  transform: scale(1.08);
+}
+.skills-tooltip {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  margin-top: 0.5rem;
+  background: none;
+  color: #4f7de9;
+  font-weight: 700;
+  font-size: 1.08em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s;
+  white-space: nowrap;
+  z-index: 2;
+}
+.skills-icon-card:hover .skills-tooltip {
+  opacity: 1;
+}
+
+.badge_icon {
+  width: 4rem;
+  height: 4rem;
+  vertical-align: -0.1em;
+}
+
 /* About page styles */
 .about-cards-vertical {
   display: flex;
@@ -61,7 +123,7 @@
   padding-right: 2vw;
 }
 .about-section-header {
-  font-size: 2.7rem;
+  font-size: 2.82rem;
   font-weight: 900;
   margin: 0;
   letter-spacing: 0.01em;
@@ -69,7 +131,7 @@
 }
 
 .teal-header {
-  font-size: 2.7rem;
+  font-size: 2.82rem;
 }
 .teal-header {
   color: #055b5c;
