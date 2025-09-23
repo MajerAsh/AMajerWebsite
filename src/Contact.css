@@ -1,3 +1,15 @@
+/* Glowing card effect for contact form */
+.form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.18), 0 0 24px 8px #adbfff33;
+  padding: 1rem;
+}
+.field input,
+.field textarea {
+  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.1), 0 0 8px 2px #adbfff22;
+}
 /* Contact links (no bullets, horizontal) */
 .contact-links {
   display: flex;

@@ -41,8 +41,16 @@
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+  margin-top: 4.5rem;
+}
+
+.about-card--left:last-of-type {
+  margin-bottom: 6.5rem;
+}
+
+.timeline-section {
+  margin-bottom: 8rem;
 }
 .about-header-row--left {
   justify-content: flex-start;

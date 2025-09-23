@@ -144,7 +144,7 @@ export default function About() {
       <Timeline />
       <section
         className="github-activity container"
-        style={{ marginTop: "5rem", textAlign: "center" }}
+        style={{ marginTop: "0", textAlign: "center" }}
       >
         <div className="about-header-row about-header-row--left">
           <h2

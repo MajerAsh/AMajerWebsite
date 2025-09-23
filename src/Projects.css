@@ -4,44 +4,45 @@
   flex-direction: column;
   gap: 12vh;
   margin: 10vh 0 14vh 0;
+  .project-outer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .project-outer--right {
+    justify-content: flex-end;
+  }
+  .project-card-vertical {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 44vh;
+  }
+  .project-card-vertical--reverse {
+    flex-direction: row-reverse;
+  }
+  .project-card-vertical__media {
+    flex: 0 0 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    background: color-mix(in oklab, var(--card) 90%, transparent);
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
+    overflow: hidden;
+  }
+  .project-card-vertical__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.2rem;
+  }
 }
-.project-outer {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-.project-outer--right {
-  justify-content: flex-end;
-}
-.project-card-vertical {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2.5rem;
-  max-width: 1100px;
-  width: 100%;
-  min-height: 44vh;
-}
-.project-card-vertical--reverse {
-  flex-direction: row-reverse;
-}
-.project-card-vertical__media {
-  flex: 0 0 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 260px;
-  background: color-mix(in oklab, var(--card) 90%, transparent);
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
-  overflow: hidden;
-}
-.project-card-vertical__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 1.2rem;
-}
+
 .project-card-vertical__body {
   flex: 1 1 0;
   min-width: 0;
@@ -49,7 +50,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.04);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.18), 0 0 24px 8px #adbfff33;
   transition: box-shadow 0.2s;
 }
 @media (max-width: 900px) {
