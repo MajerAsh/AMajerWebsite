@@ -101,7 +101,7 @@ export default function Timeline() {
               top: `${idx * 40}px`,
               zIndex: 10 + idx,
               marginBottom:
-                idx === timelineData.length - 1
+                idx === timelineData.length
                   ? "40px" // last card gets small margin to stick at end
                   : "200px",
               boxShadow: "0 2px 12px #8c9eff33",
