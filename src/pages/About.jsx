@@ -63,11 +63,11 @@ export default function About() {
             ref={skillsRef}
             className="about-section-header teal-header pop-in"
           >
-            Skills
+            Technologies I Love
           </h3>
         </header>
         <div className="skills-row">
-          <strong style={{ marginBottom: "1.2rem", display: "block" }}>
+          <strong className="skills-section-header">
             Languages &amp; Tools:
           </strong>
           <div className="skills-icon-list" aria-label="Languages and Tools">
@@ -87,40 +87,67 @@ export default function About() {
           </div>
         </div>
         <div className="skills-row">
-          <strong style={{ marginBottom: "1.2rem", display: "block" }}>
-            Frameworks &amp; Libraries:
-          </strong>
           <div
-            className="skills-icon-list"
-            aria-label="Frameworks and Libraries"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+            }}
           >
+            <strong
+              className="skills-section-header"
+              style={{ textAlign: "right", width: "100%" }}
+            >
+              Frameworks &amp; Libraries:
+            </strong>
+            <div
+              className="skills-icon-list"
+              aria-label="Frameworks and Libraries"
+              style={{ justifyContent: "flex-end", width: "100%" }}
+            >
+              {[
+                { name: "React", icon: "react" },
+                { name: "Node.js", icon: "nodejs" },
+                { name: "Express", icon: "express" },
+                { name: "Mapbox", icon: "mapbox" },
+                { name: "Multer", icon: "multer" },
+                { name: "Jest", icon: "jest" },
+                { name: "Postman", icon: "postman" },
+              ].map((item) => (
+                <div className="skills-icon-card" key={item.name}>
+                  <Badge icon={item.icon} />
+                  <span className="skills-tooltip">{item.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div style={{ marginBottom: "2.5rem" }}>
+          <strong
+            className="skills-section-header"
+            style={{
+              fontSize: "1.5rem",
+              fontWeight: 700,
+              marginBottom: "1.2rem",
+            }}
+          >
+            Core Concepts:
+          </strong>
+          <div className="chips" aria-label="Core Concepts">
             {[
-              { name: "React", icon: "react" },
-              { name: "Node.js", icon: "nodejs" },
-              { name: "Express", icon: "express" },
-              { name: "Mapbox", icon: "mapbox" },
-              { name: "Multer", icon: "multer" },
-              { name: "Context API" },
-              { name: "Custom Hooks" },
-            ].map((item) => (
-              <div className="skills-icon-card" key={item.name}>
-                <Badge icon={item.icon} />
-                <span className="skills-tooltip">{item.name}</span>
-              </div>
+              "REST APIs",
+              "JWT Auth",
+              "Accessibility",
+              "Responsive Design",
+              "Testing",
+              "Automated Tests",
+            ].map((concept) => (
+              <span className="core-concept-card" key={concept}>
+                {concept}
+              </span>
             ))}
           </div>
         </div>
-        <article className="card about-card about-card--right">
-          <strong>Core Concepts:</strong>
-          <div className="chips" aria-label="Core Concepts">
-            <Badge name="REST APIs" icon="api" />
-            <Badge name="JWT Auth" icon="jwt" />
-            <Badge name="Accessibility" icon="accessibility" />
-            <Badge name="Responsive Design" icon="responsive" />
-            <Badge name="Testing" icon="testing" />
-            <Badge name="Automated Tests" icon="automation" />
-          </div>
-        </article>
 
         <header className="about-header-row about-header-row--left">
           <h3

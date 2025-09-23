@@ -1,6 +1,40 @@
+/* Core Concepts text-only cards */
+.core-concept-card {
+  display: inline-block;
+  min-width: 110px;
+  padding: 0.7rem 1.1rem;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  background: #4f7de9;
+  border-radius: 1.1rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #000000;
+  box-shadow: 0 2px 8px 0 rgba(79, 125, 233, 0.07);
+  letter-spacing: 0.01em;
+  transition: box-shadow 0.18s, transform 0.18s;
+  vertical-align: middle;
+}
+.core-concept-card:hover {
+  box-shadow: 0 0 12px #c5cfe4, 0 0 24px #8c9eff;
+  transform: scale(1.04);
+}
+/* Section headers for skills */
+.skills-section-header {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #055b5c;
+  letter-spacing: 0.02em;
+  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 2px 8px rgba(79, 125, 233, 0.12);
+}
 /* Skills icon cards row */
 .skills-row {
-  margin-bottom: 3rem;
+  margin-bottom: "none";
 }
 .skills-icon-list {
   display: flex;
@@ -9,17 +43,21 @@
   justify-content: flex-start;
 }
 .skills-icon-card {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.7rem;
   width: auto;
   height: auto;
+  padding: 1rem;
   transition: transform 0.18s;
   cursor: pointer;
   position: relative;
   /* Make badge icons large */
   .badge-icon {
+    display: block;
+    margin-left: auto; /*inside card, around svg*/
+    margin-right: auto;
     width: 120px;
     height: 140px;
     display: block;
@@ -31,8 +69,15 @@
 }
 
 .skills-icon-card:hover {
-  box-shadow: 0 0 16px #4f7de9, 0 0 32px #8c9eff;
+}
+.skills-icon-card:hover .badge-icon {
+  filter: drop-shadow(0 0 12px #273e74) drop-shadow(0 0 24px #8c9eff);
+  box-shadow: none;
   transform: scale(1.08);
+}
+
+ {
+  /* Tooltip for skill icons, hover text*/
 }
 .skills-tooltip {
   position: absolute;
@@ -90,8 +135,8 @@
 }
 @media (min-width: 900px) {
   .about-cards-vertical {
-    gap: 18vh;
-    margin: 12vh 0 18vh 0;
+    gap: 0.5vh;
+    margin: 1vh 0 1vh 0;
   }
   .about-card {
     min-height: 48vh;
