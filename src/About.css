@@ -71,14 +71,11 @@
 .skills-icon-card:hover {
 }
 .skills-icon-card:hover .badge-icon {
-  filter: drop-shadow(0 0 12px #273e74) drop-shadow(0 0 24px #8c9eff);
+  filter: drop-shadow(0 0 12px #273e74) drop-shadow(0 0 24px #7181da);
   box-shadow: none;
   transform: scale(1.08);
 }
 
- {
-  /* Tooltip for skill icons, hover text*/
-}
 .skills-tooltip {
   position: absolute;
   left: 50%;
@@ -115,7 +112,7 @@
 .about-card {
   max-width: 700px;
   width: 90%;
-  min-height: 38vh;
+  min-height: 30vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -149,7 +146,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
-  margin-top: 4.5rem;
+  margin-top: 2rem;
 }
 
 .about-card--left:last-of-type {

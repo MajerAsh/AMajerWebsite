@@ -2,8 +2,8 @@
 .projects-vertical-list {
   display: flex;
   flex-direction: column;
-  gap: 12vh;
-  margin: 10vh 0 14vh 0;
+  gap: 2.5rem;
+  margin: 8vh 0 10vh 0;
   .project-outer {
     width: 100%;
     display: flex;

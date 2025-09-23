@@ -14,8 +14,8 @@
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin: 0.5rem 0 1.5rem 0;
+  gap: 1.2rem;
+  margin: 1.2rem 0 1.2rem 0;
 }
 @media (min-width: 500px) {
   .contact-links {
