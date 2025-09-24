@@ -19,12 +19,7 @@ export default function ProjectCard({
           <img src={image} alt={`image of ${title}`} loading="lazy" />
         </figure>
       )}
-      <a
-        className="project-card-vertical__body card"
-        href={href}
-        target={href?.startsWith("http") ? "_blank" : undefined}
-        rel="noreferrer"
-      >
+      <div className="project-card-vertical__body card">
         <h3 className="h4">{title}</h3>
         <p className="muted">{description}</p>
         <p className="chips" aria-label="Tech stack">
@@ -64,7 +59,7 @@ export default function ProjectCard({
             View Github Repo
           </a>
         </div>
-      </a>
+      </div>
     </div>
   );
 }
