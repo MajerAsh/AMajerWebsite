@@ -14,7 +14,7 @@ svg.react-activity-calendar__calendar {
   width: 70vw;
 }
 rect {
-  border-radius: 50% !important;
+  border-radius: 80% !important;
 }
 rect:hover {
   transform: scale(1.04);

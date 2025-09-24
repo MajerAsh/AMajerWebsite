@@ -69,6 +69,8 @@
   margin-top: 1.2rem;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 .project-card-btn {
   background: linear-gradient(180deg, #4f7de9 0%, #2e4fa2 100%);
