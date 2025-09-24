@@ -1,3 +1,11 @@
+/* Global gradient header style for all major headers */
+.gradient-header {
+  color: #055b5c;
+  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 /* persistent vertical line scroll with bioluminescent glow */
 .glow-scrollbar {
   position: fixed;
@@ -194,14 +202,16 @@ html::-webkit-scrollbar {
   color: inherit;
   transform: translateY(-2px) scale(1.08);
 }
+/*nav bar!*/
 .sidebar-social__list a:hover img,
 .sidebar-social__list a:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(36%) sepia(60%) saturate(600%)
-    hue-rotate(140deg) brightness(90%) contrast(110%);
+  filter: drop-shadow(0 0 16px #6ec6ca) drop-shadow(0 0 32px #b6eaff)
+    invert(80%) sepia(0%) saturate(75%) hue-rotate(180deg) brightness(650%);
 }
+
 .sidebar-social__list img {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   display: block;
   background: none;
   border-radius: 0;

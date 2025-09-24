@@ -84,13 +84,13 @@ export default function Projects() {
   return (
     <section className="container stack-lg">
       <header className="stack-sm">
-        <h2
+        <h1
           ref={projectsHeaderRef}
-          className="about-section-header teal-header pop-in"
+          className="about-section-header gradient-header pop-in"
           style={{ marginBottom: "2.5rem" }}
         >
           Projects
-        </h2>
+        </h1>
         <p className="muted"></p>
       </header>
       <div className="projects-vertical-list">

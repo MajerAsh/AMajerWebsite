@@ -15,6 +15,7 @@
   vertical-align: middle;
 }
 .core-concept-card:hover {
+  background-color: #317ef1;
   box-shadow: 0 0 12px #c5cfe4, 0 0 24px #8c9eff;
   transform: scale(1.04);
 }
@@ -68,14 +69,14 @@
   height: 88px;
 }
 
-.skills-icon-card:hover {
-}
 .skills-icon-card:hover .badge-icon {
-  filter: drop-shadow(0 0 12px #273e74) drop-shadow(0 0 24px #7181da);
+  filter: drop-shadow(0 0 10px #b6adf0) drop-shadow(0 0 20px #e5e2fc) invert(0%)
+    sepia(0%) saturate(300%) hue-rotate(0deg) brightness(100%); /*hue 210deg = reds ->purpl, blue to green*/
   box-shadow: none;
   transform: scale(1.08);
+  /* For SVGs as <img>, use filter for color */
 }
-
+/*100deg = reds - green, bue to pink*/
 .skills-tooltip {
   position: absolute;
   left: 50%;
@@ -145,8 +146,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
-  margin-top: 2rem;
+  margin-bottom: none;
+  margin-top: none;
 }
 
 .about-card--left:last-of-type {
@@ -165,7 +166,7 @@
   padding-right: 2vw;
 }
 .about-section-header {
-  font-size: 2.82rem;
+  font-size: 4rem;
   font-weight: 900;
   margin: 0;
   letter-spacing: 0.01em;

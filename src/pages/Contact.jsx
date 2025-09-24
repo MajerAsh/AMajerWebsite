@@ -42,13 +42,13 @@ ${message}`);
   return (
     <section className="container grid-2 contact">
       <div className="stack-sm">
-        <h2
+        <h1
           ref={contactHeaderRef}
-          className="about-section-header teal-header pop-in"
+          className="about-section-header gradient-header pop-in"
           style={{ marginBottom: "2rem" }}
         >
           Contact
-        </h2>
+        </h1>
         <p className="muted">
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
