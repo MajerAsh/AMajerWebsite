@@ -40,6 +40,7 @@ const projects = [
     ],
     image: "/assets/MycoMap.png",
     href: "#",
+    github: "https://github.com/MajerAsh/BackendCapstone",
   },
 
   {
@@ -57,6 +58,7 @@ const projects = [
     ],
     image: "/assets/PagePal.png",
     href: "https://majerash.github.io/PagePal",
+    github: "https://github.com/MajerAsh/Page-Pal",
   },
 
   {
@@ -75,6 +77,7 @@ const projects = [
     ],
     image: "/assets/whackAmole.png",
     href: "https://majerash.github.io/whackAmole/",
+    github: "https://github.com/MajerAsh/whackAmole",
   },
 ];
 

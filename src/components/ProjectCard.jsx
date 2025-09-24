@@ -29,9 +29,6 @@ export default function ProjectCard({
             </span>
           ))}
         </p>
-        <span className="external" aria-hidden>
-          Visit →
-        </span>
         <div className="project-card-buttons">
           <a
             className="project-card-btn"
@@ -46,9 +43,9 @@ export default function ProjectCard({
             className="project-card-btn"
             href={
               title === "Myco Map"
-                ? "https://github.com/majerash/MycoMap"
+                ? "https://github.com/MajerAsh/BackendCapstone"
                 : title === "Page Pal Library App"
-                ? "https://github.com/majerash/PagePal"
+                ? "https://github.com/majerash/Page-Pal"
                 : title === "Whack-A-Mole Game"
                 ? "https://github.com/majerash/whackAmole"
                 : "#"

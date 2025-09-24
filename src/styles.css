@@ -1,10 +1,12 @@
 /* Global gradient header style for all major headers */
 .gradient-header {
   color: #055b5c;
-  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
+  background: linear-gradient(90deg, #6ec6ca 60%, #089294 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: shine 2.5s linear infinite alternate;
+  animation-fill-mode: forwards;
 }
 /* persistent vertical line scroll with bioluminescent glow */
 .glow-scrollbar {

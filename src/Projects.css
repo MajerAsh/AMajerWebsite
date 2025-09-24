@@ -88,10 +88,11 @@
 }
 .project-card-btn:hover,
 .project-card-btn:focus,
-.project-card-btn:hover {
+.project-card-btn:active {
   background: linear-gradient(180deg, #2e4fa2 0%, #1c2a4d 100%);
   box-shadow: 0 6px 0 #1c2a4d, 0 6px 24px 0 rgba(79, 125, 233, 0.22);
   outline: none;
+  text-decoration: none;
 }
 .project-card-btn:active {
   transform: translateY(2px);
