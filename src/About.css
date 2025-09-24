@@ -2,8 +2,8 @@
 .core-concept-card {
   display: inline-block;
   min-width: 110px;
-  padding: 0.7rem 1.1rem;
-  margin: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.7rem 1.1rem; /* on cards*/
+  margin: 0.5rem 1rem 1rem 1rem;
   background: #4f7de9;
   border-radius: 1.1rem;
   font-size: 1.08rem;
@@ -38,7 +38,7 @@
 }
 .skills-icon-list {
   display: flex;
-  gap: 2.2rem;
+  gap: 1.6rem;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
@@ -58,8 +58,8 @@
     display: block;
     margin-left: auto; /*inside card, around svg*/
     margin-right: auto;
-    width: 120px;
-    height: 140px;
+    width: 100px;
+    height: 110px;
     display: block;
   }
 }

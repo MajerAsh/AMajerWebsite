@@ -185,7 +185,7 @@ html::-webkit-scrollbar {
   background: transparent;
   border-radius: 1rem;
   box-shadow: none;
-  color: var(--fg);
+  color: #055b5c;
   transition: background 0.2s, color 0.2s, transform 0.15s;
 }
 .sidebar-social__list a:hover,
@@ -196,8 +196,8 @@ html::-webkit-scrollbar {
 }
 .sidebar-social__list a:hover img,
 .sidebar-social__list a:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(16%) saturate(7492%)
-    hue-rotate(202deg) brightness(104%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(36%) sepia(60%) saturate(600%)
+    hue-rotate(140deg) brightness(90%) contrast(110%);
 }
 .sidebar-social__list img {
   width: 36px;

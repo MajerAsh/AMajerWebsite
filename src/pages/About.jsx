@@ -59,12 +59,13 @@ export default function About() {
         </article>
 
         <header className="about-header-row about-header-row--right">
-          <h3
+          <h2
             ref={skillsRef}
             className="about-section-header teal-header pop-in"
+            style={{ fontSize: "3.2rem", textAlign: "center", width: "100%" }}
           >
-            Technologies I Love
-          </h3>
+            Technologies I Love to Use
+          </h2>
         </header>
         <div className="skills-row">
           <strong className="skills-section-header">
@@ -125,11 +126,7 @@ export default function About() {
         <div style={{ marginBottom: "2.5rem" }}>
           <strong
             className="skills-section-header"
-            style={{
-              fontSize: "1.5rem",
-              fontWeight: 700,
-              marginBottom: "1.2rem",
-            }}
+            style={{ textAlign: "left", width: "100%" }}
           >
             Core Concepts:
           </strong>

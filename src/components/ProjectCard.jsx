@@ -37,6 +37,33 @@ export default function ProjectCard({
         <span className="external" aria-hidden>
           Visit →
         </span>
+        <div className="project-card-buttons">
+          <a
+            className="project-card-btn"
+            href={href}
+            target={href?.startsWith("http") ? "_blank" : undefined}
+            rel="noreferrer"
+          >
+            View App
+          </a>
+          {/* Example repo link, replace with actual repo URL if available */}
+          <a
+            className="project-card-btn"
+            href={
+              title === "Myco Map"
+                ? "https://github.com/majerash/MycoMap"
+                : title === "Page Pal Library App"
+                ? "https://github.com/majerash/PagePal"
+                : title === "Whack-A-Mole Game"
+                ? "https://github.com/majerash/whackAmole"
+                : "#"
+            }
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Github Repo
+          </a>
+        </div>
       </a>
     </div>
   );
