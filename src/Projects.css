@@ -25,15 +25,23 @@
     flex-direction: row-reverse;
   }
   .project-card-vertical__media {
-    flex: 0 0 340px;
+    flex: 0 0 520px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 260px;
+    height: 340px;
     background: color-mix(in oklab, var(--card) 90%, transparent);
     border-radius: 1.2rem;
     box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
     overflow: hidden;
+  }
+  .project-card-vertical__media iframe {
+    width: 500px;
+    height: 320px;
+    border-radius: 1.2rem;
+    border: none;
+    background: #000;
+    display: block;
   }
   .project-card-vertical__media img {
     width: 100%;
