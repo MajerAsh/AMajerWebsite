@@ -22,21 +22,30 @@ export default function App() {
       const sections = sectionIds.map((id) => document.getElementById(id));
       let current = sectionIds[0];
       const scrollY = window.scrollY;
-      sections.forEach((section) => {
-        if (section) {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= sectionTop - sectionHeight / 3) {
-            current = section.id;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      // If at top, set to home
+      if (scrollY === 0) {
+        current = "home";
+      } else if (scrollY + windowHeight >= docHeight - 2) {
+        current = sectionIds[sectionIds.length - 1];
+      } else {
+        sections.forEach((section, idx) => {
+          if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+              current = section.id;
+            }
           }
-        }
-      });
+        });
+      }
       setActiveSection(current);
       // Scroll progress
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
       const progress =
-        docHeight > 0 ? Math.min(1, window.scrollY / docHeight) : 0;
+        docHeight - windowHeight > 0
+          ? Math.min(1, window.scrollY / (docHeight - windowHeight))
+          : 0;
       setScrollProgress(progress);
     }
     window.addEventListener("scroll", onScroll);
@@ -178,6 +187,16 @@ export default function App() {
           <li>
             <a href="mailto:majerash@gmail.com" aria-label="Email">
               <img src="/icons/mail.svg" alt="" aria-hidden="true" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://docs.google.com/document/d/1NFAYU3ljGOIVwRIo4uyPMuiLllkPI4CwV0QhsUTc5XM/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Resume"
+            >
+              <img src="/icons/resume.svg" alt="Resume" aria-hidden="true" />
             </a>
           </li>
         </ul>

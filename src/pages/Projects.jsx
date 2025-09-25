@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "../Projects.css";
+import "../About.css";
 import ProjectCard from "../components/ProjectCard.jsx";
+
+function usePopInOnScroll(ref) {
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const onScroll = () => {
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        node.classList.add("visible");
+      } else {
+        node.classList.remove("visible");
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [ref]);
+}
 
 const projects = [
   {
@@ -21,6 +40,7 @@ const projects = [
     ],
     image: "/assets/MycoMap.png",
     href: "#",
+    github: "https://github.com/MajerAsh/BackendCapstone",
   },
 
   {
@@ -38,6 +58,7 @@ const projects = [
     ],
     image: "/assets/PagePal.png",
     href: "https://majerash.github.io/PagePal",
+    github: "https://github.com/MajerAsh/Page-Pal",
   },
 
   {
@@ -56,14 +77,23 @@ const projects = [
     ],
     image: "/assets/whackAmole.png",
     href: "https://majerash.github.io/whackAmole/",
+    github: "https://github.com/MajerAsh/whackAmole",
   },
 ];
 
 export default function Projects() {
+  const projectsHeaderRef = useRef(null);
+  usePopInOnScroll(projectsHeaderRef);
   return (
     <section className="container stack-lg">
       <header className="stack-sm">
-        <h2 className="h2 teal-header">Projects</h2>
+        <h1
+          ref={projectsHeaderRef}
+          className="about-section-header gradient-header pop-in"
+          style={{ marginBottom: "2.5rem" }}
+        >
+          Projects
+        </h1>
         <p className="muted"></p>
       </header>
       <div className="projects-vertical-list">

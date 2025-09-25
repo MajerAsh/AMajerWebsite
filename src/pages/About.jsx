@@ -1,16 +1,49 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "../About.css";
 import Badge from "../components/Badge";
+import GitHubCalendar from "react-github-calendar";
+import Timeline from "../components/Timeline";
+
+function usePopInOnScroll(ref) {
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const onScroll = () => {
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        node.classList.add("visible");
+      } else {
+        node.classList.remove("visible");
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [ref]);
+}
 
 export default function About() {
+  const snapshotRef = useRef(null);
+  const skillsRef = useRef(null);
+  const storyRef = useRef(null);
+  const githubHeaderRef = useRef(null);
+  usePopInOnScroll(snapshotRef);
+  usePopInOnScroll(skillsRef);
+  usePopInOnScroll(storyRef);
+  usePopInOnScroll(githubHeaderRef);
   return (
-    <section className="container stack-lg">
+    <section className="container stack-lg" style={{ marginBottom: "6rem" }}>
       <header className="stack-sm">{/*<h2 className="h2">About</h2>*/}</header>
 
       <div className="about-cards-vertical">
-        <div className="about-header-row about-header-row--left">
-          <h3 className="about-section-header teal-header">Snapshot</h3>
-        </div>
+        <header className="about-header-row about-header-row--left">
+          <h3
+            ref={snapshotRef}
+            className="about-section-header teal-header pop-in"
+          >
+            At a Glance
+          </h3>
+        </header>
         <article className="card about-card about-card--left">
           <p className="muted" style={{ marginBottom: "1.2rem" }}>
             Junior developer with a passion for building clean, user-friendly
@@ -25,53 +58,102 @@ export default function About() {
           </ul>
         </article>
 
-        <div className="about-header-row about-header-row--right">
-          <h3 className="about-section-header teal-header">Skills</h3>
-        </div>
-        <article className="card about-card about-card--right">
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "0.5em" }}
+        <header className="about-header-row about-header-row--right">
+          <h2
+            ref={skillsRef}
+            className="about-section-header teal-header pop-in"
+            style={{ fontSize: "3.2rem", textAlign: "center", width: "100%" }}
           >
-            <div>
-              <strong>Languages & Tools:</strong>
-              <div className="chips" aria-label="Languages and Tools">
-                <Badge name="HTML" icon="html" />
-                <Badge name="CSS" icon="css" />
-                <Badge name="JavaScript" icon="javascript" />
-                <Badge name="PostgreSQL" icon="sql" />
-                <Badge name="Git" icon="git" />
-                <Badge name="Vite" icon="vite" />
+            Technologies I Love to Use
+          </h2>
+        </header>
+        <div className="skills-row">
+          <strong className="skills-section-header">
+            Languages &amp; Tools:
+          </strong>
+          <div className="skills-icon-list" aria-label="Languages and Tools">
+            {[
+              { name: "HTML", icon: "html" },
+              { name: "CSS", icon: "css" },
+              { name: "JavaScript", icon: "javascript" },
+              { name: "PostgreSQL", icon: "sql" },
+              { name: "Git", icon: "git" },
+              { name: "Vite", icon: "vite" },
+            ].map((item) => (
+              <div className="skills-icon-card" key={item.name}>
+                <Badge icon={item.icon} />
+                <span className="skills-tooltip">{item.name}</span>
               </div>
-            </div>
-            <div>
-              <strong>Frameworks & Libraries:</strong>
-              <div className="chips" aria-label="Frameworks and Libraries">
-                <Badge name="React" icon="react" />
-                <Badge name="Node.js" icon="nodejs" />
-                <Badge name="Express" icon="express" />
-                <Badge name="Mapbox" icon="mapbox" />
-                <Badge name="Multer" icon="multer" />
-                <Badge name="Context API" />
-                <Badge name="Custom Hooks" />
-              </div>
-            </div>
-            <div>
-              <strong>Core Concepts:</strong>
-              <div className="chips" aria-label="Core Concepts">
-                <Badge name="REST APIs" icon="api" />
-                <Badge name="JWT Auth" icon="jwt" />
-                <Badge name="Accessibility" icon="accessibility" />
-                <Badge name="Responsive Design" icon="responsive" />
-                <Badge name="Testing" icon="testing" />
-                <Badge name="Automated Tests" icon="automation" />
-              </div>
+            ))}
+          </div>
+        </div>
+        <div className="skills-row">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+            }}
+          >
+            <strong
+              className="skills-section-header"
+              style={{ textAlign: "right", width: "100%" }}
+            >
+              Frameworks &amp; Libraries:
+            </strong>
+            <div
+              className="skills-icon-list"
+              aria-label="Frameworks and Libraries"
+              style={{ justifyContent: "flex-end", width: "100%" }}
+            >
+              {[
+                { name: "React", icon: "react" },
+                { name: "Node.js", icon: "nodejs" },
+                { name: "Express", icon: "express" },
+                { name: "Mapbox", icon: "mapbox" },
+                { name: "Multer", icon: "multer" },
+                { name: "Jest", icon: "jest" },
+                { name: "Postman", icon: "postman" },
+              ].map((item) => (
+                <div className="skills-icon-card" key={item.name}>
+                  <Badge icon={item.icon} />
+                  <span className="skills-tooltip">{item.name}</span>
+                </div>
+              ))}
             </div>
           </div>
-        </article>
-
-        <div className="about-header-row about-header-row--left">
-          <h3 className="about-section-header teal-header">Story</h3>
         </div>
+        <div style={{ marginBottom: "2.5rem" }}>
+          <strong
+            className="skills-section-header"
+            style={{ textAlign: "left", width: "100%" }}
+          >
+            Core Concepts:
+          </strong>
+          <div className="chips" aria-label="Core Concepts">
+            {[
+              "REST APIs",
+              "JWT Auth",
+              "Accessibility",
+              "Responsive Design",
+              "Testing",
+              "Automated Tests",
+            ].map((concept) => (
+              <span className="core-concept-card" key={concept}>
+                {concept}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <header className="about-header-row about-header-row--left">
+          <h3
+            ref={storyRef}
+            className="about-section-header teal-header pop-in"
+          >
+            My Story
+          </h3>
+        </header>
         <article className="card about-card about-card--left">
           <p className="muted">
             My career began in nutrition and human services, where I developed
@@ -98,33 +180,38 @@ export default function About() {
         </article>
       </div>
 
-      <article className="card">
-        <h3 className="h4">Timeline</h3>
-        <ol className="timeline">
-          <li>
-            <strong>{new Date().getFullYear()} — Present</strong>
-            <p>
-              Building portfolio projects, exploring TypeScript, and
-              contributing to open source.
-            </p>
-          </li>
-          <li>
-            <strong>{new Date().getFullYear() - 1}</strong>
-            <p>
-              Completed Fullstack Academy’s Software Engineering Immersive,
-              specializing in full-stack web development.
-            </p>
-          </li>
-          <li>
-            <strong>Prior Career</strong>
-            <p>
-              Nutritionist, outreach coordinator, and educator—focused on
-              solving problems, guiding clients, and implementing digital
-              systems.
-            </p>
-          </li>
-        </ol>
-      </article>
+      <Timeline />
+      <div style={{ height: "10rem" }} />
+      <section
+        className="github-activity container"
+        style={{ marginTop: "0", marginBottom: "6rem", textAlign: "center" }}
+      >
+        <div className="about-header-row about-header-row--left">
+          <h2
+            ref={githubHeaderRef}
+            className="about-section-header teal-header pop-in"
+            style={{ marginBottom: "1.5rem" }}
+          >
+            GitHub Activity
+          </h2>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <GitHubCalendar
+            username="majerash"
+            blockSize={16}
+            blockMargin={4}
+            color="#4f7de9"
+            fontSize={14}
+            transformData={(contributions) => {
+              const sixMonthsAgo = new Date();
+              sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+              return contributions.filter(
+                (day) => new Date(day.date) >= sixMonthsAgo
+              );
+            }}
+          />
+        </div>
+      </section>
     </section>
   );
 }

@@ -1,3 +1,13 @@
+/* Global gradient header style for all major headers */
+.gradient-header {
+  color: #055b5c;
+  background: linear-gradient(90deg, #6ec6ca 60%, #089294 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2.5s linear infinite alternate;
+  animation-fill-mode: forwards;
+}
 /* persistent vertical line scroll with bioluminescent glow */
 .glow-scrollbar {
   position: fixed;
@@ -185,7 +195,7 @@ html::-webkit-scrollbar {
   background: transparent;
   border-radius: 1rem;
   box-shadow: none;
-  color: var(--fg);
+  color: #055b5c;
   transition: background 0.2s, color 0.2s, transform 0.15s;
 }
 .sidebar-social__list a:hover,
@@ -194,14 +204,16 @@ html::-webkit-scrollbar {
   color: inherit;
   transform: translateY(-2px) scale(1.08);
 }
+/*nav bar!*/
 .sidebar-social__list a:hover img,
 .sidebar-social__list a:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(16%) saturate(7492%)
-    hue-rotate(202deg) brightness(104%) contrast(101%);
+  filter: drop-shadow(0 0 16px #6ec6ca) drop-shadow(0 0 32px #b6eaff)
+    invert(80%) sepia(0%) saturate(75%) hue-rotate(180deg) brightness(650%);
 }
+
 .sidebar-social__list img {
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
   display: block;
   background: none;
   border-radius: 0;
@@ -365,6 +377,7 @@ a:hover {
 .site__header {
   position: sticky;
   top: 0;
+  z-index: 9999;
   backdrop-filter: blur(6px);
   background: color-mix(in oklab, var(--bg) 85%, transparent);
 }
@@ -673,14 +686,30 @@ textarea {
 
 /* ===== Utilities ===== */
 .h1 {
-  font-size: 2rem;
+  font-size: 2.7rem;
+  font-weight: 900;
 }
 .h2 {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
+  font-weight: 800;
 }
 .h3 {
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 .h4 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Pop-in animation for headers */
+.pop-in {
+  opacity: 0;
+  transform: scale(0.85) translateY(30px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pop-in.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }

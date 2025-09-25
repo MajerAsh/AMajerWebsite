@@ -19,12 +19,7 @@ export default function ProjectCard({
           <img src={image} alt={`image of ${title}`} loading="lazy" />
         </figure>
       )}
-      <a
-        className="project-card-vertical__body card"
-        href={href}
-        target={href?.startsWith("http") ? "_blank" : undefined}
-        rel="noreferrer"
-      >
+      <div className="project-card-vertical__body card">
         <h3 className="h4">{title}</h3>
         <p className="muted">{description}</p>
         <p className="chips" aria-label="Tech stack">
@@ -34,10 +29,34 @@ export default function ProjectCard({
             </span>
           ))}
         </p>
-        <span className="external" aria-hidden>
-          Visit →
-        </span>
-      </a>
+        <div className="project-card-buttons">
+          <a
+            className="project-card-btn"
+            href={href}
+            target={href?.startsWith("http") ? "_blank" : undefined}
+            rel="noreferrer"
+          >
+            View App
+          </a>
+          {/* Example repo link, replace with actual repo URL if available */}
+          <a
+            className="project-card-btn"
+            href={
+              title === "Myco Map"
+                ? "https://github.com/MajerAsh/BackendCapstone"
+                : title === "Page Pal Library App"
+                ? "https://github.com/majerash/Page-Pal"
+                : title === "Whack-A-Mole Game"
+                ? "https://github.com/majerash/whackAmole"
+                : "#"
+            }
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Github Repo
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
