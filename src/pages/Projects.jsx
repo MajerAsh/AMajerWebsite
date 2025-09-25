@@ -38,8 +38,8 @@ const projects = [
       "Vite",
       "Automated Testing",
     ],
-    image: "/assets/MycoMap.png",
-    href: "#",
+    youtubeId: "vG1QxaKjTag",
+    href: "https://mycomap.netlify.app/",
     github: "https://github.com/MajerAsh/BackendCapstone",
   },
 
@@ -56,8 +56,8 @@ const projects = [
       "CSS",
       "GitHub Pages",
     ],
-    image: "/assets/PagePal.png",
-    href: "https://majerash.github.io/PagePal",
+    youtubeId: "VRnEz8XUdWI",
+    href: "https://majerash.github.io/Page-Pal",
     github: "https://github.com/MajerAsh/Page-Pal",
   },
 
@@ -75,9 +75,9 @@ const projects = [
       "GitHub Pages",
       "Procreate",
     ],
-    image: "/assets/whackAmole.png",
-    href: "https://majerash.github.io/whackAmole/",
-    github: "https://github.com/MajerAsh/whackAmole",
+    youtubeId: "igNM1Q5iBvk",
+    href: "https://majerash.github.io/whack-a-mole/",
+    github: "https://github.com/MajerAsh/whack-a-mole",
   },
 ];
 

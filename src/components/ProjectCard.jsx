@@ -1,10 +1,51 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+
+//autoplay on scroll into view:
+function YouTubeEmbed({ youtubeId, title }) {
+  const iframeRef = useRef(null);
+
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          iframe.contentWindow.postMessage(
+            '{"event":"command","func":"playVideo","args":""}',
+            "*"
+          );
+        } else {
+          iframe.contentWindow.postMessage(
+            '{"event":"command","func":"pauseVideo","args":""}',
+            "*"
+          );
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(iframe);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <iframe
+      ref={iframeRef}
+      src={`https://www.youtube.com/embed/${youtubeId}?enablejsapi=1&mute=1`}
+      title={`Demo of ${title}`}
+      allow="autoplay; encrypted-media"
+      allowFullScreen
+    />
+  );
+}
 
 export default function ProjectCard({
   title,
   description,
   tags = [],
   image,
+  youtubeId,
   href,
   imageAlign = "left",
 }) {
@@ -14,9 +55,18 @@ export default function ProjectCard({
         imageAlign === "right" ? "project-card-vertical--reverse" : ""
       }`}
     >
-      {image && (
+      {(youtubeId || image) && (
         <figure className="project-card-vertical__media">
-          <img src={image} alt={`image of ${title}`} loading="lazy" />
+          {youtubeId ? (
+            <iframe
+              src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&enablejsapi=1`}
+              title={`Demo of ${title}`}
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          ) : (
+            <img src={image} alt={`Screenshot of ${title}`} loading="lazy" />
+          )}
         </figure>
       )}
       <div className="project-card-vertical__body card">
