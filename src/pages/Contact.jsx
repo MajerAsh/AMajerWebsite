@@ -55,7 +55,7 @@ ${message}`);
         <div className="contact-links">
           <a href="mailto:majerash@gmail.com">Send me a email</a>
           <a
-            href="https://www.linkedin.com/in/ashley-majer-8b3978362"
+            href="https://www.linkedin.com/in/ashleymajer/"
             target="_blank"
             rel="noreferrer"
           >
