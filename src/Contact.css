@@ -11,8 +11,7 @@
   box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.1), 0 0 8px 2px #adbfff22;
 }
 
-
-/* Contact links (no bullets, horizontal) */
+/* Contact links */
 .contact-links {
   display: flex;
   flex-direction: column;
@@ -35,7 +34,7 @@
 .contact-links a:hover,
 .contact-links a:focus-visible {
   color: #8c9eff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 button.btn {
   background: linear-gradient(180deg, #4f7de9 0%, #2e4fa2 100%);
