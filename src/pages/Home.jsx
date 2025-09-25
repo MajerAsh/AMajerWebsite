@@ -14,9 +14,7 @@ export default function Home() {
           style={{ display: "flex", flexDirection: "column", gap: "0.2em" }}
         >
           <span>I build useful, accessible web experiences.</span>
-          <span>
-            Currently exploring accessibility, tests, and delightful UIs.
-          </span>
+          <span>Currently exploring tests and delightful UIs.</span>
         </div>
       </div>
     </section>
