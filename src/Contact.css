@@ -1,3 +1,32 @@
+/* ===== Forms ===== */
+.form {
+  display: grid;
+  gap: 0.75rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.18), 0 0 24px 8px #adbfff33;
+  padding: 1rem;
+}
+.field {
+  display: grid;
+  gap: 0.25rem;
+}
+input,
+textarea {
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.75rem;
+}
+.field input,
+.field textarea {
+  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.1), 0 0 8px 2px #adbfff22;
+}
+.status {
+  min-height: 1.5rem;
+}
 /* Glowing card effect for contact form */
 .form {
   background: var(--card);

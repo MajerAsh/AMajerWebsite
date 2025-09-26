@@ -2,28 +2,35 @@
 .timeline-graph-box {
   transition: filter 0.18s, box-shadow 0.18s;
 }
-.timeline-graph-box:hover {
-  filter: brightness(1.18) sepia(10%) saturate(180%) hue-rotate(160deg)
-    drop-shadow(0 0 8px #4f7de9);
-  box-shadow: 0 0 12px #3ba8b6, 0 0 24px #8c9eff;
-}
 
 svg.react-activity-calendar__calendar {
   filter: brightness(1) invert(0%) sepia(50%) saturate(300%) hue-rotate(115deg);
-  height: auto;
-  width: 70vw;
+  max-height: auto;
+  width: 100%;
 }
-rect {
-  border-radius: 80% !important;
-}
+
 rect:hover {
-  transform: scale(1.04);
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 16px #eae2ff) drop-shadow(0 0 32px #a59df3)
+    invert(50%) sepia(0%) saturate(500%) hue-rotate(0deg) brightness(300%);
 }
 
 div.react-activity-calendar__legend-colors {
   filter: brightness(1) invert(0%) sepia(50%) saturate(300%) hue-rotate(115deg);
 }
 
+/* Prevent horizontal scroll on GitHub activity section 
+.github-activity {
+  overflow-x: hidden;
+}
+.github-activity .react-activity-calendar__calendar {
+  max-width: 100%;
+  width: auto;
+  min-width: 0;
+  display: block;
+}
+
+/* TIMELINE */
 .timeline-section {
   margin: 2.5rem 0;
 }

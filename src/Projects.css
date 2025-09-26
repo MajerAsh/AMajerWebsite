@@ -1,3 +1,19 @@
+/* Project grid card styles moved from styles.css */
+.project__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.75rem 0.75rem 0 0;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project:hover .project__media img {
+  transform: scale(1.04);
+}
+.project__body {
+  display: grid;
+  gap: 0.5rem;
+}
 .project-chips {
   display: flex;
   flex-wrap: wrap;
@@ -146,6 +162,22 @@
     width: 100%;
     height: 180px;
     margin-bottom: 0.5rem;
+    order: 1;
+    position: relative;
+  }
+  .project-card-vertical__body {
+    order: 2;
+    position: relative;
+    z-index: 1;
+  }
+  .projects-vertical-list {
+    gap: 1.2rem;
+    margin: 2vh 0 8vh 0;
+  }
+  .project-card-vertical {
+    gap: 1.2rem;
+    min-height: unset;
+    max-width: 100%;
   }
 }
 .muted,
