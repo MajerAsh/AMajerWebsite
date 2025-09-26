@@ -33,7 +33,7 @@
   margin-top: 0.5rem;
   text-shadow: 0 2px 8px rgba(79, 125, 233, 0.12);
 }
-/* Skills icon cards row */
+/* Skills badge row */
 .skills-row {
   margin-bottom: "none";
 }
@@ -43,6 +43,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
 .skills-icon-card {
   text-align: center;
   display: flex;
@@ -54,7 +55,7 @@
   transition: transform 0.18s;
   cursor: pointer;
   position: relative;
-  /* Make badge icons large */
+  /* to adjust badge size */
   .badge-icon {
     display: block;
     margin-left: auto; /*inside card, around svg*/
@@ -64,19 +65,19 @@
     display: block;
   }
 }
+
 .skills-icon-card svg {
   width: 72px;
   height: 88px;
 }
 
 .skills-icon-card:hover .badge-icon {
-  filter: drop-shadow(0 0 10px #b6adf0) drop-shadow(0 0 20px #e5e2fc) invert(0%)
-    sepia(0%) saturate(300%) hue-rotate(0deg) brightness(100%); /*hue 210deg = reds ->purpl, blue to green*/
-  box-shadow: none;
+  filter: drop-shadow(0 0 10px #b6adf088) drop-shadow(0 0 5px #e5e2fc88)
+    invert(0%) sepia(0%) saturate(300%) hue-rotate(0deg) brightness(100%);
   transform: scale(1.08);
   /* For SVGs as <img>, use filter for color */
 }
-/*100deg = reds - green, bue to pink*/
+
 .skills-tooltip {
   position: absolute;
   left: 50%;
