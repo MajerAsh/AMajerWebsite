@@ -1,3 +1,7 @@
+.about {
+  margin-bottom: 50vh !important;
+}
+
 /* Core Concepts text-only cards */
 .core-concept-card {
   display: inline-block;
@@ -29,8 +33,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1.2rem;
-  margin-top: 0.5rem;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   text-shadow: 0 2px 8px rgba(79, 125, 233, 0.12);
 }
 /* Skills badge row */
@@ -42,6 +46,7 @@
   gap: 1.6rem;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-bottom: 10vh;
 }
 
 .skills-icon-card {
@@ -71,6 +76,7 @@
   height: 88px;
 }
 
+/*badge filter for color*/
 .skills-icon-card:hover .badge-icon {
   filter: drop-shadow(0 0 10px #b6adf088) drop-shadow(0 0 5px #e5e2fc88)
     invert(0%) sepia(0%) saturate(300%) hue-rotate(0deg) brightness(100%);
@@ -104,9 +110,10 @@
   vertical-align: -0.1em;
 }
 
-/* About page styles */
+/*hover caption on badges*/
 .about-cards-vertical {
   display: flex;
+  color: #317ef1;
   flex-direction: column;
   gap: 0.5vh;
   margin: 8vh 0 10vh 0;
@@ -116,16 +123,19 @@
   width: 90%;
   min-height: 30vh;
   margin: 0 auto;
+  margin-bottom: 50vh !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
   transition: box-shadow 0.2s;
 }
+
 .about-card--left {
   align-items: flex-start;
   margin-left: 0;
   margin-right: auto;
+  margin-bottom: 30vh;
 }
 .about-card--right {
   align-items: flex-end;

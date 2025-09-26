@@ -72,9 +72,9 @@ export default function ProjectCard({
       <div className="project-card-vertical__body card">
         <h3 className="h4">{title}</h3>
         <p className="muted">{description}</p>
-        <p className="chips" aria-label="Tech stack">
+        <p className="project-chips" aria-label="Tech stack">
           {tags.map((t) => (
-            <span key={t} className="chip">
+            <span key={t} className="project-chip">
               {t}
             </span>
           ))}
@@ -88,7 +88,7 @@ export default function ProjectCard({
           >
             View App
           </a>
-          {/* Example repo link, replace with actual repo URL if available */}
+          {/* repo link? */}
           <a
             className="project-card-btn"
             href={

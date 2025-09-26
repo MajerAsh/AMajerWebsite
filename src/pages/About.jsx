@@ -62,7 +62,7 @@ export default function About() {
           <h2
             ref={skillsRef}
             className="about-section-header teal-header pop-in"
-            style={{ fontSize: "3.2rem", textAlign: "center", width: "100%" }}
+            //style={{ fontSize: "3.2rem", textAlign: "center", width: "100%" }}
           >
             Technologies I Love to Use
           </h2>
