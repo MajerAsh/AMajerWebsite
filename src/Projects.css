@@ -1,54 +1,53 @@
-/* Projects page styles */
 .projects-vertical-list {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   margin: 8vh 0 10vh 0;
-  .project-outer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .project-outer--right {
-    justify-content: flex-end;
-  }
-  .project-card-vertical {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2.5rem;
-    max-width: 1100px;
-    width: 100%;
-    min-height: 44vh;
-  }
-  .project-card-vertical--reverse {
-    flex-direction: row-reverse;
-  }
-  .project-card-vertical__media {
-    flex: 0 0 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 340px;
-    background: color-mix(in oklab, var(--card) 90%, transparent);
-    border-radius: 1.2rem;
-    box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
-    overflow: hidden;
-  }
-  .project-card-vertical__media iframe {
-    width: 500px;
-    height: 320px;
-    border-radius: 1.2rem;
-    border: none;
-    background: #000;
-    display: block;
-  }
-  .project-card-vertical__media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1.2rem;
-  }
+}
+.project-outer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.project-outer--right {
+  justify-content: flex-end;
+}
+.project-card-vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1100px;
+  width: 100%;
+  min-height: 44vh;
+}
+.project-card-vertical--reverse {
+  flex-direction: row-reverse;
+}
+.project-card-vertical__media {
+  flex: 0 0 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 340px;
+  background: color-mix(in oklab, var(--card) 90%, transparent);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.07);
+  overflow: hidden;
+}
+.project-card-vertical__media iframe {
+  width: 500px;
+  height: 320px;
+  border-radius: 1.2rem;
+  border: none;
+  background: #000;
+  display: block;
+}
+.project-card-vertical__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
 }
 
 .project-card-vertical__body {
@@ -124,4 +123,3 @@
   color: #d6cfff;
   opacity: 1;
 }
-/* Styles specific to the Projects page */

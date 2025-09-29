@@ -423,13 +423,6 @@ a:hover {
   text-decoration: none;
   background: var(--card);
 }
-
-.social svg {
-  width: 22px; /* icon size */
-  height: 22px;
-  display: block;
-}
-
 /* ===== Nav ===== */
 .nav {
   display: flex;

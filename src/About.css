@@ -34,9 +34,6 @@
   text-shadow: 0 2px 8px rgba(79, 125, 233, 0.12);
 }
 /* Skills badge row */
-.skills-row {
-  margin-bottom: "none";
-}
 .skills-icon-list {
   display: flex;
   gap: 1.6rem;
