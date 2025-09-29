@@ -21,7 +21,7 @@
 }
 /* Section headers for skills */
 .skills-section-header {
-  font-size: 2.1rem;
+  font-size: 3.1rem;
   font-weight: 800;
   color: #055b5c;
   letter-spacing: 0.02em;
@@ -164,7 +164,7 @@
   padding-right: 2vw;
 }
 .about-section-header {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 900;
   margin: 0;
   letter-spacing: 0.01em;
@@ -172,7 +172,7 @@
 }
 
 .teal-header {
-  font-size: 2.82rem;
+  font-size: 3.82rem;
 }
 .teal-header {
   color: #055b5c;
