@@ -9,7 +9,6 @@ export default function Badge({ name, icon }) {
       alt={name}
       className="badge__icon badge-icon"
       loading="lazy"
-      aria-label={name}
       style={{ display: "block" }}
     />
   );

@@ -1,3 +1,11 @@
+@media (min-width: 900px) {
+  .react-activity-calendar__calendar {
+    overflow-x: hidden !important;
+    width: 70vw;
+    max-width: 100%;
+    display: block;
+  }
+}
 /* GitHub activity graph box pop effect */
 .timeline-graph-box {
   transition: filter 0.18s, box-shadow 0.18s;

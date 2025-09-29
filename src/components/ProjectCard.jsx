@@ -70,7 +70,7 @@ export default function ProjectCard({
         </figure>
       )}
       <div className="project-card-vertical__body card">
-        <h3 className="h4">{title}</h3>
+        <h2 className="h4">{title}</h2>
         <p className="muted">{description}</p>
         <p className="chips" aria-label="Tech stack">
           {tags.map((t) => (
