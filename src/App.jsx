@@ -176,7 +176,7 @@ export default function App() {
           </li>
           <li>
             <a
-              href="www.linkedin.com/in/ashleymajer"
+              href="https://www.linkedin.com/in/ashleymajer/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
