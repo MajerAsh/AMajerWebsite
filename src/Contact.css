@@ -1,0 +1,53 @@
+/* Glowing card effect for contact form */
+/* .form styles are already defined below for layout, keep only one definition if needed */
+.field input,
+.field textarea {
+  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.1), 0 0 8px 2px #adbfff22;
+}
+
+/* Contact links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 1.2rem 0 1.2rem 0;
+}
+@media (min-width: 500px) {
+  .contact-links {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+.contact-links a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  color: #8c9eff;
+  text-decoration: none;
+}
+button.btn {
+  background: linear-gradient(180deg, #4f7de9 0%, #2e4fa2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 4px 0 #1c2a4d, 0 2px 8px 0 rgba(79, 125, 233, 0.18);
+  font-weight: 600;
+  text-shadow: 0 1px 2px #1c2a4d44;
+  position: relative;
+}
+button.btn:hover,
+button.btn:focus,
+button.btn:hover {
+  background: linear-gradient(180deg, #2e4fa2 0%, #1c2a4d 100%);
+  box-shadow: 0 6px 0 #1c2a4d, 0 6px 24px 0 rgba(79, 125, 233, 0.22);
+  outline: none;
+}

@@ -1,7 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import "../Contact.css";
+import "../About.css";
+
+function usePopInOnScroll(ref) {
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const onScroll = () => {
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        node.classList.add("visible");
+      } else {
+        node.classList.remove("visible");
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [ref]);
+}
 
 export default function Contact() {
   const [status, setStatus] = useState("");
+  const contactHeaderRef = useRef(null);
+  usePopInOnScroll(contactHeaderRef);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -20,45 +42,56 @@ ${message}`);
   return (
     <section className="container grid-2 contact">
       <div className="stack-sm">
-        <h2 className="h2">Contact</h2>
+        <h1
+          ref={contactHeaderRef}
+          className="about-section-header gradient-header pop-in"
+          style={{ marginBottom: "2rem" }}
+        >
+          Contact
+        </h1>
         <p className="muted">
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
-        <ul className="list-dots">
-          <li>
-            <a href="mailto:you@example.com">you@example.com</a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </li>
-        </ul>
+        <div className="contact-links">
+          <a href="mailto:majerash@gmail.com">Send me a email</a>
+          <a
+            href="https://www.linkedin.com/in/ashleymajer/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/MajerAsh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
 
       <form className="card form" onSubmit={onSubmit} noValidate>
         <div className="field">
           <label htmlFor="name">Name</label>
-          <input id="name" name="name" autoComplete="name" required />
-        </div>
-        <div className="field">
-          <label htmlFor="email">Email</label>
           <input
-            id="email"
+            id="name"
             name="email"
             type="email"
             autoComplete="email"
             required
+            className="muted"
           />
         </div>
         <div className="field">
           <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            className="muted"
+          ></textarea>
         </div>
         <button className="btn" type="submit">
           Send

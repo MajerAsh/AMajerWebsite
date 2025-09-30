@@ -1,32 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../Home.css";
 
 export default function Home() {
   return (
-    <section className="hero container">
-      <div className="hero__text">
-        <h1 className="h1">
-          Hi, I’m Ashley Majer<span className="underline">Your Name</span>.
-        </h1>
-        <p className="lead">
-          I build useful, accessible web experiences. Currently exploring React,
-          APIs, and delightful UIs.
-        </p>
-        <div className="cta">
-          <Link className="btn" to="/projects">
-            See my work →
-          </Link>
-          <Link className="btn btn--ghost" to="/contact">
-            Contact me
-          </Link>
+    <section className="hero container hero-full">
+      <div className="hero__text hero-animated">
+        <div className="hero-header-row">
+          <span className="h1 hero-hi animate-hi">Hi, I’m</span>
+          <span className="h1 hero-name animate-name">Ashley Majer</span>
+        </div>
+        <div
+          className="lead hero-lead animate-lead"
+          style={{ display: "flex", flexDirection: "column", gap: "0.2em" }}
+        >
+          <span>I build useful, accessible web experiences.</span>
+          <span>Currently exploring tests and delightful UIs.</span>
         </div>
       </div>
-      <figure className="hero__visual" aria-hidden="true">
-        <img
-          src="https://images.unsplash.com/photo-1522199710521-72d69614c702?q=80&w=1600&auto=format&fit=crop"
-          alt=""
-        />
-      </figure>
     </section>
   );
 }

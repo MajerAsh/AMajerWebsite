@@ -1,0 +1,107 @@
+@media (min-width: 1200px) {
+  .timeline-section {
+    margin-bottom: 30rem !important;
+  }
+}
+@media (min-width: 900px) {
+  .react-activity-calendar__calendar {
+    overflow-x: hidden !important;
+    width: 70vw;
+    max-width: 100%;
+    display: block;
+  }
+}
+/* GitHub activity graph box pop effect */
+.timeline-graph-box {
+  transition: filter 0.18s, box-shadow 0.18s;
+}
+.timeline-graph-box:hover {
+  filter: brightness(1.18) sepia(10%) saturate(180%) hue-rotate(160deg)
+    drop-shadow(0 0 8px #4f7de9);
+  box-shadow: 0 0 12px #3ba8b6, 0 0 24px #8c9eff;
+}
+
+svg.react-activity-calendar__calendar {
+  filter: brightness(1) invert(0%) sepia(50%) saturate(300%) hue-rotate(115deg);
+  height: auto;
+  width: 70vw;
+}
+rect {
+  border-radius: 80% !important;
+}
+rect:hover {
+  transform: scale(1.04);
+}
+
+div.react-activity-calendar__legend-colors {
+  filter: brightness(1) invert(0%) sepia(50%) saturate(300%) hue-rotate(115deg);
+}
+
+.timeline-section {
+  margin: 2.5rem 0 8rem 0; /* 200% more space below GitHub Activity */
+  margin: 2.5rem 0;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, #055b5c 0%, #4f7de9 60%, #3ba8b6 100%);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.1rem;
+  top: 0.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: linear-gradient(135deg, #8c9eff 60%, #4f7de9 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px #8c9eff88;
+  border: 2px solid #fff;
+}
+
+.timeline-content {
+  color: #e3e6f3;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin-left: 1rem;
+  min-width: 220px;
+  max-width: 420px;
+}
+
+.timeline-date {
+  font-size: 0.95rem;
+  color: #8c9eff;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-desc {
+  font-size: 0.98rem;
+  color: #b6adf0;
+}
