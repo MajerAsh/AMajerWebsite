@@ -4,11 +4,11 @@
 
 @media (min-width: 1200px) {
   #Projects {
-    margin-bottom: 200vh !important;
+    margin-bottom: 60vh !important;
   }
 }
 #Projects {
-  margin-bottom: 32vh; /* 300% more space below Projects section */
+  margin-bottom: 32vh; /* widescreen space below Projects section */
 }
 .projects-vertical-list {
   display: flex;
