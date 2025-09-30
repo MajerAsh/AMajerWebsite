@@ -147,16 +147,10 @@ export default function App() {
         >
           <About />
         </section>
-        <section
-          id="projects"
-          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
-        >
+        <section id="projects" style={{ scrollMarginTop: "100px" }}>
           <Projects />
         </section>
-        <section
-          id="contact"
-          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
-        >
+        <section id="contact" style={{ scrollMarginTop: "100px" }}>
           <Contact />
         </section>
       </main>

@@ -25,7 +25,7 @@ const projects = [
   {
     title: "Myco Map",
     description:
-      "Full-stack app for mushroom foragers to log, map, and share their finds. Features secure authentication, image uploads, interactive Mapbox maps, and advanced search. Role-based marker visibility: public users see all finds (no usernames), logged-in users see usernames, and secret locations are protected. Built solo with React, Node.js, Express, PostgreSQL, and Mapbox. Highlights: RESTful API, robust validation, JWT auth, Multer file uploads, automated backend tests, and responsive, accessible UI.",
+      "Full-stack app for mushroom foragers to log, map, and share their finds. Features secure authentication, Multer data uploads, interactive Mapbox maps, and advanced search. Role-based marker visibility: public users see all finds (no usernames), logged-in users see usernames, and secret locations are protected. Built solo with React, Node.js, Express, PostgreSQL, and Mapbox. Highlights: RESTful API, robust validation, JWT auth, Multer file uploads, automated backend tests, and responsive, accessible UI.",
     tags: [
       "React",
       "Node.js",
@@ -46,7 +46,7 @@ const projects = [
   {
     title: "Page Pal Library App",
     description:
-      "Page Pal is a full-stack library app built with React, Node.js, Express, and PostgreSQL. Features include secure authentication, book reservation timeline, responsive UI, and robust error handling. Sole developer responsible for design, implementation, and deployment.",
+      "Page Pal is a mobile-first, full-stack library app with a 100% accessibility rating in Lighthouse. Features include secure authentication, book reservation timeline, responsive UI, and robust error handling. Sole developer responsible for design, implementation, and deployment.",
     tags: [
       "React",
       "Node.js",
@@ -64,7 +64,7 @@ const projects = [
   {
     title: "Whack-A-Mole Game",
     description:
-      "A fast-paced browser game where players race against the clock to whack as many moles as possible across multiple levels. Features custom SVG graphics, playful sound effects, animated UI, and persistent high scores. Built solo with React, Context API, and custom hooks for state and timing logic.",
+      "A fast-paced browser game where players race against the clock to whack as many moles as possible across multiple levels. Features custom SVG graphics, complex state management, playful sound effects, animated UI, and persistent high scores. Built solo with React, Context API, and custom hooks for state and timing logic.",
     tags: [
       "React",
       "JavaScript",
@@ -90,7 +90,6 @@ export default function Projects() {
         <h1
           ref={projectsHeaderRef}
           className="about-section-header gradient-header pop-in"
-          style={{ marginBottom: "2.5rem" }}
         >
           Projects
         </h1>

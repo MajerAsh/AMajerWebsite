@@ -140,6 +140,7 @@
     font-size: 1.13rem;
   }
 }
+
 .about-header-row {
   width: 100%;
   display: flex;
@@ -149,7 +150,7 @@
 }
 
 .about-card--left:last-of-type {
-  margin-bottom: 6.5rem;
+  margin-bottom: 16rem; /* 150% more space below At A Glance card */
 }
 
 .timeline-section {

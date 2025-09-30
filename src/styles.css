@@ -582,6 +582,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 3rem; /* 150% more space below Core Concepts chips */
 }
 
 .badge {
