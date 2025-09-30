@@ -73,10 +73,7 @@ export default function Timeline() {
   const headerRef = useRef(null);
   usePopInOnScroll(headerRef);
   return (
-    <section
-      className="timeline-section"
-      style={{ marginBottom: "30rem", marginTop: "8rem" }}
-    >
+    <section className="timeline-section">
       <div
         className="about-header-row about-header-row--left"
         style={{
