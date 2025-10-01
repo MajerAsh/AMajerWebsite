@@ -85,15 +85,10 @@ export default function App() {
             className="nav__toggle"
             aria-controls="nav-menu"
             aria-expanded={menuOpen}
-            onClick={toggleMenu}
           >
             <span className="sr-only">Menu</span>☰
           </button>
-          <ul
-            id="nav-menu"
-            className="nav__list nav__list--centered"
-            data-collapsed={!menuOpen}
-          >
+          <ul id="nav-menu" className="nav__list" data-collapsed={!menuOpen}>
             <li>
               <a
                 href="#home"
@@ -135,19 +130,13 @@ export default function App() {
       </header>
 
       <main id="main" className="site__main" role="main">
-        <section
-          id="home"
-          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
-        >
+        <section id="home" style={{ scrollMarginTop: "100px" }}>
           <Home />
         </section>
-        <section
-          id="about"
-          style={{ scrollMarginTop: "100px", padding: "70px 0 105px 0" }}
-        >
+        <section id="about" style={{ scrollMarginTop: "100px" }}>
           <About />
         </section>
-        <section id="projects" style={{ scrollMarginTop: "100px" }}>
+        <section id="Projects" style={{ scrollMarginTop: "100px" }}>
           <Projects />
         </section>
         <section id="contact" style={{ scrollMarginTop: "100px" }}>
