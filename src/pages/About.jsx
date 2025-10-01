@@ -46,13 +46,18 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted" style={{ marginBottom: "1.2rem" }}>
-            Junior developer with a passion for building clean, user-friendly
-            applications and a creative eye for design. I love solving problems,
-            learning new tools, and creating projects that make a real impact.
+            Junior fullstack developer with a passion for building clean,
+            user-friendly applications and a creative eye for design. I love
+            solving problems, learning new tools and creating projects that make
+            a real impact.
           </p>
           <ul className="list-dots">
             <li>Based in Atlanta, Georgia</li>
-            <li>Currently learning: TypeScript & testing</li>
+            <li>
+              Energized by frontend rendering and building interactive user
+              interfaces
+            </li>
+            <li>Currently learning: TypeScript & agentic coding</li>
             <li>Fluent in Spanish</li>
             <li>Open to junior developer roles & freelance</li>
           </ul>
@@ -164,12 +169,13 @@ export default function About() {
             software engineering.
           </p>
           <p className="muted">
-            This led me to complete a Software Engineering Immersive at
-            Fullstack Academy, where I gained expertise in modern web
-            technologies like React, Node, Express, and PostgreSQL. Now, I bring
-            a unique perspective to engineering: the empathy and adaptability
-            gained from serving people, combined with the technical skills to
-            design and deliver user-focused applications.
+            This led me to complete a Software Engineering Immersive at Emory
+            University, powered by Fullstack Academy, where I gained expertise
+            in modern web technologies like React, Node, Express, and
+            PostgreSQL. Now, I bring a unique perspective to engineering: the
+            empathy and adaptability gained from serving people, combined with
+            the technical skills to design and deliver user-focused
+            applications.
           </p>
           <p className="muted">
             Outside of tech, I love hiking mossy creeks, researching local fungi
