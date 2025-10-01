@@ -21,40 +21,40 @@ function usePopInOnScroll(ref) {
 
 const timelineData = [
   {
-    date: "2025",
+    date: "September 2025",
     title: "Myco Map (Project)",
     description:
-      "Full-stack app for mushroom foragers. React, Node, Express, PostgreSQL, Mapbox.",
+      "Full-stack app for mushroom foragers. React, Node, Express, PostgreSQL, Mapbox. Deployed with Netlify, Supabase and Render.",
   },
   {
-    date: "2025",
+    date: "August 2025",
     title: "Page Pal (Project)",
     description:
       "Library reservation app. React, Node, Express, PostgreSQL, JWT, CSS.",
   },
   {
-    date: "2025",
+    date: "August 2025",
     title: "Fullstack Academy",
     description:
       "Software Engineering Immersive Certificate, Emory University.",
   },
   {
-    date: "2024-2025",
+    date: "2024 - 2025",
     title: "Benefits Outreach Coordinator",
     description:
       "Atlanta Community Food Bank. Guided clients through technical systems.",
   },
   {
-    date: "2023-2024",
+    date: "2024 - 2024",
     title: "Cultivation Technician",
     description:
       "Southern Cap Mushrooms. Monitored growth cycles, process-driven tasks.",
   },
   {
-    date: "2015-2023",
-    title: "Nutritionist",
+    date: "2015 - 2023",
+    title: "WIC Nutritionist",
     description:
-      "WIC Program. Data entry, care plans, client support, software navigation.",
+      "WIC Program - various locations. Nutritional counseling, data entry, medical formula, care plans, software navigation.",
   },
   {
     date: "2014",
