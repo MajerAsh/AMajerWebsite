@@ -154,7 +154,11 @@ export default function App() {
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <img src="/icons/github.svg" alt="" aria-hidden="true" />
+              <img
+                src="/AMajerWebsite/icons/github.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </a>
           </li>
           <li>
@@ -164,12 +168,20 @@ export default function App() {
               rel="noreferrer"
               aria-label="LinkedIn"
             >
-              <img src="/icons/linkedin.svg" alt="" aria-hidden="true" />
+              <img
+                src="/AMajerWebsite/icons/linkedin.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </a>
           </li>
           <li>
             <a href="mailto:majerash@gmail.com" aria-label="Email">
-              <img src="/icons/mail.svg" alt="" aria-hidden="true" />
+              <img
+                src="/AMajerWebsite/icons/mail.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </a>
           </li>
           <li>
@@ -179,7 +191,11 @@ export default function App() {
               rel="noreferrer"
               aria-label="Resume"
             >
-              <img src="/icons/resume.svg" alt="Resume" aria-hidden="true" />
+              <img
+                src="/AMajerWebsite/icons/resume.svg"
+                alt="Resume"
+                aria-hidden="true"
+              />
             </a>
           </li>
         </ul>

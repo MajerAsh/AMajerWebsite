@@ -45,7 +45,7 @@ const timelineData = [
       "Atlanta Community Food Bank. Guided clients through technical systems.",
   },
   {
-    date: "2024 - 2024",
+    date: "2024",
     title: "Cultivation Technician",
     description:
       "Southern Cap Mushrooms. Monitored growth cycles, process-driven tasks.",
