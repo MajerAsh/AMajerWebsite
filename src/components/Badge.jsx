@@ -5,7 +5,7 @@ import React from "react";
 export default function Badge({ name, icon }) {
   return (
     <img
-      src={"/icons/" + icon + ".svg"}
+      src={"/AMajerWebsite/icons/" + icon + ".svg"}
       alt={name}
       className="badge__icon badge-icon"
       loading="lazy"
