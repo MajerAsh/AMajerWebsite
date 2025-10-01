@@ -172,10 +172,11 @@ export default function About() {
             design and deliver user-focused applications.
           </p>
           <p className="muted">
-            Outside of tech, I love hiking creeks and finding waterfalls,
-            foraging gourmet mushrooms, and watching hummingbirds at my many
-            feeders. I’m energized by learning, creating, and building things
-            that bring clarity and value to others.
+            Outside of tech, I love hiking mossy creeks, researching local fungi
+            and reading historic fiction. I strive to fill my life with
+            curiosity, education and growth. I’m energized by learning,
+            creating, and building things that bring clarity and value to
+            others.
           </p>
         </article>
       </div>
