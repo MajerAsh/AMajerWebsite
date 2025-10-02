@@ -1,3 +1,7 @@
+/* Add margin to bottom of contact section for spacing */
+#contact {
+  margin-bottom: 30vh;
+}
 /* Global gradient header style for all major headers */
 .gradient-header {
   color: #055b5c;
