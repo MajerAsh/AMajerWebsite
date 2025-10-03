@@ -21,14 +21,16 @@
 }
 /* Section headers for skills */
 .skills-section-header {
-  font-size: 3.1rem;
+  font-size: 2.2rem;
   font-weight: 800;
-  color: #055b5c;
+  color: #b6adf0;
   letter-spacing: 0.02em;
-  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
+  background: linear-gradient(90deg, #b6adf0 60%, #8c9eff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: shine 2.5s linear infinite alternate;
+  animation-fill-mode: forwards;
   margin-bottom: 1.2rem;
   margin-top: 0.5rem;
   text-shadow: 0 2px 8px rgba(79, 125, 233, 0.12);
