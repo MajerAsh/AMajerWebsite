@@ -192,6 +192,8 @@ export default function About() {
           />
         </div>
       </section>
+      {/* Responsive spacer between GitHub Activity and Contact */}
+      <div className="spacer-gh-contact" style={{ minHeight: "70vh" }} />
     </section>
   );
 }

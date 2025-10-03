@@ -172,15 +172,13 @@
   line-height: 1.08;
 }
 
-.teal-header {
-  font-size: 3.82rem;
-}
-.teal-header {
-  color: #055b5c;
-  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.site__main .about-section-header.teal-header {
+  font-size: 3.82rem !important;
+  color: #055b5c !important;
+  background: linear-gradient(90deg, #6ec6ca 60%, #055b5c 100%) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 .muted,
 .about-card .muted {

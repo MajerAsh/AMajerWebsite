@@ -89,7 +89,7 @@ export default function Projects() {
       <header className="stack-sm">
         <h1
           ref={projectsHeaderRef}
-          className="about-section-header gradient-header pop-in"
+          className="about-section-header teal-header pop-in"
         >
           Projects
         </h1>
