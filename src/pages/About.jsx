@@ -36,33 +36,6 @@ export default function About() {
       <header className="stack-sm">{/*<h2 className="h2">About</h2>*/}</header>
 
       <div className="about-cards-vertical">
-        <header className="about-header-row about-header-row--left">
-          <h3
-            ref={snapshotRef}
-            className="about-section-header teal-header pop-in"
-          >
-            At a Glance
-          </h3>
-        </header>
-        <article className="card about-card about-card--left">
-          <p className="muted" style={{ marginBottom: "1.2rem" }}>
-            Junior fullstack developer with a passion for building clean,
-            user-friendly applications and a creative eye for design. I love
-            solving problems, learning new tools and creating projects that make
-            a real impact.
-          </p>
-          <ul className="list-dots">
-            <li>Based in Atlanta, Georgia</li>
-            <li>
-              Energized by frontend rendering and building interactive user
-              interfaces
-            </li>
-            <li>Currently learning: TypeScript & agentic coding</li>
-            <li>Fluent in Spanish</li>
-            <li>Open to junior developer roles & freelance</li>
-          </ul>
-        </article>
-
         <header className="about-header-row about-header-row--right">
           <h2
             ref={skillsRef}
