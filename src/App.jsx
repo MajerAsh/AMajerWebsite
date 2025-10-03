@@ -9,7 +9,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
-  const sectionIds = ["home", "Projects", "about", "timeline", "contact"];
+  const sectionIds = ["home", "Projects", "about", "contact"];
   const sectionRefs = useRef({});
 
   function toggleMenu() {
@@ -124,15 +124,7 @@ export default function App() {
                 About
               </a>
             </li>
-            <li>
-              <a
-                href="#timeline"
-                className={activeSection === "timeline" ? "active" : undefined}
-                onClick={(e) => handleNavClick(e, "timeline")}
-              >
-                Timeline
-              </a>
-            </li>
+
             <li>
               <a
                 href="#contact"
@@ -156,10 +148,7 @@ export default function App() {
         <section id="about" style={{ scrollMarginTop: "100px" }}>
           <About />
         </section>
-        <section id="timeline" style={{ scrollMarginTop: "100px" }}>
-          {/* Timeline section includes Timeline and GitHub Activity */}
-          {/* Insert Timeline and GitHub Activity components here if needed */}
-        </section>
+
         <section id="contact" style={{ scrollMarginTop: "100px" }}>
           <Contact />
         </section>
