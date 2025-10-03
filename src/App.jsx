@@ -8,7 +8,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
-  const sectionIds = ["home", "about", "projects", "contact"];
+  const sectionIds = ["home", "about", "Projects", "contact"];
   const sectionRefs = useRef({});
 
   function toggleMenu() {
@@ -109,9 +109,9 @@ export default function App() {
             </li>
             <li>
               <a
-                href="#projects"
-                className={activeSection === "projects" ? "active" : undefined}
-                onClick={(e) => handleNavClick(e, "projects")}
+                href="#Projects"
+                className={activeSection === "Projects" ? "active" : undefined}
+                onClick={(e) => handleNavClick(e, "Projects")}
               >
                 Projects
               </a>
