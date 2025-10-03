@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import AtAGlance from "./pages/AtAGlance";
 import Projects from "./pages/Projects";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
-  const sectionIds = ["home", "about", "Projects", "contact"];
+  const sectionIds = ["home", "at-a-glance", "Projects", "about", "contact"];
   const sectionRefs = useRef({});
 
   function toggleMenu() {
@@ -100,11 +101,13 @@ export default function App() {
             </li>
             <li>
               <a
-                href="#about"
-                className={activeSection === "about" ? "active" : undefined}
-                onClick={(e) => handleNavClick(e, "about")}
+                href="#at-a-glance"
+                className={
+                  activeSection === "at-a-glance" ? "active" : undefined
+                }
+                onClick={(e) => handleNavClick(e, "at-a-glance")}
               >
-                About
+                At a Glance
               </a>
             </li>
             <li>
@@ -114,6 +117,15 @@ export default function App() {
                 onClick={(e) => handleNavClick(e, "Projects")}
               >
                 Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className={activeSection === "about" ? "active" : undefined}
+                onClick={(e) => handleNavClick(e, "about")}
+              >
+                About
               </a>
             </li>
             <li>
@@ -133,11 +145,14 @@ export default function App() {
         <section id="home" style={{ scrollMarginTop: "100px" }}>
           <Home />
         </section>
-        <section id="about" style={{ scrollMarginTop: "100px" }}>
-          <About />
+        <section id="at-a-glance" style={{ scrollMarginTop: "100px" }}>
+          <AtAGlance />
         </section>
         <section id="Projects" style={{ scrollMarginTop: "100px" }}>
           <Projects />
+        </section>
+        <section id="about" style={{ scrollMarginTop: "100px" }}>
+          <About />
         </section>
         <section id="contact" style={{ scrollMarginTop: "100px" }}>
           <Contact />

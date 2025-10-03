@@ -44,7 +44,7 @@ ${message}`);
       <div className="stack-sm">
         <h1
           ref={contactHeaderRef}
-          className="about-section-header gradient-header pop-in"
+          className="about-section-header teal-header pop-in"
           style={{ marginBottom: "2rem" }}
         >
           Contact
