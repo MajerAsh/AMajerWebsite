@@ -9,7 +9,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
-  const sectionIds = ["home", "at-a-glance", "Projects", "about", "contact"];
+  const sectionIds = ["home", "Projects", "about", "contact"];
   const sectionRefs = useRef({});
 
   function toggleMenu() {
@@ -31,15 +31,21 @@ export default function App() {
       } else if (scrollY + windowHeight >= docHeight - 2) {
         current = sectionIds[sectionIds.length - 1];
       } else {
-        sections.forEach((section, idx) => {
+        for (let i = 0; i < sections.length; i++) {
+          const section = sections[i];
           if (section) {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop - sectionHeight / 3) {
+            // Use stricter bounds: highlight only when section is mostly in view
+            if (
+              scrollY + windowHeight / 2 >= sectionTop &&
+              scrollY + windowHeight / 2 < sectionTop + sectionHeight
+            ) {
               current = section.id;
+              break;
             }
           }
-        });
+        }
       }
       setActiveSection(current);
       // Scroll progress
@@ -99,17 +105,7 @@ export default function App() {
                 Home
               </a>
             </li>
-            <li>
-              <a
-                href="#at-a-glance"
-                className={
-                  activeSection === "at-a-glance" ? "active" : undefined
-                }
-                onClick={(e) => handleNavClick(e, "at-a-glance")}
-              >
-                At a Glance
-              </a>
-            </li>
+
             <li>
               <a
                 href="#Projects"
@@ -128,6 +124,7 @@ export default function App() {
                 About
               </a>
             </li>
+
             <li>
               <a
                 href="#contact"
@@ -145,15 +142,13 @@ export default function App() {
         <section id="home" style={{ scrollMarginTop: "100px" }}>
           <Home />
         </section>
-        <section id="at-a-glance" style={{ scrollMarginTop: "100px" }}>
-          <AtAGlance />
-        </section>
         <section id="Projects" style={{ scrollMarginTop: "100px" }}>
           <Projects />
         </section>
         <section id="about" style={{ scrollMarginTop: "100px" }}>
           <About />
         </section>
+
         <section id="contact" style={{ scrollMarginTop: "100px" }}>
           <Contact />
         </section>
