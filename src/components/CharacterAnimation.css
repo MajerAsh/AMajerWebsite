@@ -1,0 +1,52 @@
+.character {
+  position: fixed;
+  bottom: 0;
+  left: -20vw;
+  width: 20vw;
+  max-width: 480px;
+  height: 14vw;
+  max-height: 180px;
+  z-index: 100;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+
+.character.walk {
+  background-image: url("/assets/walk.png");
+  background-size: 800% 100%; /* 8 frames */
+  animation: walk-frames 1s steps(8) infinite, walk-move 2s linear forwards;
+}
+
+@keyframes walk-frames {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -3854px 0;
+  }
+}
+
+@keyframes walk-move {
+  from {
+    left: -20vw;
+  }
+  to {
+    left: 25vw;
+  }
+}
+
+.character.wave {
+  left: 25vw;
+  background-image: url("/assets/wave.png");
+  background-size: 500% 100%; /* 5 frames */
+  animation: wave-frames 0.9s steps(5) infinite;
+}
+
+@keyframes wave-frames {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2346px 0;
+  }
+}

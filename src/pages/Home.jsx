@@ -1,5 +1,6 @@
 import React from "react";
 import "../Home.css";
+import CharacterAnimation from "../components/CharacterAnimation";
 import AtAGlance from "./AtAGlance";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <CharacterAnimation />
       <AtAGlance />
     </>
   );
