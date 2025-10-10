@@ -138,6 +138,24 @@ html::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 700px) {
+  .hero-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .hero-header-row .h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: left;
+    width: 100%;
+  }
+  .hero-lead {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+}
+
 /*======================More scroll w colors rendering=====*/
 .glow-scrollbar {
   position: fixed;
