@@ -13,8 +13,8 @@
 
 .character.walk {
   background-image: url("/assets/walk.png");
-  background-size: 3665px 100%; /* 8 frames, total width */
-  height: 1191px; /* 953px * 1.25 for 25% taller */
+  background-size: 3677px 100%; /* 8 frames, total width */
+  height: 950px; /* 953px * 1.25 for 25% taller */
   animation: walk-frames 1s steps(8) infinite, walk-move 2s linear forwards;
 }
 
@@ -39,8 +39,8 @@
 .character.wave {
   left: 25vw;
   background-image: url("/assets/wave.png");
-  background-size: 2027px 100%; /* 5 frames, total width */
-  height: 1092.5px; /* 874px * 1.25 for 25% taller */
+  background-size: 2039px 100%; /* 5 frames, total width */
+  height: 950px; /* 874px * 1.25 for 25% taller */
   animation: wave-frames 0.9s steps(5) infinite;
 }
 
