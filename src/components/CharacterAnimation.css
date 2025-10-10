@@ -1,0 +1,61 @@
+@media (max-width: 700px) {
+  .character {
+    display: none;
+  }
+}
+.character {
+  position: absolute;
+  bottom: 2vh;
+  left: -20vw;
+  z-index: 100;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+
+.character.walk {
+  width: 459.625px; /* 3677px/8frames*/
+  height: 950px;
+  background-image: url("/assets/walk.png");
+  background-size: 3677px 950px;
+  animation: walk-frames 1s steps(8) infinite, walk-move 2s linear forwards;
+  transform: scale(0.48); /* 0.6 * 0.8 = 0.48 for 20% smaller */
+  transform-origin: bottom left;
+}
+
+@keyframes walk-frames {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -3665px 0;
+  }
+}
+
+@keyframes walk-move {
+  from {
+    left: -20vw;
+  }
+  to {
+    left: 20vw;
+  }
+}
+
+.character.wave {
+  width: 407.8px; /* 2039px/5frames */
+  height: 950px;
+  left: 25vw;
+  background-image: url("/assets/wave.png");
+  background-size: 2039px 950px;
+  animation: wave-frames 0.9s steps(5) infinite;
+  transform: scale(0.48); /* 0.6 * 0.8 = 0.48 for 20% smaller */
+  transform-origin: bottom left;
+}
+
+@keyframes wave-frames {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2027px 0;
+  }
+}

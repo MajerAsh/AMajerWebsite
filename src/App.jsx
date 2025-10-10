@@ -9,7 +9,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
-  const sectionIds = ["home", "Projects", "about", "contact"];
+  const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
   const sectionRefs = useRef({});
 
   function toggleMenu() {
@@ -140,7 +140,11 @@ export default function App() {
 
       <main id="main" className="site__main" role="main">
         <section id="home" style={{ scrollMarginTop: "100px" }}>
-          <Home />
+          <Home showCharacter={activeSection === "home"} />
+        </section>
+        {/* AtAGlance sits between Home and Projects, not in nav */}
+        <section id="ataglance" style={{ scrollMarginTop: "100px" }}>
+          <AtAGlance />
         </section>
         <section id="Projects" style={{ scrollMarginTop: "100px" }}>
           <Projects />
