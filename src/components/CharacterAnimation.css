@@ -8,10 +8,10 @@
 }
 
 .character.walk {
-  width: 458px; /* 3665px / 8 */
-  height: 1191px;
+  width: 459.625px; /* 3677px/8frames*/
+  height: 950px;
   background-image: url("/assets/walk.png");
-  background-size: 3665px 1191px;
+  background-size: 3677px 950px;
   animation: walk-frames 1s steps(8) infinite, walk-move 2s linear forwards;
   transform: scale(0.6);
   transform-origin: bottom left;
@@ -36,11 +36,11 @@
 }
 
 .character.wave {
-  width: 405px; /* 2027px / 5 */
-  height: 1092.5px;
+  width: 407.8px; /* 2039px/5frames */
+  height: 950px;
   left: 25vw;
   background-image: url("/assets/wave.png");
-  background-size: 2027px 1092.5px;
+  background-size: 2039px 950px;
   animation: wave-frames 0.9s steps(5) infinite;
   transform: scale(0.6);
   transform-origin: bottom left;
