@@ -8,7 +8,7 @@ export default function Home({ showCharacter }) {
     <>
       <section
         className="hero container hero-full"
-        style={{ position: "relative", marginBottom: "30vh" }}
+        style={{ position: "relative", marginBottom: "35vh" }}
       >
         <div className="hero__text hero-animated">
           <div className="hero-header-row">
