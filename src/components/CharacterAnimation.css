@@ -2,20 +2,19 @@
   position: fixed;
   bottom: 0;
   left: -20vw;
-  width: 20vw;
-  max-width: 480px;
-  height: 14vw;
-  max-height: 180px;
   z-index: 100;
   pointer-events: none;
   background-repeat: no-repeat;
 }
 
 .character.walk {
+  width: 458px; /* 3665px / 8 */
+  height: 1191px;
   background-image: url("/assets/walk.png");
-  background-size: 3677px 100%; /* 8 frames, total width */
-  height: 950px; /* 953px * 1.25 for 25% taller */
+  background-size: 3665px 1191px;
   animation: walk-frames 1s steps(8) infinite, walk-move 2s linear forwards;
+  transform: scale(0.6);
+  transform-origin: bottom left;
 }
 
 @keyframes walk-frames {
@@ -37,11 +36,14 @@
 }
 
 .character.wave {
+  width: 405px; /* 2027px / 5 */
+  height: 1092.5px;
   left: 25vw;
   background-image: url("/assets/wave.png");
-  background-size: 2039px 100%; /* 5 frames, total width */
-  height: 950px; /* 874px * 1.25 for 25% taller */
+  background-size: 2027px 1092.5px;
   animation: wave-frames 0.9s steps(5) infinite;
+  transform: scale(0.6);
+  transform-origin: bottom left;
 }
 
 @keyframes wave-frames {
