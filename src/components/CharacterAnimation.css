@@ -5,7 +5,7 @@
 }
 .character {
   position: absolute;
-  bottom: 0;
+  bottom: 2vh;
   left: -20vw;
   z-index: 100;
   pointer-events: none;
