@@ -6,7 +6,7 @@ import AtAGlance from "./AtAGlance";
 export default function Home({ showCharacter }) {
   return (
     <>
-      <section className="hero container hero-full">
+  <section className="hero container hero-full" style={{ position: 'relative' }}>
         <div className="hero__text hero-animated">
           <div className="hero-header-row">
             <span className="h1 hero-hi animate-hi">Hi, I’m</span>
