@@ -1,3 +1,8 @@
+@media (max-width: 700px) {
+  .character {
+    display: none;
+  }
+}
 .character {
   position: fixed;
   bottom: 0;
@@ -13,7 +18,7 @@
   background-image: url("/assets/walk.png");
   background-size: 3677px 950px;
   animation: walk-frames 1s steps(8) infinite, walk-move 2s linear forwards;
-  transform: scale(0.6);
+  transform: scale(0.48); /* 0.6 * 0.8 = 0.48 for 20% smaller */
   transform-origin: bottom left;
 }
 
@@ -31,7 +36,7 @@
     left: -20vw;
   }
   to {
-    left: 25vw;
+    left: 20vw;
   }
 }
 
@@ -42,7 +47,7 @@
   background-image: url("/assets/wave.png");
   background-size: 2039px 950px;
   animation: wave-frames 0.9s steps(5) infinite;
-  transform: scale(0.6);
+  transform: scale(0.48); /* 0.6 * 0.8 = 0.48 for 20% smaller */
   transform-origin: bottom left;
 }
 

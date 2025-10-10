@@ -3,7 +3,7 @@ import "../Home.css";
 import CharacterAnimation from "../components/CharacterAnimation";
 import AtAGlance from "./AtAGlance";
 
-export default function Home() {
+export default function Home({ showCharacter }) {
   return (
     <>
       <section className="hero container hero-full">
@@ -21,8 +21,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <CharacterAnimation />
-      <AtAGlance />
+      {showCharacter && <CharacterAnimation />}
     </>
   );
 }
