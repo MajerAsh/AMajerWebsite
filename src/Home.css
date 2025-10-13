@@ -108,3 +108,22 @@
   border: 1px solid var(--border);
 }
 /* Styles specific to the Home page */
+@media (max-width: 700px) {
+  .hero-lead {
+    text-align: left !important;
+    align-items: flex-start !important;
+    margin-left: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: none !important;
+    color: var(--muted) !important;
+    -webkit-text-fill-color: var(--muted) !important;
+  }
+  .hero-lead span {
+    text-align: left !important;
+    width: 100%;
+    background: none !important;
+    color: var(--muted) !important;
+    -webkit-text-fill-color: var(--muted) !important;
+  }
+}
