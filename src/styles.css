@@ -245,6 +245,11 @@ html::-webkit-scrollbar {
     display: none;
   }
 }
+@media (max-width: 1268px) {
+  .sidebar-social {
+    display: none !important;
+  }
+}
 /* ===== Reset & base ===== */
 * {
   box-sizing: border-box;
