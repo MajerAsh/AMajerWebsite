@@ -200,7 +200,7 @@ export default function App() {
           </li>
           <li>
             <a
-              href="https://docs.google.com/document/d/1NFAYU3ljGOIVwRIo4uyPMuiLllkPI4CwV0QhsUTc5XM/edit?usp=sharing"
+              href="https://docs.google.com/document/d/11YKz9bPIxjuucCJu3K-GDEri7xVFniPtqDfNjT_a00s/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
               aria-label="Resume"
