@@ -130,6 +130,20 @@
     margin-bottom: 0.5rem;
   }
 }
+@media (max-width: 700px) {
+  .project-card-vertical__body {
+    min-height: unset !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 1rem;
+    font-size: 1rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
 .muted,
 .project-card-vertical__body .muted {
   color: #d6cfff;
