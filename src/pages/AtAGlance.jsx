@@ -34,9 +34,10 @@ export default function AtAGlance() {
       </header>
       <article className="card about-card about-card--left">
         <p className="muted" style={{ marginBottom: "1.2rem" }}>
-          Junior developer with a passion for building clean, user-friendly
-          applications and a creative eye for design. I love solving problems,
-          learning new tools, and creating projects that make a real impact.
+          Fullstack Web Developer with a passion for building clean,
+          user-friendly applications and a creative eye for design. I love
+          solving problems, learning new tools, and creating projects that make
+          a real impact.
         </p>
         <ul className="list-dots">
           <li>Based in Atlanta, Georgia</li>
