@@ -64,7 +64,7 @@ const timelineData = [
   },
   {
     date: "2013",
-    title: "St. Catherine's University",
+    title: "St Catherine University",
     description: "Bachelor of Science in Dietetics.",
   },
 ];
