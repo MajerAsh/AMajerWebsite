@@ -92,6 +92,7 @@ export default function App() {
             className="nav__toggle"
             aria-controls="nav-menu"
             aria-expanded={menuOpen}
+            onClick={toggleMenu}
           >
             <span className="sr-only">Menu</span>☰
           </button>
