@@ -100,7 +100,6 @@ export default function App() {
       </div>
       <header className="site__header" role="banner">
         <nav className="nav" aria-label="Primary">
-          {/* Removed brand for centered nav */}
           <button
             className="nav__toggle"
             aria-controls="nav-menu"

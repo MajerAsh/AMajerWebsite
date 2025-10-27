@@ -16,9 +16,10 @@
 .glow-scrollbar {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 2vw;
   width: 0.25px;
-  height: 100vh;
+  height: auto; /* use top/bottom so the track always fills viewport even after pinch/zoom */
   z-index: 999;
   pointer-events: none;
   border-radius: 1px;
@@ -475,6 +476,31 @@ a:hover {
     background: none;
     border: none;
     border-radius: 0;
+  }
+}
+
+/* Mobile: move hamburger to the left and increase hit area/size */
+@media (max-width: 767px) {
+  .nav__toggle {
+    /* remove the desktop 'push to right' behavior */
+    margin-left: 0;
+    margin-right: auto;
+    /* larger touch target and icon */
+    font-size: 1.25rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.6rem;
+    height: auto;
+    min-height: 44px; /* recommended minimum touch target */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* If the hamburger contains an icon, scale it slightly */
+  .nav__toggle > svg,
+  .nav__toggle > img {
+    width: 1.25em;
+    height: 1.25em;
   }
 }
 
