@@ -16,9 +16,10 @@
 .glow-scrollbar {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 2vw;
   width: 0.25px;
-  height: 100vh;
+  height: auto; /* use top/bottom so the track always fills viewport even after pinch/zoom */
   z-index: 999;
   pointer-events: none;
   border-radius: 1px;
