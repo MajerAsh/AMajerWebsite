@@ -77,12 +77,25 @@ export default function App() {
       <div className="glow-scrollbar" aria-hidden="true">
         <div
           className="glow-scrollbar__glow"
-          style={{
-            top: `calc(${
-              Math.max(0, Math.min(1, scrollProgress)) * 100
-            }% - 7vh)`,
-            height: "14vh",
-          }}
+          style={(() => {
+            try {
+              // Compute glow position in pixels so pinch/zoom on mobile
+              // (which can change vh units) doesn't break the scrollbar length.
+              const pct = Math.max(0, Math.min(1, scrollProgress));
+              const vh = window.innerHeight || 0;
+              const glowH = Math.round(vh * 0.14); // 14vh equivalent in px
+              const topPx = Math.round(pct * (vh - glowH));
+              return { top: `${topPx}px`, height: `${glowH}px` };
+            } catch (e) {
+              // Fallback to previous percent-based approach
+              return {
+                top: `calc(${
+                  Math.max(0, Math.min(1, scrollProgress)) * 100
+                }% - 7vh)`,
+                height: "14vh",
+              };
+            }
+          })()}
         ></div>
       </div>
       <header className="site__header" role="banner">
@@ -92,6 +105,7 @@ export default function App() {
             className="nav__toggle"
             aria-controls="nav-menu"
             aria-expanded={menuOpen}
+            onClick={toggleMenu}
           >
             <span className="sr-only">Menu</span>☰
           </button>
