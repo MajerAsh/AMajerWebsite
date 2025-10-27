@@ -48,6 +48,10 @@
 /* Hide default browser scrollbar for all browsers */
 html {
   scrollbar-width: none; /* Firefox */
+  /* Prevent iOS Safari from automatically resizing text (causes unexpected zoom) */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 body {
   -ms-overflow-style: none; /* IE 10+ */
