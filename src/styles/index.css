@@ -1,0 +1,8 @@
+/* Central stylesheet that composes modular styles. Import this from main.jsx */
+@import "./base.css";
+@import "./layout.css";
+@import "./nav.css";
+@import "./hero.css";
+@import "./components.css";
+@import "./scrollbar.css";
+@import "./pretty-print.css";
