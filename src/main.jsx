@@ -2,7 +2,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import "./styles.css";
+import "./styles/index.css";
 
 // On narrow screens, set a slightly zoomed-out initial viewport scale so
 // users don't have to pinch-zoom manually. We modify the existing

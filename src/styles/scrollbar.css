@@ -1,0 +1,31 @@
+/* Glow scrollbar track and thumb */
+.glow-scrollbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 2vw;
+  width: 0.25px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+  border-radius: 1px;
+  background: linear-gradient(
+    180deg,
+    #172142 10%,
+    #314385 50%,
+    #4b65c6 100%
+  ) !important;
+  box-shadow: 0 0 4px 1px #4b65c6, 0 0 8px 2px #4f7de922;
+  overflow: visible;
+}
+.glow-scrollbar__glow {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-radius: 1px;
+  background: linear-gradient(180deg, #92a6ee 0%, #6f87df 60%, #4b65c6 100%);
+  box-shadow: 0 0 12px 4px #ffffff, 0 0 24px 8px #adbfff;
+  opacity: 0.45;
+  transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}

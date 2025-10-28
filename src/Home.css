@@ -50,6 +50,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Highly specific size-only overrides to ensure the Home hero headings are larger
+   while preserving the existing animations, gradient color, and alignment. */
+.site__main .hero .hero-header-row .h1.hero-hi,
+.site__main .hero .hero-header-row .h1.hero-name {
+  font-size: clamp(2.8rem, 8.5vw, 6.5rem);
+  line-height: 1.02;
+}
 .hero-lead {
   opacity: 0;
   transform: translateX(-60vw);
@@ -64,6 +72,14 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Size-only override to increase the hero lead responsively without altering
+   animation, gradient color or text alignment. */
+.site__main .hero .hero-lead {
+  font-size: clamp(1.25rem, 2.8vw, 1.9rem);
+  max-width: 60ch;
+  line-height: 1.4;
 }
 @keyframes heroHiIn {
   to {
@@ -121,7 +137,8 @@
     gap: 0.3rem;
   }
   .hero-header-row .h1 {
-    font-size: 2rem;
+    /* increase the min size on narrow screens so the header reads larger */
+    font-size: 2.8rem;
     line-height: 1.1;
     text-align: left;
     width: 100%;
@@ -129,5 +146,6 @@
   .hero-lead {
     align-items: flex-start !important;
     text-align: left !important;
+    font-size: 1.15rem; /* slightly larger on small screens */
   }
 }

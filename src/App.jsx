@@ -80,14 +80,14 @@ export default function App() {
           style={(() => {
             try {
               // Compute glow position in pixels so pinch/zoom on mobile
-              // (which can change vh units) doesn't break the scrollbar length.
+              // can change vh units and doesn't break the scrollbar length.
               const pct = Math.max(0, Math.min(1, scrollProgress));
               const vh = window.innerHeight || 0;
               const glowH = Math.round(vh * 0.14); // 14vh equivalent in px
               const topPx = Math.round(pct * (vh - glowH));
               return { top: `${topPx}px`, height: `${glowH}px` };
             } catch (e) {
-              // Fallback to previous percent-based approach
+              // Default fallback to previous percent-based approach
               return {
                 top: `calc(${
                   Math.max(0, Math.min(1, scrollProgress)) * 100

@@ -1,0 +1,24 @@
+/* Hero and home-specific visual rules (global fallbacks) */
+.hero {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+.hero__text .h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+}
+.lead {
+  color: var(--muted);
+  max-width: 55ch;
+}
+.hero__visual {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.underline {
+  text-decoration: none;
+  text-underline-offset: 0.25em;
+  text-decoration-color: color-mix(in oklab, var(--accent) 50%, transparent);
+}
