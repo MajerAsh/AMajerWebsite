@@ -504,6 +504,41 @@ a:hover {
   }
 }
 
+/* Mobile: position the nav menu so it opens next to the hamburger toggle */
+@media (max-width: 767px) {
+  .nav {
+    position: relative; /* anchor for absolute menu */
+  }
+
+  .nav__list {
+    position: absolute;
+    left: 0; /* align with the left edge of the nav (where the toggle sits) */
+    top: calc(100% + 0.5rem);
+    width: auto;
+    min-width: 180px;
+    max-width: calc(100vw - 2rem);
+    margin: 0;
+    padding: 0.25rem;
+    transform: none; /* avoid translate-based offscreen positioning */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    z-index: 1500;
+  }
+
+  /* When collapsed, keep it visually hidden via height/opacity as before */
+  .nav__list[data-collapsed="true"] {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav__list[data-collapsed="false"] {
+    /* ensure expanded state uses the absolute sizing above */
+    max-height: 40rem; /* plenty of room */
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 /* ===== Hero ===== */
 .hero {
   display: grid;
