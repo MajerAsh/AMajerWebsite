@@ -79,3 +79,43 @@
   text-decoration: none;
   background: var(--card);
 }
+
+/* Floating Social Sidebar (moved from legacy src/styles.css) */
+.sidebar-social {
+  position: fixed;
+  top: 40%;
+  left: 2rem;
+  z-index: 1000;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar-social__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+.sidebar-social__list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: none;
+  color: #055b5c;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.sidebar-social__list a:hover, .sidebar-social__list a:focus-visible { background: transparent; color: inherit; transform: translateY(-2px) scale(1.08); }
+.sidebar-social__list a:hover img, .sidebar-social__list a:focus-visible img {
+  filter: drop-shadow(0 0 16px #6ec6ca) drop-shadow(0 0 32px #b6eaff) invert(80%) sepia(0%) saturate(75%) hue-rotate(180deg) brightness(650%);
+}
+.sidebar-social__list img { width:48px; height:48px; display:block; background:none; border-radius:0; }
+@media (max-width: 700px) { .sidebar-social { display: none; } }
+@media (max-width: 1268px) { .sidebar-social { display: none !important; } }
