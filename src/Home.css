@@ -55,7 +55,7 @@
    while preserving the existing animations, gradient color, and alignment. */
 .site__main .hero .hero-header-row .h1.hero-hi,
 .site__main .hero .hero-header-row .h1.hero-name {
-  font-size: clamp(3rem, 8.5vw, 6.5rem);
+  font-size: clamp(2.9rem, 8.5vw, 6.5rem);
   line-height: 1.02;
 }
 .hero-lead {
