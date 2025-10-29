@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "../About.css";
+import "../styles/About.css";
 import Badge from "../components/Badge";
 import GitHubCalendar from "react-github-calendar";
 import Timeline from "../components/Timeline";

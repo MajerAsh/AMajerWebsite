@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../Contact.css";
-import "../About.css";
+import "../styles/Contact.css";
+import "../styles/About.css";
 
 function usePopInOnScroll(ref) {
   useEffect(() => {

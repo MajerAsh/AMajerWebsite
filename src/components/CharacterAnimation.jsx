@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./CharacterAnimation.css";
+import "../styles/CharacterAnimation.css";
 
 export default function CharacterAnimation() {
   const [phase, setPhase] = useState("walk");
