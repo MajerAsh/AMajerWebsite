@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import "../styles/Projects.css";
-import "../styles/About.css";
+import "../Projects.css";
+import "../About.css";
 import ProjectCard from "../components/ProjectCard.jsx";
 
 function usePopInOnScroll(ref) {

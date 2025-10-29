@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "../styles/About.css";
+import "../About.css";
 
 function usePopInOnScroll(ref) {
   useEffect(() => {

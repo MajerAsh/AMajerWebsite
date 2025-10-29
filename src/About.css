@@ -1,5 +1,3 @@
-/*skills/ technoogies/ badges*/
-
 /* Core Concepts text-only cards */
 .core-concept-card {
   display: inline-block;
@@ -45,7 +43,9 @@
   justify-content: flex-start;
 }
 
-/*Added vertical spacing below badge rows*/
+/* Add vertical spacing below badge rows so subsequent section headers
+   (e.g. "Frameworks & Libraries" and "Core Concepts") don't sit
+   directly against the badges. Adjust on small screens for balance. */
 .skills-icon-list {
   margin-bottom: 2rem;
 }
