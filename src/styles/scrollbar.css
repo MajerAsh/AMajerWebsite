@@ -29,3 +29,19 @@
   transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
+/* Hide native browser scrollbars (we use a custom glow indicator) */
+html {
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+/* IE 10+ */
+body {
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Opera */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none !important;
+}
