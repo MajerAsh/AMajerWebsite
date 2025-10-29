@@ -11,6 +11,13 @@
   align-items: flex-end;
   min-height: 60vh;
 }
+
+/* Prevent transformed children from creating horizontal overflow on small
+   screens by clipping offscreen content. This keeps the animation intact
+   while avoiding layout overflow for other pages. */
+.hero-animated {
+  overflow: hidden;
+}
 .hero-header-row {
   display: flex;
   flex-direction: row;
