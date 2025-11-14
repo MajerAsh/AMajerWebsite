@@ -41,7 +41,7 @@ const projects = [
       "Supabase",
       "Postman",
     ],
-    youtubeId: "YOUR_YOUTUBE_ID",
+    youtubeId: "jEVJ-EI5ixE",
     href: "https://keypaw.netlify.app/",
     github: "https://github.com/MajerAsh/FEKeyMaster",
   },
