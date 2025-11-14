@@ -43,6 +43,13 @@
   justify-content: flex-start;
 }
 
+/* Add vertical spacing below badge rows so subsequent section headers
+   (e.g. "Frameworks & Libraries" and "Core Concepts") don't sit
+   directly against the badges. Adjust on small screens for balance. */
+.skills-icon-list {
+  margin-bottom: 2rem;
+}
+
 .skills-icon-card {
   text-align: center;
   display: flex;
