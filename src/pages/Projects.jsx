@@ -23,6 +23,29 @@ function usePopInOnScroll(ref) {
 
 const projects = [
   {
+    title: "KeyPaw (In Development)",
+    description:
+      "KeyPaw is an interactive, full-stack puzzle app that simulates real-world lock mechanisms—including pin tumbler and rotary dial systems—using custom graphics and dynamic sprite alignment. Users can create, save, and solve puzzles, with secure authentication and real-time validation. Built solo with React (Vite), Node.js, Express, and PostgreSQL. Highlights include JWT auth, a reusable apiFetch client, fully seeded database, Postman-tested REST API, pixel-accurate UI rendering, and responsive layout logic. Currently developing animation and sound feedback systems.",
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "JWT Auth",
+      "REST API",
+      "CSS",
+      "Vite",
+      "Netlify",
+      "Render",
+      "Railway",
+      "Supabase",
+      "Postman",
+    ],
+    youtubeId: "YOUR_YOUTUBE_ID",
+    href: "https://keypaw.netlify.app/",
+    github: "https://github.com/YOUR_REPO",
+  },
+  {
     title: "Myco Map",
     description:
       "Full-stack app for mushroom foragers to log, map, and share their finds. Features secure authentication, Multer data uploads, interactive Mapbox maps, and advanced search. Role-based marker visibility: public users see all finds (no usernames), logged-in users see usernames, and secret locations are protected. Built solo with React, Node.js, Express, PostgreSQL, and Mapbox. Highlights: RESTful API, robust validation, JWT auth, Multer file uploads, automated backend tests, and responsive, accessible UI.",
