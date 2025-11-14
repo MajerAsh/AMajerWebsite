@@ -83,25 +83,6 @@ const projects = [
     href: "https://majerash.github.io/Page-Pal",
     github: "https://github.com/MajerAsh/Page-Pal",
   },
-
-  {
-    title: "Whack-A-Mole Game",
-    description:
-      "A fast-paced browser game where players race against the clock to whack as many moles as possible across multiple levels. Features custom SVG graphics, complex state management, playful sound effects, animated UI, and persistent high scores. Built solo with React, Context API, and custom hooks for state and timing logic.",
-    tags: [
-      "React",
-      "JavaScript",
-      "Context API",
-      "Custom Hooks",
-      "CSS",
-      "Vite",
-      "GitHub Pages",
-      "Procreate",
-    ],
-    youtubeId: "igNM1Q5iBvk",
-    href: "https://majerash.github.io/whack-a-mole/",
-    github: "https://github.com/MajerAsh/whack-a-mole",
-  },
 ];
 
 export default function Projects() {
