@@ -43,7 +43,7 @@ const projects = [
     ],
     youtubeId: "YOUR_YOUTUBE_ID",
     href: "https://keypaw.netlify.app/",
-    github: "https://github.com/YOUR_REPO",
+    github: "https://github.com/MajerAsh/FEKeyMaster",
   },
   {
     title: "Myco Map",
