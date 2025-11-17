@@ -21,7 +21,7 @@ function usePopInOnScroll(ref) {
 
 const timelineData = [
   {
-    date: "November 2025",
+    date: "October 2025",
     title: "KeyPaw (Project)",
     description:
       "Browser puzzle game (formerly KeyMaster). React, Vite, Netlify frontend; Node/Express backend, PostgreSQL, JWT, puzzles & auth.",
