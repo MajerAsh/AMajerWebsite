@@ -36,6 +36,41 @@ export default function About() {
       <header className="stack-sm">{/*<h2 className="h2">About</h2>*/}</header>
 
       <div className="about-cards-vertical">
+        <header className="about-header-row about-header-row--left">
+          <h3
+            ref={storyRef}
+            className="about-section-header teal-header pop-in"
+          >
+            My Story
+          </h3>
+        </header>
+        <article className="card about-card about-card--left">
+          <p className="muted">
+            My career began in nutrition and human services, where I developed
+            strong communication, problem-solving, and data management skills
+            while guiding diverse clients through complex systems. Over time, I
+            discovered that what I loved most—breaking down problems, finding
+            efficient solutions, and learning new tools—aligned closely with
+            software engineering.
+          </p>
+          <p className="muted">
+            This led me to complete a Software Engineering Immersive at Emory
+            University, powered by Fullstack Academy, where I gained expertise
+            in modern web technologies like React, Node, Express, and
+            PostgreSQL. Now, I bring a unique perspective to engineering: the
+            empathy and adaptability gained from serving people, combined with
+            the technical skills to design and deliver user-focused
+            applications.
+          </p>
+          <p className="muted">
+            Outside of tech, I love hiking mossy creeks, researching local fungi
+            and reading historic fiction. I strive to fill my life with
+            curiosity, education and growth. I’m energized by learning,
+            creating, and building things that bring clarity and value to
+            others.
+          </p>
+        </article>
+
         <header className="about-header-row about-header-row--right">
           <h2
             ref={skillsRef}
@@ -123,41 +158,6 @@ export default function About() {
             ))}
           </div>
         </div>
-
-        <header className="about-header-row about-header-row--left">
-          <h3
-            ref={storyRef}
-            className="about-section-header teal-header pop-in"
-          >
-            My Story
-          </h3>
-        </header>
-        <article className="card about-card about-card--left">
-          <p className="muted">
-            My career began in nutrition and human services, where I developed
-            strong communication, problem-solving, and data management skills
-            while guiding diverse clients through complex systems. Over time, I
-            discovered that what I loved most—breaking down problems, finding
-            efficient solutions, and learning new tools—aligned closely with
-            software engineering.
-          </p>
-          <p className="muted">
-            This led me to complete a Software Engineering Immersive at Emory
-            University, powered by Fullstack Academy, where I gained expertise
-            in modern web technologies like React, Node, Express, and
-            PostgreSQL. Now, I bring a unique perspective to engineering: the
-            empathy and adaptability gained from serving people, combined with
-            the technical skills to design and deliver user-focused
-            applications.
-          </p>
-          <p className="muted">
-            Outside of tech, I love hiking mossy creeks, researching local fungi
-            and reading historic fiction. I strive to fill my life with
-            curiosity, education and growth. I’m energized by learning,
-            creating, and building things that bring clarity and value to
-            others.
-          </p>
-        </article>
       </div>
 
       <Timeline />
