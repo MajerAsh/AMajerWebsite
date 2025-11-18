@@ -24,7 +24,7 @@ const timelineData = [
     date: "October 2025",
     title: "KeyPaw (Project)",
     description:
-      "Browser puzzle game (formerly KeyMaster). React, Vite, Netlify frontend; Node/Express backend, PostgreSQL, JWT, puzzles & auth.",
+      "Browser puzzle game. React, Vite, Netlify frontend; Node/Express backend, PostgreSQL, JWT, puzzles & auth.",
   },
   {
     date: "September 2025",
