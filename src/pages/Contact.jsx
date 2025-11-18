@@ -53,7 +53,7 @@ ${message}`);
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
         <div className="contact-links">
-          <a href="mailto:majerash@gmail.com">Send me a email</a>
+          <a href="mailto:MajerCoding@gmail.com">Send me a email</a>
           <a
             href="https://www.linkedin.com/in/ashleymajer/"
             target="_blank"
