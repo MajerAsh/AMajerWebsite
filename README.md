@@ -238,7 +238,7 @@ This project is open source and available for personal and educational use.
 
 - **GitHub**: [@MajerAsh](https://github.com/MajerAsh)
 - **LinkedIn**: [Ashley Majer](https://www.linkedin.com/in/ashleymajer/)
-- **Email**: [majerash@gmail.com](mailto:majerash@gmail.com)
+- **Email**: [majerash@gmail.com](mailto:MajerCoding@gmail.com)
 - **Resume**: [View Resume](https://docs.google.com/document/d/11YKz9bPIxjuucCJu3K-GDEri7xVFniPtqDfNjT_a00s/edit?usp=sharing)
 
 ---
