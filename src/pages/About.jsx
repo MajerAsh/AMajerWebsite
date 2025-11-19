@@ -56,11 +56,11 @@ export default function About() {
             I completed the Software Engineering Immersive at Emory University
             (Fullstack Academy), gaining experience with React, JavaScript,
             Node, Express, and PostgreSQL. I love the craft of UI and
-            accessibility, and I’m comfortable learning new technologies
-            quickly. My approach is shaped by curiosity: when I become
-            interested in something, I study it deeply and build real tools
-            around it. This is evident in my personal projects, which blend my
-            interests in fungi or lock mechanisms with my technical skills.
+            accessibility and I’m comfortable learning new technologies quickly.
+            My approach is shaped by curiosity: when I become interested in
+            something, I study it deeply and build real tools around it. This is
+            evident in my personal projects, which blend my interests in fungi
+            or lock mechanisms with my technical skills.
           </p>
           <p className="muted">
             I love building thoughtful, intuitive tools, blending technical
