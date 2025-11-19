@@ -62,9 +62,9 @@ export default function About() {
             around it.
           </p>
           <p className="muted">
-            That pattern led to Myco Map, inspired by my study of fungi and
-            real-world foraging behavior, and KeyPaw, a puzzle project modeled
-            on the geometry and mechanics of pin tumbler locks. I’m drawn to
+            That pattern led to Myco Map, inspired by my self-study of fungi and
+            real world foraging behavior. Also, KeyPaw, a puzzle project modeled
+            on the geometry and mechanics of pin tumbler locks. I am drawn to
             roles where thoughtful engineering meets real impact—places that
             value usability, performance, and software people can trust.
           </p>
