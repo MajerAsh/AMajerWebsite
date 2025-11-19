@@ -54,19 +54,13 @@ const timelineData = [
     date: "2024",
     title: "Cultivation Technician",
     description:
-      "Southern Cap Mushrooms. Monitored growth cycles, process-driven tasks.",
+      "Southern Cap Mushrooms. Temporary, part time position. Monitored growth cycles, process-driven tasks.",
   },
   {
     date: "2015 - 2023",
     title: "WIC Nutritionist",
     description:
       "WIC Program - various locations. Nutritional counseling, data entry, medical formula, care plans, software navigation.",
-  },
-  {
-    date: "2014",
-    title: "English Teacher",
-    description:
-      "Golden Gate Academia, Ecuador. Lesson planning, teaching all ages.",
   },
   {
     date: "2013",
