@@ -46,28 +46,25 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted">
-            My career began in nutrition and human services, where I developed
-            strong communication, problem-solving, and data management skills
-            while guiding diverse clients through complex systems. Over time, I
-            discovered that what I loved most—breaking down problems, finding
-            efficient solutions, and learning new tools—aligned closely with
-            software engineering.
+            I’m a developer with a background in nutrition and human services,
+            where I saw how confusing interfaces and unstable systems could
+            prevent people from accessing essential benefits. That experience
+            pushed me toward software engineering. I wanted to build tools that
+            feel reliable, intuitive, and genuinely helpful.
           </p>
           <p className="muted">
-            This led me to complete a Software Engineering Immersive at Emory
-            University, powered by Fullstack Academy, where I gained expertise
-            in modern web technologies like React, Node, Express, and
-            PostgreSQL. Now, I bring a unique perspective to engineering: the
-            empathy and adaptability gained from serving people, combined with
-            the technical skills to design and deliver user-focused
-            applications.
+            I completed the Software Engineering Immersive at Emory University
+            (Fullstack Academy), gaining experience with React, JavaScript,
+            Node, Express, and PostgreSQL. I love the craft of UI and
+            accessibility, and I’m comfortable learning new technologies
+            quickly, including TypeScript, testing frameworks, and Flutter. My
+            approach is shaped by curiosity: when I become interested in
+            something, I study it deeply and build real tools around it.
           </p>
           <p className="muted">
-            Outside of tech, I love hiking mossy creeks, researching local fungi
-            and reading historic fiction. I strive to fill my life with
-            curiosity, education and growth. I’m energized by learning,
-            creating, and building things that bring clarity and value to
-            others.
+            I love building thoughtful, intuitive tools, blending technical
+            precision with creativity. Outside of development, you will usually
+            find me hiking creeks, foraging mushrooms, or creating digital art.
           </p>
         </article>
 
