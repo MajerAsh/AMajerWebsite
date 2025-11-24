@@ -46,27 +46,24 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted">
-            I’m a developer with a background in nutrition and human services,
-            where I saw how confusing interfaces and unstable systems could
-            prevent people from accessing essential benefits. That experience
-            pushed me toward software engineering. I wanted to build tools that
-            feel reliable, intuitive, and genuinely helpful.
+            I’m a Web Developer and Fullstack Academy graduate with a passion
+            for creating clean, user-friendly applications. My first career was
+            in nutrition and human services, where I built expertise in
+            communication, data management, and problem-solving—skills that
+            translate seamlessly into engineering.
           </p>
           <p className="muted">
-            I completed the Software Engineering Immersive at Emory University
-            (Fullstack Academy), gaining experience with React, JavaScript,
-            Node, Express, and PostgreSQL. I love the craft of UI and
-            accessibility and I am comfortable learning new technologies
-            quickly. My approach is shaped by curiosity: when I become
-            interested in something, I study it deeply and build real tools
-            around it.
+            I’ve worked with JavaScript, React, Node, Express, and PostgreSQL
+            and I especially enjoy the intersection of UI design and
+            problem-solving logic—building software that both looks good and
+            works beautifully.
           </p>
           <p className="muted">
-            That pattern led to Myco Map, inspired by my self-study of fungi and
-            real world foraging behavior. Also, KeyPaw, a puzzle project modeled
-            on the geometry and mechanics of pin tumbler locks. I am drawn to
-            roles where thoughtful engineering meets real impact—places that
-            value usability, performance, and software people can trust.
+            Outside of tech, I’m usually hiking creeks, foraging gourmet
+            mushrooms, or watching the hummingbirds at my feeders. That same
+            curiosity and love of discovery fuels my approach to engineering:
+            always learning, always improving, always building something
+            valuable.
           </p>
         </article>
 
