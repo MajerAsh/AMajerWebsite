@@ -32,10 +32,12 @@ export default function Contact() {
     const email = data.get("email");
     const message = data.get("message");
     const body = encodeURIComponent(`Name: ${name}
-Email: ${email}
+  Email: ${email}
 
-${message}`);
-    window.location.href = `mailto:you@example.com?subject=Portfolio%20contact&body=${body}`;
+  ${message}`);
+    // Open user's email client with prefilled recipient, subject and body.
+    const recipient = "majerash@gmail.com";
+    window.location.href = `mailto:${recipient}?subject=Portfolio%20contact&body=${body}`;
     setStatus("Opening your email client…");
   }
 
@@ -53,7 +55,7 @@ ${message}`);
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
         <div className="contact-links">
-          <a href="mailto:MajerCoding@gmail.com">Send me a email</a>
+          <a href="mailto:majerash@gmail.com">Send me an email</a>
           <a
             href="https://www.linkedin.com/in/ashleymajer/"
             target="_blank"
@@ -76,6 +78,17 @@ ${message}`);
           <label htmlFor="name">Name</label>
           <input
             id="name"
+            name="name"
+            type="text"
+            autoComplete="name"
+            required
+            className="muted"
+          />
+        </div>
+        <div className="field">
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
             name="email"
             type="email"
             autoComplete="email"
