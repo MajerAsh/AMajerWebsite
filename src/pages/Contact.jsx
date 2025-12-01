@@ -36,7 +36,7 @@ export default function Contact() {
 
   ${message}`);
     // Open user's email client with prefilled recipient, subject and body.
-    const recipient = "majerash@gmail.com";
+    const recipient = "MajerCoding@gmail.com";
     window.location.href = `mailto:${recipient}?subject=Portfolio%20contact&body=${body}`;
     setStatus("Opening your email client…");
   }
@@ -55,7 +55,7 @@ export default function Contact() {
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
         <div className="contact-links">
-          <a href="mailto:majerash@gmail.com">Send me an email</a>
+          <a href="mailto:MajerCoding@gmail.com">Send me an email</a>
           <a
             href="https://www.linkedin.com/in/ashleymajer/"
             target="_blank"
