@@ -19,9 +19,9 @@ function YouTubeEmbed({ youtubeId, title }) {
               );
             }
           } catch (err) {
-            // Log and continue — prevent uncaught exceptions from breaking the app
-            // (Some browser extensions or unusual iframe states can cause messaging errors)
-            // eslint-disable-next-line no-console
+            /* Log and continue — prevents uncaught exceptions from breaking the app.
+           for browser extensions or unusual iframe states can cause messaging errors
+          eslint-disable-next-line no-console*/
             console.warn("postMessage (playVideo) failed:", err);
           }
         } else {
