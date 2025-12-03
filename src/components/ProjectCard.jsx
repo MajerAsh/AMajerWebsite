@@ -11,15 +11,31 @@ function YouTubeEmbed({ youtubeId, title }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          iframe.contentWindow.postMessage(
-            '{"event":"command","func":"playVideo","args":""}',
-            "*"
-          );
+          try {
+            if (iframe.contentWindow && iframe.contentWindow.postMessage) {
+              iframe.contentWindow.postMessage(
+                '{"event":"command","func":"playVideo","args":""}',
+                "*"
+              );
+            }
+          } catch (err) {
+            /* Log and continue — prevents uncaught exceptions from breaking the app.
+           for browser extensions or unusual iframe states can cause messaging errors
+          eslint-disable-next-line no-console*/
+            console.warn("postMessage (playVideo) failed:", err);
+          }
         } else {
-          iframe.contentWindow.postMessage(
-            '{"event":"command","func":"pauseVideo","args":""}',
-            "*"
-          );
+          try {
+            if (iframe.contentWindow && iframe.contentWindow.postMessage) {
+              iframe.contentWindow.postMessage(
+                '{"event":"command","func":"pauseVideo","args":""}',
+                "*"
+              );
+            }
+          } catch (err) {
+            // eslint-disable-next-line no-console
+            console.warn("postMessage (pauseVideo) failed:", err);
+          }
         }
       },
       { threshold: 0.5 }
