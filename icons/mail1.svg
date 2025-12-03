@@ -1,14 +1,0 @@
-<?xml version="1.0" ?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<style>.cls-1{fill:#8c9eff;}.cls-2{fill:#5f7cf9;}.cls-3{fill:#4062ed;}</style>
-</defs>
-<title/>
-<g data-name="Envelope open" id="Envelope_open">
-<path class="cls-1" d="M29.52,10.15l-13-8a1,1,0,0,0-1,0l-13,8A1,1,0,0,0,2,11V29a1,1,0,0,0,1,1H29a1,1,0,0,0,1-1V11A1,1,0,0,0,29.52,10.15Z"/>
-<path class="cls-2" d="M29.52,10.15l-13-8A1,1,0,0,0,16,2V30H29a1,1,0,0,0,1-1V11A1,1,0,0,0,29.52,10.15Z"/>
-<path class="cls-2" d="M29.52,10.15l-13-8a1,1,0,0,0-1,0l-13,8a1,1,0,0,0,0,1.7l13,8a1,1,0,0,0,1,0l13-8a1,1,0,0,0,0-1.7Z"/>
-<path class="cls-3" d="M29.52,10.15l-13-8A1,1,0,0,0,16,2V20a1,1,0,0,0,.52-.15l13-8a1,1,0,0,0,0-1.7Z"/>
-</g>
-</svg>
