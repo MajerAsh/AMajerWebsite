@@ -17,9 +17,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
+  width: 88px;
+  height: 88px;
+  border-radius: 12px;
   background: transparent;
   text-decoration: none;
   transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
