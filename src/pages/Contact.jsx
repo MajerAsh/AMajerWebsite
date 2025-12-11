@@ -77,7 +77,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/linkin.svg"
+              src="/AMajerWebsite/icons/linkIn.svg"
               alt=""
               aria-hidden="true"
               className="contact-icon"
