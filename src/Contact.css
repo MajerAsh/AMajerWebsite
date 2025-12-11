@@ -32,14 +32,14 @@
 }
 
 .contact-icon {
-  width: 24px;
-  height: 24px;
+  width: 72px; /* 24px * 3 = 72px (300% larger) */
+  height: 72px;
   display: block;
 }
 
 .contact-link:hover .contact-icon,
 .contact-link:focus .contact-icon {
-  transform: translateY(-3px);
+  transform: translateY(-9px); /* scale hover lift proportionally */
 }
 
 @media (max-width: 420px) {
