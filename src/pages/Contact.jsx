@@ -62,7 +62,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/mail.svg"
+              src="/AMajerWebsite/icons/email.svg"
               alt=""
               aria-hidden="true"
               className="contact-icon"
@@ -77,7 +77,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/linkedin.svg"
+              src="/AMajerWebsite/icons/linkIn.svg"
               alt=""
               aria-hidden="true"
               className="contact-icon"
@@ -92,7 +92,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/github.svg"
+              src="/AMajerWebsite/icons/githb.svg"
               alt=""
               aria-hidden="true"
               className="contact-icon"

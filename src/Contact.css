@@ -32,14 +32,18 @@
 }
 
 .contact-icon {
-  width: 24px;
-  height: 24px;
+  width: 72px; /* 24px * 3 = 72px (300% larger) */
+  height: 72px;
   display: block;
+  transition: transform 0.18s ease, filter 0.18s ease;
 }
 
 .contact-link:hover .contact-icon,
 .contact-link:focus .contact-icon {
-  transform: translateY(-3px);
+  /* combine lift + subtle scale + badge-style drop-shadow for consistency */
+  transform: translateY(-9px) scale(1.08);
+  filter: drop-shadow(0 0 10px #b6adf088) drop-shadow(0 0 5px #e5e2fc88)
+    invert(0%) sepia(0%) saturate(300%) hue-rotate(0deg) brightness(100%);
 }
 
 @media (max-width: 420px) {
