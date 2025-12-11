@@ -66,6 +66,41 @@ export default function About() {
             valuable.
           </p>
         </article>
+        {/* spacer after My Story */}
+        <div style={{ minHeight: "50vh" }} />
+
+        <section
+          className="github-activity container"
+          style={{ marginTop: "0", marginBottom: "6rem", textAlign: "center" }}
+        >
+          <div className="about-header-row about-header-row--left">
+            <h2
+              ref={githubHeaderRef}
+              className="about-section-header teal-header pop-in"
+              style={{ marginBottom: "1.5rem" }}
+            >
+              GitHub Activity
+            </h2>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <GitHubCalendar
+              username="majerash"
+              blockSize={16}
+              blockMargin={4}
+              color="#4f7de9"
+              fontSize={14}
+              transformData={(contributions) => {
+                const sixMonthsAgo = new Date();
+                sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+                return contributions.filter(
+                  (day) => new Date(day.date) >= sixMonthsAgo
+                );
+              }}
+            />
+          </div>
+        </section>
+        {/* spacer after GitHub Activity */}
+        <div style={{ minHeight: "50vh" }} />
 
         <header className="about-header-row about-header-row--right">
           <h2
@@ -154,41 +189,13 @@ export default function About() {
             ))}
           </div>
         </div>
+        {/* spacer after Technologies/Core Concepts */}
+        <div style={{ minHeight: "50vh" }} />
       </div>
 
       <Timeline />
       <div style={{ height: "10rem" }} />
-      <section
-        className="github-activity container"
-        style={{ marginTop: "0", marginBottom: "6rem", textAlign: "center" }}
-      >
-        <div className="about-header-row about-header-row--left">
-          <h2
-            ref={githubHeaderRef}
-            className="about-section-header teal-header pop-in"
-            style={{ marginBottom: "1.5rem" }}
-          >
-            GitHub Activity
-          </h2>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <GitHubCalendar
-            username="majerash"
-            blockSize={16}
-            blockMargin={4}
-            color="#4f7de9"
-            fontSize={14}
-            transformData={(contributions) => {
-              const sixMonthsAgo = new Date();
-              sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
-              return contributions.filter(
-                (day) => new Date(day.date) >= sixMonthsAgo
-              );
-            }}
-          />
-        </div>
-      </section>
-      {/* Responsive spacer between GitHub Activity and Contact */}
+      {/* Responsive spacer between About/GitHub area and Contact section to restore negative space */}
       <div className="spacer-gh-contact" style={{ minHeight: "70vh" }} />
     </section>
   );
