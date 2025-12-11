@@ -27,6 +27,7 @@ const projects = [
     description:
       "KeyPaw is an interactive, full-stack puzzle app that simulates real-world lock mechanisms—including pin tumbler and rotary dial systems—using custom graphics and dynamic sprite alignment. Users can solve puzzles with secure authentication and real-time validation. Built solo with React (Vite), Node.js, Express, and PostgreSQL. Highlights include JWT auth, a reusable apiFetch client, fully seeded database, Postman-tested REST API, pixel-accurate UI rendering, and responsive layout logic. Currently developing animation and sound feedback systems.",
     tags: [
+      "TypeScript",
       "React",
       "Node.js",
       "Express",
@@ -41,7 +42,7 @@ const projects = [
       "Supabase",
       "Postman",
     ],
-    youtubeId: "jEVJ-EI5ixE",
+    youtubeId: "-yhfembvhFA",
     href: "https://keypaw.netlify.app/",
     github: "https://github.com/MajerAsh/FEKeyMaster",
   },
