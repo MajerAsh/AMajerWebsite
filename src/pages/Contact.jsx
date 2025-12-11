@@ -92,7 +92,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/github.svg"
+              src="/AMajerWebsite/icons/githb.svg"
               alt=""
               aria-hidden="true"
               className="contact-icon"
