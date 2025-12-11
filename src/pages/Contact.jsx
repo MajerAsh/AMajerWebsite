@@ -54,21 +54,49 @@ export default function Contact() {
         <p className="muted">
           Open to freelance, full‑time roles, and interesting collaborations.
         </p>
-        <div className="contact-links">
-          <a href="mailto:MajerCoding@gmail.com">Send me an email</a>
+        <div className="contact-links" aria-hidden={false}>
+          <a
+            href="mailto:MajerCoding@gmail.com"
+            aria-label="Email"
+            title="Email"
+            className="contact-link"
+          >
+            <img
+              src="/AMajerWebsite/icons/mail.svg"
+              alt=""
+              aria-hidden="true"
+              className="contact-icon"
+            />
+          </a>
           <a
             href="https://www.linkedin.com/in/ashleymajer/"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            className="contact-link"
           >
-            LinkedIn
+            <img
+              src="/AMajerWebsite/icons/linkedin.svg"
+              alt=""
+              aria-hidden="true"
+              className="contact-icon"
+            />
           </a>
           <a
             href="https://github.com/MajerAsh"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+            className="contact-link"
           >
-            GitHub
+            <img
+              src="/AMajerWebsite/icons/github.svg"
+              alt=""
+              aria-hidden="true"
+              className="contact-icon"
+            />
           </a>
         </div>
       </div>
