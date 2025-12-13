@@ -46,6 +46,7 @@
   pointer-events: none;
 }
 /*^box shadow is the aura glow, background is the slider colors, no colors = black w aura*/
+
 /* Hide default browser scrollbar for all browsers */
 html {
   scrollbar-width: none; /* Firefox */
