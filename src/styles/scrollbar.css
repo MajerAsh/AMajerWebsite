@@ -29,7 +29,7 @@
   transition: top 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
-/* Hide native browser scrollbars (we use a custom glow indicator) */
+/* Hide native browser scrollbars */
 html {
   /* Firefox */
   scrollbar-width: none;
