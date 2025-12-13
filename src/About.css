@@ -2,7 +2,7 @@
 .core-concept-card {
   display: inline-block;
   min-width: 110px;
-  padding: 0.7rem 1.1rem; /* on cards*/
+  padding: 0.7rem 1.1rem;
   margin: 0.5rem 1rem 1rem 1rem;
   background: #4f7de9;
   border-radius: 1.1rem;
@@ -43,8 +43,7 @@
   justify-content: flex-start;
 }
 
-/* Add vertical spacing below badge rows so subsequent section headers
-   (e.g. "Frameworks & Libraries" and "Core Concepts") don't sit
+/* Add vertical spacing below badge rows so subsequent section headers don't sit
    directly against the badges. Adjust on small screens for balance. */
 .skills-icon-list {
   margin-bottom: 2rem;
@@ -61,7 +60,7 @@
   transition: transform 0.18s;
   cursor: pointer;
   position: relative;
-  /* to adjust badge size */
+  /* BADGE SIZE */
   .badge-icon {
     display: block;
     margin-left: auto; /*inside card, around svg*/
