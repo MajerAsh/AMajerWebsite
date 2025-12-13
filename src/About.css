@@ -109,7 +109,7 @@
   vertical-align: -0.1em;
 }
 
-/* About page styles */
+/********** ABOUT page styles ***********/
 .about-cards-vertical {
   display: flex;
   flex-direction: column;
