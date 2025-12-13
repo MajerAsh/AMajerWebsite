@@ -25,7 +25,7 @@ body {
 }
 
 :root {
-  --bg: #0b0c0f; /* dark background (good contrast) */
+  --bg: #0b0c0f; /* dark background */
   --fg: #e8e9ee; /* light foreground */
   --muted: #a7adbb; /* muted text */
   --card: #12141a;
