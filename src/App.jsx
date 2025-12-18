@@ -159,6 +159,7 @@ export default function App() {
         <section id="ataglance" style={{ scrollMarginTop: "100px" }}>
           <AtAGlance />
         </section>
+        <div style={{ minHeight: "50vh" }} />
         <section id="Projects" style={{ scrollMarginTop: "100px" }}>
           <Projects />
         </section>
