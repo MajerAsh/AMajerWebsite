@@ -1,3 +1,4 @@
+// Hook used in Timeline.jsx, About.jsx, AtAGlance.jsx, Projects.jsx and Contact.jsx
 import { useEffect } from "react";
 
 export default function usePopInOnScroll(ref, visibilityThreshold = 0.85) {
