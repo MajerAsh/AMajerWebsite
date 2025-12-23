@@ -5,8 +5,9 @@ import App from "./App.jsx";
 import "./styles/index.css";
 
 /* On narrow screens, set a slightly zoomed-out initial viewport scale so
- users don't have to pinch-zoom manually. We modify the existing
- <meta name="viewport"> tag at runtime so it only affects small devices.*/
+ users don't have to pinch-zoom manually. Modified the existing
+ <meta name="viewport"> tag at runtime so it only affects small devices.
+ STILL NOT DOING WHAT IT SHOULD:*/
 function adjustViewportForSmallScreens() {
   try {
     const meta = document.querySelector('meta[name="viewport"]');
