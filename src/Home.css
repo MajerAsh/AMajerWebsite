@@ -114,25 +114,6 @@
     background-position: 100% 50%;
   }
 }
-.hero {
-  display: grid;
-  gap: 1rem;
-  align-items: center;
-}
-.hero__text .h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 1.1;
-}
-.lead {
-  color: var(--muted);
-  max-width: 55ch;
-}
-.hero__visual {
-  border-radius: 1rem;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-/* Styles specific to the Home page */
 
 @media (max-width: 700px) {
   .hero-animated {
