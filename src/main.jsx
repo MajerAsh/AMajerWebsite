@@ -4,9 +4,9 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./styles/index.css";
 
-// On narrow screens, set a slightly zoomed-out initial viewport scale so
-// users don't have to pinch-zoom manually. We modify the existing
-// <meta name="viewport"> tag at runtime so it only affects small devices.
+/* On narrow screens, set a slightly zoomed-out initial viewport scale so
+ users don't have to pinch-zoom manually. We modify the existing
+ <meta name="viewport"> tag at runtime so it only affects small devices.*/
 function adjustViewportForSmallScreens() {
   try {
     const meta = document.querySelector('meta[name="viewport"]');
