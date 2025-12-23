@@ -1,7 +1,7 @@
 import React from "react";
 
-// Usage: <Badge name="HTML" icon="html" />
-// Expects SVGs in public/icons/{icon}.svg
+/* Usage: <Badge name="HTML" icon="html" />
+// Expects SVGs in public/icons/{icon}.svg*/
 export default function Badge({ name, icon }) {
   return (
     <img
