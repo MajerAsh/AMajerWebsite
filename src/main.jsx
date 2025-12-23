@@ -31,8 +31,8 @@ function adjustViewportForSmallScreens() {
       mql.addListener((ev) => apply(ev.matches));
     }
   } catch (e) {
-    // no-op if any host blocks meta mutation
-    // (we'll silently fail and the page will use the default viewport)
+    /* no-op if any host blocks meta mutation
+(it'll silently fail and the page will use the default viewport)*/
   }
 }
 
