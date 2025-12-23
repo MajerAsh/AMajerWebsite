@@ -6,7 +6,8 @@ export default function Badge({ name, icon }) {
   return (
     <img
       src={"/AMajerWebsite/icons/" + icon + ".svg"}
-      alt={name + " logo"}
+      alt={name ? `${name} logo` : ""}
+      aria-hidden={!name}
       className="badge__icon badge-icon"
       loading="lazy"
       style={{ display: "block" }}

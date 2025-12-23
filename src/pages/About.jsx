@@ -109,7 +109,7 @@ export default function About() {
               { name: "Vite", icon: "vite" },
             ].map((item) => (
               <div className="skills-icon-card" key={item.name}>
-                <Badge icon={item.icon} />
+                <Badge name={item.name} icon={item.icon} />
                 <span className="skills-tooltip">{item.name}</span>
               </div>
             ))}
@@ -144,7 +144,7 @@ export default function About() {
                 { name: "Postman", icon: "postman" },
               ].map((item) => (
                 <div className="skills-icon-card" key={item.name}>
-                  <Badge icon={item.icon} />
+                  <Badge name={item.name} icon={item.icon} />
                   <span className="skills-tooltip">{item.name}</span>
                 </div>
               ))}
