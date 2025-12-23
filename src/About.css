@@ -60,15 +60,15 @@
   transition: transform 0.18s;
   cursor: pointer;
   position: relative;
-  /* BADGE SIZE */
-  .badge-icon {
-    display: block;
-    margin-left: auto; /*inside card, around svg*/
-    margin-right: auto;
-    width: 100px;
-    height: 110px;
-    display: block;
-  }
+}
+
+/* BADGE SIZE */
+.skills-icon-card .badge-icon {
+  display: block;
+  margin-left: auto; /* inside card, around svg */
+  margin-right: auto;
+  width: 100px;
+  height: 110px;
 }
 
 .skills-icon-card svg {
