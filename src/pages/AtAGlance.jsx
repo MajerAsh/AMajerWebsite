@@ -1,23 +1,7 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import "../About.css";
 
-function usePopInOnScroll(ref) {
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const onScroll = () => {
-      const rect = node.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.85) {
-        node.classList.add("visible");
-      } else {
-        node.classList.remove("visible");
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [ref]);
-}
+import usePopInOnScroll from "../hooks/usePopInOnScroll";
 
 export default function AtAGlance() {
   const glanceHeaderRef = useRef(null);

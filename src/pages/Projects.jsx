@@ -1,25 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import "../Projects.css";
 import "../About.css";
 import ProjectCard from "../components/ProjectCard.jsx";
 
-function usePopInOnScroll(ref) {
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return;
-    const onScroll = () => {
-      const rect = node.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.85) {
-        node.classList.add("visible");
-      } else {
-        node.classList.remove("visible");
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [ref]);
-}
+import usePopInOnScroll from "../hooks/usePopInOnScroll";
 
 const projects = [
   {
