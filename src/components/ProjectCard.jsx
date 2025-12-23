@@ -7,6 +7,7 @@ export default function ProjectCard({
   image,
   youtubeId,
   href,
+  github,
   imageAlign = "left",
 }) {
   return (
@@ -48,20 +49,12 @@ export default function ProjectCard({
           >
             View App
           </a>
-          {/* Example repo link, replace with actual repo URL if available */}
           <a
             className="project-card-btn"
-            href={
-              title === "Myco Map"
-                ? "https://github.com/MajerAsh/BackendCapstone"
-                : title === "Page Pal Library App"
-                ? "https://github.com/majerash/Page-Pal"
-                : title === "Whack-A-Mole Game"
-                ? "https://github.com/majerash/whackAmole"
-                : "#"
-            }
-            target="_blank"
-            rel="noreferrer"
+            href={github || "#"}
+            target={github ? "_blank" : undefined}
+            rel={github ? "noreferrer" : undefined}
+            aria-disabled={!github}
           >
             View Github Repo
           </a>
