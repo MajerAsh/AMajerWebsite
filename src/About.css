@@ -161,9 +161,6 @@
   margin-bottom: 16rem; /* 150% more space below At A Glance card */
 }
 
-.timeline-section {
-  margin-bottom: 8rem;
-}
 .about-header-row--left {
   justify-content: flex-start;
   padding-left: 2vw;
