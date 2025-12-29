@@ -38,8 +38,17 @@ div.react-activity-calendar__legend-colors {
 }
 
 .timeline-section {
-  margin: 2.5rem 0 8rem 0; /*  space below GitHub Activity */
-  margin: 2.5rem 0;
+  margin: 2.5rem 0; /* base spacing for the whole Timeline section */
+}
+
+/* Sticky Timeline header (was inline styles in Timeline.jsx) */
+.timeline-header {
+  margin-bottom: 8rem;
+  position: sticky;
+  top: 64px;
+  z-index: 100;
+  background: none;
+  box-shadow: none;
 }
 
 .timeline {
@@ -47,6 +56,12 @@ div.react-activity-calendar__legend-colors {
   margin-left: 2rem;
   padding-left: 2rem;
   border-left: none;
+}
+
+/* Sticky stacking timeline cards */
+.timeline--sticky {
+  /* timelineData currently has 8 events; keep enough vertical space for sticky stacking */
+  min-height: 2560px;
 }
 
 .timeline::before {
@@ -66,6 +81,50 @@ div.react-activity-calendar__legend-colors {
   margin-bottom: 2.5rem;
   display: flex;
   align-items: flex-start;
+}
+
+.timeline-event--sticky {
+  position: sticky;
+  margin-bottom: 200px;
+  box-shadow: 0 2px 12px #8c9eff33;
+  border-radius: 0.7rem;
+  background: rgba(18, 20, 26, 0.96);
+  transition: box-shadow 0.2s;
+}
+
+/* Per-card sticky offsets (replaces inline calc using idx) */
+.timeline--sticky .timeline-event--sticky:nth-child(1) {
+  top: calc(0 * 40px + 144px);
+  z-index: 10;
+}
+.timeline--sticky .timeline-event--sticky:nth-child(2) {
+  top: calc(1 * 40px + 144px);
+  z-index: 11;
+}
+.timeline--sticky .timeline-event--sticky:nth-child(3) {
+  top: calc(2 * 40px + 144px);
+  z-index: 12;
+}
+.timeline--sticky .timeline-event--sticky:nth-child(4) {
+  top: calc(3 * 40px + 144px);
+  z-index: 13;
+}
+.timeline--sticky .timeline-event--sticky:nth-child(5) {
+  top: calc(4 * 40px + 144px);
+  z-index: 14;
+}
+.timeline--sticky .timeline-event--sticky:nth-child(6) {
+  top: calc(5 * 40px + 144px);
+  z-index: 15;
+}
+.timeline--sticky .timeline-event--sticky:nth-child(7) {
+  top: calc(6 * 40px + 144px);
+  z-index: 16;
+}
+.timeline--sticky .timeline-event--sticky:nth-child(8) {
+  top: calc(7 * 40px + 144px);
+  z-index: 17;
+  margin-bottom: 40px;
 }
 
 .timeline-dot {
