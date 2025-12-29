@@ -217,7 +217,7 @@ export default function App() {
               href="/AMajerWebsite/resume/Ashley_Majer_Resume.pdf"
               target="_blank"
               rel="noreferrer"
-              aria-label="Resume (PDF)"
+              aria-label="Download Resume (PDF)"
             >
               <img
                 src="/AMajerWebsite/icons/resume.svg"
