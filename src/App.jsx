@@ -217,7 +217,7 @@ export default function App() {
               href="https://docs.google.com/document/d/11YKz9bPIxjuucCJu3K-GDEri7xVFniPtqDfNjT_a00s/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
-              aria-label="Resume"
+              aria-label="Resume (PDF)"
             >
               <img
                 src="/AMajerWebsite/icons/resume.svg"
