@@ -215,8 +215,7 @@ export default function App() {
           <li>
             <a
               href="/AMajerWebsite/resume/Ashley_Majer_Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
+              download
               aria-label="Download Resume (PDF)"
             >
               <img
