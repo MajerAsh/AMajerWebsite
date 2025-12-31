@@ -5,6 +5,8 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
+const base = import.meta.env.BASE_URL;
+
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -182,11 +184,7 @@ export default function App() {
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <img
-                src="/AMajerWebsite/icons/github.svg"
-                alt=""
-                aria-hidden="true"
-              />
+              <img src={`${base}icons/github.svg`} alt="" aria-hidden="true" />
             </a>
           </li>
           <li>
@@ -197,7 +195,7 @@ export default function App() {
               aria-label="LinkedIn"
             >
               <img
-                src="/AMajerWebsite/icons/linkedin.svg"
+                src={`${base}icons/linkedin.svg`}
                 alt=""
                 aria-hidden="true"
               />
@@ -205,21 +203,17 @@ export default function App() {
           </li>
           <li>
             <a href="mailto:majerash@gmail.com" aria-label="Email">
-              <img
-                src="/AMajerWebsite/icons/mail.svg"
-                alt=""
-                aria-hidden="true"
-              />
+              <img src={`${base}icons/mail.svg`} alt="" aria-hidden="true" />
             </a>
           </li>
           <li>
             <a
-              href="/AMajerWebsite/resume/Ashley_Majer_Resume.pdf"
-              download
+              href={`${base}resume/Ashley_Majer_Resume.pdf`}
+              download="Ashley_Majer_Resume.pdf"
               aria-label="Download Resume (PDF)"
             >
               <img
-                src="/AMajerWebsite/icons/resume.svg"
+                src={`${base}icons/resume.svg`}
                 alt="Resume"
                 aria-hidden="true"
               />

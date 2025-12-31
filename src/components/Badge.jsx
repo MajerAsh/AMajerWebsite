@@ -1,9 +1,12 @@
 /* Usage: <Badge name="HTML" icon="html" />
 Expects SVGs in public/icons/{icon}.svg*/
+
+const base = import.meta.env.BASE_URL;
+
 export default function Badge({ name, icon }) {
   return (
     <img
-      src={"/AMajerWebsite/icons/" + icon + ".svg"}
+      src={`${base}icons/${icon}.svg`}
       alt={name ? `${name} logo` : ""}
       aria-hidden={!name}
       className="badge__icon badge-icon"
