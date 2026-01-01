@@ -12,7 +12,6 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
   const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
-  const sectionRefs = useRef({});
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
