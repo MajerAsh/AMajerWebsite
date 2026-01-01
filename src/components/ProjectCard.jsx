@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 export default function ProjectCard({
   title,
@@ -22,6 +22,7 @@ export default function ProjectCard({
             <iframe
               src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&enablejsapi=1`}
               title={`Demo of ${title}`}
+              loading="lazy"
               allow="autoplay; encrypted-media"
               allowFullScreen
             />

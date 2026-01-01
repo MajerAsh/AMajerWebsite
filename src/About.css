@@ -23,12 +23,12 @@
 .skills-section-header {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #b6adf0;
+  color: #f3e6ff;
   letter-spacing: 0.02em;
   background: linear-gradient(90deg, #b6adf0 60%, #8c9eff 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /*-webkit-text-fill-color: transparent;*/
   animation: shine 2.5s linear infinite alternate;
   animation-fill-mode: forwards;
   margin-bottom: 1.2rem;

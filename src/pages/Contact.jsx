@@ -4,6 +4,8 @@ import "../About.css";
 
 import usePopInOnScroll from "../hooks/usePopInOnScroll";
 
+const base = import.meta.env.BASE_URL;
+
 export default function Contact() {
   const [status, setStatus] = useState("");
   const contactHeaderRef = useRef(null);
@@ -46,7 +48,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/email.svg"
+              src={`${base}icons/email.svg`}
               alt=""
               aria-hidden="true"
               className="contact-icon"
@@ -61,7 +63,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/linkIn.svg"
+              src={`${base}icons/linkIn.svg`}
               alt=""
               aria-hidden="true"
               className="contact-icon"
@@ -76,7 +78,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src="/AMajerWebsite/icons/githb.svg"
+              src={`${base}icons/githb.svg`}
               alt=""
               aria-hidden="true"
               className="contact-icon"

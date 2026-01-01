@@ -100,7 +100,8 @@
   gap: 1.2rem;
   align-items: center;
 }
-.sidebar-social__list a {
+.sidebar-social__list a,
+.sidebar-social__list button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,14 +113,23 @@
   color: #055b5c;
   transition: background 0.2s, color 0.2s, transform 0.15s;
 }
+.sidebar-social__list button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
 .sidebar-social__list a:hover,
-.sidebar-social__list a:focus-visible {
+.sidebar-social__list a:focus-visible,
+.sidebar-social__list button:hover,
+.sidebar-social__list button:focus-visible {
   background: transparent;
   color: inherit;
   transform: translateY(-2px) scale(1.08);
 }
 .sidebar-social__list a:hover img,
-.sidebar-social__list a:focus-visible img {
+.sidebar-social__list a:focus-visible img,
+.sidebar-social__list button:hover img,
+.sidebar-social__list button:focus-visible img {
   filter: drop-shadow(0 0 16px #6ec6ca) drop-shadow(0 0 32px #b6eaff)
     invert(80%) sepia(0%) saturate(75%) hue-rotate(180deg) brightness(650%);
 }

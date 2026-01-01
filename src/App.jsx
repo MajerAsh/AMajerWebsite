@@ -5,12 +5,18 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
+const base = import.meta.env.BASE_URL;
+
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
-  const sectionRefs = useRef({});
+  const resumeHref = `${base}resume/Ashley_Majer_Resume.pdf`;
+  const resumeTriggerRef = useRef(null);
+  const resumeCloseRef = useRef(null);
+  const lastActiveElementRef = useRef(null);
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
@@ -18,7 +24,12 @@ export default function App() {
 
   // Scrollspy effect and scroll progress
   useEffect(() => {
-    function onScroll() {
+    let rafId = 0;
+    let scheduled = false;
+
+    function update() {
+      scheduled = false;
+      rafId = 0;
       // Scrollspy
       const sections = sectionIds.map((id) => document.getElementById(id));
       let current = sectionIds[0];
@@ -55,10 +66,23 @@ export default function App() {
           : 0;
       setScrollProgress(progress);
     }
-    window.addEventListener("scroll", onScroll);
+
+    function requestUpdate() {
+      if (scheduled) return;
+      scheduled = true;
+      rafId = window.requestAnimationFrame(update);
+    }
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
     // Set initial value
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    requestUpdate();
+
+    return () => {
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      if (rafId) window.cancelAnimationFrame(rafId);
+    };
   }, []);
 
   // Smooth scroll for nav links
@@ -70,6 +94,31 @@ export default function App() {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
+
+  useEffect(() => {
+    if (!resumeOpen) return;
+
+    lastActiveElementRef.current = document.activeElement;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const focusTimer = window.setTimeout(() => {
+      resumeCloseRef.current?.focus?.();
+    }, 0);
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") setResumeOpen(false);
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.clearTimeout(focusTimer);
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+      const el = lastActiveElementRef.current;
+      if (el && typeof el.focus === "function") el.focus();
+    };
+  }, [resumeOpen]);
 
   return (
     <div className="site">
@@ -113,6 +162,7 @@ export default function App() {
               <a
                 href="#home"
                 className={activeSection === "home" ? "active" : undefined}
+                aria-current={activeSection === "home" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "home")}
               >
                 Home
@@ -123,6 +173,7 @@ export default function App() {
               <a
                 href="#Projects"
                 className={activeSection === "Projects" ? "active" : undefined}
+                aria-current={activeSection === "Projects" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "Projects")}
               >
                 Projects
@@ -132,6 +183,7 @@ export default function App() {
               <a
                 href="#about"
                 className={activeSection === "about" ? "active" : undefined}
+                aria-current={activeSection === "about" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "about")}
               >
                 About
@@ -142,6 +194,7 @@ export default function App() {
               <a
                 href="#contact"
                 className={activeSection === "contact" ? "active" : undefined}
+                aria-current={activeSection === "contact" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "contact")}
               >
                 Contact
@@ -182,11 +235,7 @@ export default function App() {
               rel="noreferrer"
               aria-label="GitHub"
             >
-              <img
-                src="/AMajerWebsite/icons/github.svg"
-                alt=""
-                aria-hidden="true"
-              />
+              <img src={`${base}icons/github.svg`} alt="" aria-hidden="true" />
             </a>
           </li>
           <li>
@@ -197,7 +246,7 @@ export default function App() {
               aria-label="LinkedIn"
             >
               <img
-                src="/AMajerWebsite/icons/linkedin.svg"
+                src={`${base}icons/linkedin.svg`}
                 alt=""
                 aria-hidden="true"
               />
@@ -205,28 +254,73 @@ export default function App() {
           </li>
           <li>
             <a href="mailto:majerash@gmail.com" aria-label="Email">
-              <img
-                src="/AMajerWebsite/icons/mail.svg"
-                alt=""
-                aria-hidden="true"
-              />
+              <img src={`${base}icons/mail.svg`} alt="" aria-hidden="true" />
             </a>
           </li>
           <li>
-            <a
-              href="/AMajerWebsite/resume/Ashley_Majer_Resume.pdf"
-              download
-              aria-label="Download Resume (PDF)"
+            <button
+              ref={resumeTriggerRef}
+              type="button"
+              aria-label="View Resume"
+              aria-haspopup="dialog"
+              aria-controls="resume-dialog"
+              onClick={() => setResumeOpen(true)}
             >
-              <img
-                src="/AMajerWebsite/icons/resume.svg"
-                alt="Resume"
-                aria-hidden="true"
-              />
-            </a>
+              <img src={`${base}icons/resume.svg`} alt="" aria-hidden="true" />
+            </button>
           </li>
         </ul>
       </aside>
+
+      {resumeOpen && (
+        <div
+          className="modal-backdrop"
+          onMouseDown={(e) => {
+            if (e.target === e.currentTarget) setResumeOpen(false);
+          }}
+        >
+          <div
+            id="resume-dialog"
+            className="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="resume-title"
+          >
+            <div className="modal__header">
+              <h2 id="resume-title" className="h4">
+                Resume
+              </h2>
+              <button
+                ref={resumeCloseRef}
+                type="button"
+                className="project-card-btn"
+                onClick={() => setResumeOpen(false)}
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="modal__body">
+              <iframe
+                className="resume-frame"
+                src={resumeHref}
+                title="Resume PDF"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="modal__actions">
+              <a
+                className="project-card-btn"
+                href={resumeHref}
+                download="Ashley_Majer_Resume.pdf"
+              >
+                Download
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
