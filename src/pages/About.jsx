@@ -34,14 +34,14 @@ export default function About() {
            development and a prior career in nutrition and human services. Before 
            moving into engineering, I spent years working in roles that required 
            clear communication, careful data handling, and solving practical problems 
-           for real people. These same skills strongly shape how I approach engineering 
-           today.
+           for real people. These same skills strongly shape how I approach 
+           engineering today.
           </p>
           <p className="muted">
-            I’ve worked with JavaScript, React, Node, Express, and PostgreSQL
-            and I especially enjoy the intersection of UI design and
-            problem-solving logic—building software that both looks good and
-            works beautifully.
+            My technical work has focused on JavaScript, React, Node.js, Express, and 
+            PostgreSQL. I enjoy building interfaces that are visually thoughtful and 
+            logically sound. I tend to gravitate toward projects where usability, structure 
+            and reliability matter just as much as features.
           </p>
           <p className="muted">
             Outside of tech, I’m usually hiking creeks, foraging gourmet
