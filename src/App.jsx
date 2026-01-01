@@ -132,6 +132,7 @@ export default function App() {
               <a
                 href="#home"
                 className={activeSection === "home" ? "active" : undefined}
+                aria-current={activeSection === "home" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "home")}
               >
                 Home
@@ -142,6 +143,7 @@ export default function App() {
               <a
                 href="#Projects"
                 className={activeSection === "Projects" ? "active" : undefined}
+                aria-current={activeSection === "Projects" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "Projects")}
               >
                 Projects
@@ -151,6 +153,7 @@ export default function App() {
               <a
                 href="#about"
                 className={activeSection === "about" ? "active" : undefined}
+                aria-current={activeSection === "about" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "about")}
               >
                 About
@@ -161,6 +164,7 @@ export default function App() {
               <a
                 href="#contact"
                 className={activeSection === "contact" ? "active" : undefined}
+                aria-current={activeSection === "contact" ? "page" : undefined}
                 onClick={(e) => handleNavClick(e, "contact")}
               >
                 Contact
