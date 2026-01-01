@@ -19,7 +19,12 @@ export default function App() {
 
   // Scrollspy effect and scroll progress
   useEffect(() => {
-    function onScroll() {
+    let rafId = 0;
+    let scheduled = false;
+
+    function update() {
+      scheduled = false;
+      rafId = 0;
       // Scrollspy
       const sections = sectionIds.map((id) => document.getElementById(id));
       let current = sectionIds[0];
@@ -56,10 +61,23 @@ export default function App() {
           : 0;
       setScrollProgress(progress);
     }
-    window.addEventListener("scroll", onScroll);
+
+    function requestUpdate() {
+      if (scheduled) return;
+      scheduled = true;
+      rafId = window.requestAnimationFrame(update);
+    }
+
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
     // Set initial value
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    requestUpdate();
+
+    return () => {
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      if (rafId) window.cancelAnimationFrame(rafId);
+    };
   }, []);
 
   // Smooth scroll for nav links
