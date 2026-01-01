@@ -36,6 +36,21 @@ export default function usePopInOnScroll(ref, visibilityThreshold = 0.85) {
     const rootMargin = getRootMarginForThreshold(threshold);
 
     if (typeof window !== "undefined" && "IntersectionObserver" in window) {
+      let rafId = 0;
+
+      function applyVisibility(topPx) {
+        if (isTopWithinThreshold(topPx, window.innerHeight, threshold)) {
+          node.classList.add("visible");
+        } else {
+          node.classList.remove("visible");
+        }
+      }
+
+      function syncApply() {
+        const topPx = node.getBoundingClientRect().top;
+        applyVisibility(topPx);
+      }
+
       const observer = new IntersectionObserver(
         (entries) => {
           const entry = entries[0];
@@ -45,17 +60,22 @@ export default function usePopInOnScroll(ref, visibilityThreshold = 0.85) {
           // the threshold line (including when it's above the viewport).
           const top =
             entry.boundingClientRect?.top ?? node.getBoundingClientRect().top;
-          if (isTopWithinThreshold(top, window.innerHeight, threshold)) {
-            node.classList.add("visible");
-          } else {
-            node.classList.remove("visible");
-          }
+          applyVisibility(top);
         },
         { root: null, rootMargin, threshold: 0 }
       );
 
       observer.observe(node);
-      return () => observer.disconnect();
+
+      // Ensure initial state is correct even if the observer callback is delayed
+      // (e.g., scroll restoration on first load).
+      syncApply();
+      rafId = window.requestAnimationFrame(syncApply);
+
+      return () => {
+        if (rafId) window.cancelAnimationFrame(rafId);
+        observer.disconnect();
+      };
     }
 
     const onScroll = () => {
