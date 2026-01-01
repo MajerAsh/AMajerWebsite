@@ -30,22 +30,26 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted">
-           I'm a software developer with a background in full-stack application 
-           development and a prior career in nutrition and human services. Before 
-           moving into engineering, I spent years working in roles that required 
-           clear communication, careful data handling, and solving practical problems 
-           for real people. These same skills strongly shape how I approach 
-           engineering today.
+            I'm a software developer with a background in full-stack application
+            development and a prior career in nutrition and human services.
+            Before moving into engineering, I spent years working in roles that
+            required clear communication, careful data handling, and solving
+            practical problems for real people. These same skills strongly shape
+            how I approach my engineering today.
           </p>
           <p className="muted">
-            My technical work has focused on JavaScript, React, Node.js, Express, and 
-            PostgreSQL. I enjoy building interfaces that are visually thoughtful and 
-            logically sound. I tend to gravitate toward projects where usability, 
-            structure and reliability matter just as much as features.
+            My technical work has focused on JavaScript, React, Node.js,
+            Express, and PostgreSQL. I enjoy building interfaces that are
+            visually thoughtful and logically sound. I tend to gravitate toward
+            projects where usability, structure and reliability matter just as
+            much as features.
           </p>
           <p className="muted">
-            Outside of work, I spend a lot of time outdoors hiking, foraging for mushrooms, 
-            and watching the wildlife around my home. That curiosity carries into my development work as well: I like understanding how things function, improving what already exists, and building tools that feel purposeful and well considered.
+            Outside of work, I spend a lot of time outdoors hiking, identifying
+            fungi and watching the wildlife around my home. I carry this
+            curiosity and hunger for knowledge into my development work as well:
+            I like understanding how things function, improving what already
+            exists and building tools that feel purposeful and well considered.
           </p>
         </article>
         {/* spacer after My Story */}
