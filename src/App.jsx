@@ -293,7 +293,7 @@ export default function App() {
               <button
                 ref={resumeCloseRef}
                 type="button"
-                className="btn btn--ghost"
+                className="project-card-btn"
                 onClick={() => setResumeOpen(false)}
               >
                 Close
@@ -311,7 +311,7 @@ export default function App() {
 
             <div className="modal__actions">
               <a
-                className="btn"
+                className="project-card-btn"
                 href={resumeHref}
                 download="Ashley_Majer_Resume.pdf"
               >

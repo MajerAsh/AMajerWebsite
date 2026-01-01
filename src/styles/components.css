@@ -1,4 +1,4 @@
-/* Component-level small utilities and shared UI */
+/* Component-level small utilities, resume viewer and shared UI */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
