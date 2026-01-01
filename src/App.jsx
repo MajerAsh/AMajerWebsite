@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Home from "./pages/Home";
 import AtAGlance from "./pages/AtAGlance";
 import Projects from "./pages/Projects";
@@ -11,7 +11,12 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
+  const resumeHref = `${base}resume/Ashley_Majer_Resume.pdf`;
+  const resumeTriggerRef = useRef(null);
+  const resumeCloseRef = useRef(null);
+  const lastActiveElementRef = useRef(null);
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
@@ -89,6 +94,31 @@ export default function App() {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
+
+  useEffect(() => {
+    if (!resumeOpen) return;
+
+    lastActiveElementRef.current = document.activeElement;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const focusTimer = window.setTimeout(() => {
+      resumeCloseRef.current?.focus?.();
+    }, 0);
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") setResumeOpen(false);
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.clearTimeout(focusTimer);
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+      const el = lastActiveElementRef.current;
+      if (el && typeof el.focus === "function") el.focus();
+    };
+  }, [resumeOpen]);
 
   return (
     <div className="site">
@@ -228,20 +258,69 @@ export default function App() {
             </a>
           </li>
           <li>
-            <a
-              href={`${base}resume/Ashley_Majer_Resume.pdf`}
-              download="Ashley_Majer_Resume.pdf"
-              aria-label="Download Resume (PDF)"
+            <button
+              ref={resumeTriggerRef}
+              type="button"
+              aria-label="View Resume"
+              aria-haspopup="dialog"
+              aria-controls="resume-dialog"
+              onClick={() => setResumeOpen(true)}
             >
-              <img
-                src={`${base}icons/resume.svg`}
-                alt="Resume"
-                aria-hidden="true"
-              />
-            </a>
+              <img src={`${base}icons/resume.svg`} alt="" aria-hidden="true" />
+            </button>
           </li>
         </ul>
       </aside>
+
+      {resumeOpen && (
+        <div
+          className="modal-backdrop"
+          onMouseDown={(e) => {
+            if (e.target === e.currentTarget) setResumeOpen(false);
+          }}
+        >
+          <div
+            id="resume-dialog"
+            className="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="resume-title"
+          >
+            <div className="modal__header">
+              <h2 id="resume-title" className="h4">
+                Resume
+              </h2>
+              <button
+                ref={resumeCloseRef}
+                type="button"
+                className="btn btn--ghost"
+                onClick={() => setResumeOpen(false)}
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="modal__body">
+              <iframe
+                className="resume-frame"
+                src={resumeHref}
+                title="Resume PDF"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="modal__actions">
+              <a
+                className="btn"
+                href={resumeHref}
+                download="Ashley_Majer_Resume.pdf"
+              >
+                Download
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
