@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import AtAGlance from "./pages/AtAGlance";
 import Projects from "./pages/Projects";
