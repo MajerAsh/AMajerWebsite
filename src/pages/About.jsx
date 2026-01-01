@@ -30,24 +30,26 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted">
-            I’m a Web Developer and Fullstack Academy graduate with a passion
-            for creating clean, user-friendly applications. My first career was
-            in nutrition and human services, where I built expertise in
-            communication, data management, and problem-solving—skills that
-            translate seamlessly into engineering.
+            I'm a software developer with a background in full-stack application
+            development and a prior career in nutrition and human services.
+            Before moving into engineering, I spent years working in roles that
+            required clear communication, careful data handling, and solving
+            practical problems for real people. These same skills strongly shape
+            how I approach my engineering today.
           </p>
           <p className="muted">
-            I’ve worked with JavaScript, React, Node, Express, and PostgreSQL
-            and I especially enjoy the intersection of UI design and
-            problem-solving logic—building software that both looks good and
-            works beautifully.
+            My technical work has focused on JavaScript, React, Node.js,
+            Express, and PostgreSQL. I enjoy building interfaces that are
+            visually thoughtful and logically sound. I tend to gravitate toward
+            projects where usability, structure and reliability matter just as
+            much as features.
           </p>
           <p className="muted">
-            Outside of tech, I’m usually hiking creeks, foraging gourmet
-            mushrooms, or watching the hummingbirds at my feeders. That same
-            curiosity and love of discovery fuels my approach to engineering:
-            always learning, always improving, always building something
-            valuable.
+            Outside of work, I spend a lot of time outdoors hiking, identifying
+            fungi and watching the wildlife around my home. I carry this
+            curiosity and hunger for knowledge into my development work as well:
+            I like understanding how things function, improving what already
+            exists and building tools that feel purposeful and well considered.
           </p>
         </article>
         {/* spacer after My Story */}
