@@ -8,8 +8,14 @@ export function normalizeVisibilityThreshold(value, fallback = 0.85) {
 
 export function getRootMarginForThreshold(threshold) {
   // Example: threshold=0.85 -> bottom rootMargin = -15%
-  const bottomMarginPct = -((1 - threshold) * 100);
-  return `0px 0px ${bottomMarginPct}% 0px`;
+  const rawPct = -((1 - threshold) * 100);
+  // Avoid floating-point artifacts like -15.000000000000002
+  const roundedPct = Math.round(rawPct * 1000) / 1000;
+  const pctText = Number.isInteger(roundedPct)
+    ? String(roundedPct)
+    : String(roundedPct).replace(/0+$/, "").replace(/\.$/, "");
+
+  return `0px 0px ${pctText}% 0px`;
 }
 
 export function isTopWithinThreshold(topPx, windowInnerHeightPx, threshold) {
