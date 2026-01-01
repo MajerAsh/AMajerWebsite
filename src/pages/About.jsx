@@ -30,11 +30,12 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted">
-            I’m a Web Developer and Fullstack Academy graduate with a passion
-            for creating clean, user-friendly applications. My first career was
-            in nutrition and human services, where I built expertise in
-            communication, data management, and problem-solving—skills that
-            translate seamlessly into engineering.
+           I'm a software developer with a background in full-stack application 
+           development and a prior career in nutrition and human services. Before 
+           moving into engineering, I spent years working in roles that required 
+           clear communication, careful data handling, and solving practical problems 
+           for real people. These same skills strongly shape how I approach engineering 
+           today.
           </p>
           <p className="muted">
             I’ve worked with JavaScript, React, Node, Express, and PostgreSQL
