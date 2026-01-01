@@ -46,11 +46,11 @@ export default function About() {
           </p>
           <p className="muted">
             When I'm not in front of the computer, I spend a lot of time
-            outdoors hiking, identifying fungi and watching the wildlife around
-            my home. I carry this curiosity and hunger for knowledge into my
-            development work as well: I like understanding how things function,
-            improving what already exists and building tools that feel
-            purposeful and well considered.
+            outdoors hiking, swimming, identifying fungi or simply, watching the
+            wildlife around my home. I carry this curiosity and hunger for
+            knowledge into my development work as well: I like understanding how
+            things function, improving what already exists and building tools
+            that feel purposeful and well considered.
           </p>
         </article>
         {/* spacer after My Story */}
