@@ -40,15 +40,12 @@ export default function About() {
           <p className="muted">
             My technical work has focused on JavaScript, React, Node.js, Express, and 
             PostgreSQL. I enjoy building interfaces that are visually thoughtful and 
-            logically sound. I tend to gravitate toward projects where usability, structure 
-            and reliability matter just as much as features.
+            logically sound. I tend to gravitate toward projects where usability, 
+            structure and reliability matter just as much as features.
           </p>
           <p className="muted">
-            Outside of tech, I’m usually hiking creeks, foraging gourmet
-            mushrooms, or watching the hummingbirds at my feeders. That same
-            curiosity and love of discovery fuels my approach to engineering:
-            always learning, always improving, always building something
-            valuable.
+            Outside of work, I spend a lot of time outdoors hiking, foraging for mushrooms, 
+            and watching the wildlife around my home. That curiosity carries into my development work as well: I like understanding how things function, improving what already exists, and building tools that feel purposeful and well considered.
           </p>
         </article>
         {/* spacer after My Story */}
