@@ -164,7 +164,7 @@ AMajerWebsite/
 - Technology/skill icon display component
 - Reusable across Projects and About sections
 
-## 🎯 Scripts
+## Scripts
 
 | Command           | Description                                 |
 | ----------------- | ------------------------------------------- |
