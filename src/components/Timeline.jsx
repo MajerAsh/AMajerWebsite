@@ -5,7 +5,7 @@ import usePopInOnScroll from "../hooks/usePopInOnScroll";
 
 const timelineData = [
   {
-    date: "October 2025",
+    date: "November 2025",
     title: "KeyPaw (Project)",
     description:
       "Browser puzzle game. React, Vite, Netlify frontend; Node/Express backend, PostgreSQL, JWT, puzzles & auth.",
