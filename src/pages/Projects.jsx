@@ -48,7 +48,7 @@ const projects = [
     ],
     youtubeId: "Oz8_jBsJ-SQ",
     href: "https://mycomap.netlify.app/",
-    github: "https://github.com/MajerAsh/BackendCapstone",
+    github: "https://github.com/MajerAsh/mycomap-server",
   },
 
   {
