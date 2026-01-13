@@ -1,246 +1,160 @@
 # Ashley Majer - Portfolio Website
 
-A modern, accessible portfolio website showcasing my journey as a Full-Stack Software Engineer. Built with React and featuring custom animations, responsive design, and a bioluminescent scroll indicator.
+Full-stack developer portfolio built with React, showcasing technical projects and software engineering capabilities. Features responsive design, custom animations, and accessibility-focused implementation.
 
-[![Live Site](https://img.shields.io/badge/Live-Site-4f7de9?style=for-the-badge)](https://majerash.github.io/AMajerWebsite/)
-[![React](https://img.shields.io/badge/React-18.3.1-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.2.0-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+**Live Site:** [majerash.github.io/AMajerWebsite](https://majerash.github.io/AMajerWebsite/)
 
-## Features
+## Technical Overview
 
-### Design & User Experience
+Modern single-page application demonstrating proficiency in:
 
-- **Single-Page Application** with smooth scroll navigation and active section highlighting
-- **Responsive Design** that adapts seamlessly from mobile to desktop
-- **Custom Bioluminescent Scrollbar** - a unique visual indicator that tracks scroll progress
-- **Animated Sprite Character** - interactive character animation on the home section
-- **Accessibility-First** approach with semantic HTML, ARIA labels, and keyboard navigation
-- **Pop-in Animations** for section headers that trigger on scroll
+- Frontend architecture using React 18.3.1 and Vite build tooling
+- Responsive, mobile-first design with CSS3 custom properties
+- Performance optimization through component-based architecture
+- Web accessibility standards (WCAG) with semantic HTML and ARIA implementation
+- GitHub Pages deployment automation
 
-### Sections
+### Core Features
 
-- **Home** - Hero section with animated introductions and tagline
-- **Projects** - Showcase of featured work with live demos and GitHub links
-- **About** - Personal story, technologies, timeline, and GitHub activity calendar
-- **Contact** - Professional contact form for inquiries
+**Interactive Navigation**
 
-### Technical Highlights
+- Scroll-spy navigation with active section tracking
+- Smooth scroll behavior with proper scroll margin for anchored links
+- Hamburger menu for mobile viewports
+- Keyboard-accessible navigation controls
 
-- Custom scroll-spy navigation with active state management
-- Pixel-perfect scroll progress tracking (pinch/zoom compatible)
-- Responsive typography using CSS `clamp()` for fluid scaling
-- Modular CSS architecture organized by component and layout
-- Social media sidebar with quick access to GitHub, LinkedIn, Email, and Resume
+**UI/UX Implementations**
 
-## Live Demo
+- Custom scroll progress indicator with pixel-precise tracking
+- Pop-in animations triggered on scroll intersection
+- Sprite-based character animation using CSS steps
+- Responsive typography with fluid scaling via clamp()
+- Touch-optimized interface elements
 
-Visit the live site: **[majerash.github.io/AMajerWebsite](https://majerash.github.io/AMajerWebsite/)**
+**Accessibility Compliance**
 
-## Built With
+- Semantic HTML5 structure with proper heading hierarchy
+- ARIA labels for icon-only buttons and links
+- Screen reader support with sr-only utility classes
+- Focus management for interactive elements
+- Keyboard navigation throughout
 
-### Core Technologies
+## Technology Stack
 
-- **React 18.3.1** - Component-based UI framework
-- **React Router DOM 6.30.1** - Client-side routing
-- **Vite 5.2.0** - Next-generation frontend build tool
+**Frontend**
 
-### Libraries & Tools
+- React 18.3.1
+- JavaScript (ES6+)
+- CSS3 (Custom Properties, Grid, Flexbox)
 
-- **React GitHub Calendar** - Visual representation of GitHub contributions
-- **gh-pages** - Automated deployment to GitHub Pages
+**Build Tools & Deployment**
 
-### Development Stack
+- Vite 5.2.0
+- GitHub Pages via gh-pages
+- ESLint & Prettier
 
-- Modern ES6+ JavaScript
-- CSS3 with custom properties and animations
-- Responsive design patterns (mobile-first)
+**Development**
 
-## Installation & Setup
+- Vitest for unit testing
+- Component-based architecture
+- Modular CSS organization
 
-### Prerequisites
+## Installation & Development
 
-- Node.js (v16 or higher recommended)
-- npm or yarn package manager
-
-### Clone the Repository
+**Prerequisites:** Node.js v16+, npm
 
 ```bash
+# Clone repository
 git clone https://github.com/MajerAsh/AMajerWebsite.git
 cd AMajerWebsite
-```
 
-### Install Dependencies
-
-```bash
+# Install dependencies
 npm install
-```
 
-### Run Development Server
-
-```bash
+# Start development server
 npm run dev
 ```
 
-The site will open automatically at `http://localhost:5173`
+Development server runs at `http://localhost:5173`
 
-### Build for Production
-
-```bash
-npm run build
-```
-
-Production-ready files will be generated in the `dist/` directory.
-
-### Preview Production Build
+### Available Scripts
 
 ```bash
-npm run preview
+npm run dev        # Start development server with hot-reload
+npm run build      # Create production build
+npm run preview    # Preview production build locally
+npm run deploy     # Build and deploy to GitHub Pages
+npm test           # Run unit tests
 ```
 
-### Deploy to GitHub Pages
-
-```bash
-npm run deploy
-```
-
-This will automatically build and deploy the site to GitHub Pages.
-
-## Project Structure
+## Project Architecture
 
 ```
-AMajerWebsite/
-├── public/
-│   ├── assets/          # Sprite images and character animations
-│   └── icons/           # Social media and UI icons
-├── src/
-│   ├── components/      # Reusable React components
-│   │   ├── Badge.jsx
-│   │   ├── CharacterAnimation.jsx
-│   │   └── Timeline.jsx
-│   ├── pages/           # Main page components
-│   │   ├── About.jsx
-│   │   ├── AtAGlance.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Home.jsx
-│   │   └── Projects.jsx
-│   ├── styles/          # Modular CSS architecture
-│   │   ├── base.css
-│   │   ├── components.css
-│   │   ├── hero.css
-│   │   ├── layout.css
-│   │   ├── nav.css
-│   │   ├── scrollbar.css
-│   │   └── index.css
-│   ├── App.jsx          # Root component with scroll logic
-│   └── main.jsx         # Application entry point
-├── index.html
-├── vite.config.js
-└── package.json
+src/
+├── components/          # Reusable UI components
+│   ├── Badge.jsx           # Technology skill badges
+│   ├── CharacterAnimation.jsx  # Sprite-based animation
+│   ├── ProjectCard.jsx     # Project showcase cards
+│   └── Timeline.jsx        # Career/education timeline
+├── pages/              # Section components
+│   ├── Home.jsx           # Hero/landing section
+│   ├── AtAGlance.jsx      # Quick overview
+│   ├── Projects.jsx       # Portfolio projects
+│   ├── About.jsx          # Background & skills
+│   └── Contact.jsx        # Contact information
+├── styles/             # Modular CSS
+│   ├── base.css           # CSS custom properties, resets
+│   ├── components.css     # Component-specific styles
+│   ├── layout.css         # Grid and layout structures
+│   ├── nav.css            # Navigation styles
+│   └── scrollbar.css      # Custom scrollbar indicator
+├── hooks/              # Custom React hooks
+│   └── usePopInOnScroll.js  # Intersection observer hook
+├── App.jsx             # Root component, state management
+└── main.jsx            # Application entry point
 ```
 
-## Key Components
+## Technical Implementation Notes
 
-### App.jsx
+**State Management**
 
-- Manages global state (menu, active section, scroll progress)
-- Implements scroll-spy navigation
-- Renders bioluminescent scrollbar with pixel-based positioning
-- Contains smooth scroll handler for navigation links
+- React hooks for local state (useState, useEffect, useRef)
+- Scroll position tracking with requestAnimationFrame
+- Efficient re-renders through memoization where applicable
 
-### CharacterAnimation.jsx
+**Performance Optimization**
 
-- Sprite-based animation component
-- Alternates between "walk" and "wave" phases
-- Responsive scaling for mobile and desktop
-- Mobile-optimized horizontal travel animation
+- Component code splitting
+- Optimized scroll event handling (RAF throttling)
+- CSS animations using transform for GPU acceleration
+- Lazy loading considerations for images
 
-### Timeline.jsx
+**Responsive Design Strategy**
 
-- Educational and professional journey visualization
-- Pop-in animation on scroll
-
-### Badge.jsx
-
-- Technology/skill icon display component
-- Reusable across Projects and About sections
-
-## Scripts
-
-| Command           | Description                                 |
-| ----------------- | ------------------------------------------- |
-| `npm run dev`     | Start development server with hot-reload    |
-| `npm run build`   | Clean and build optimized production bundle |
-| `npm run preview` | Preview production build locally            |
-| `npm run deploy`  | Build and deploy to GitHub Pages            |
-| `npm run clean`   | Remove `dist/` directory                    |
+- Mobile-first CSS approach
+- Breakpoint management via media queries
+- Flexible typography with clamp() for viewport-relative sizing
+- Touch-optimized tap targets (minimum 44x44px)
 
 ## Deployment
 
-This site is deployed using **GitHub Pages** with automated deployment via the `gh-pages` package.
+Deployed via GitHub Pages with automated CI/CD pipeline using gh-pages package.
 
-**Deployment Process:**
+**Build Process:**
 
-1. Code is built using Vite (`npm run build`)
-2. The `dist/` folder is pushed to the `gh-pages` branch
-3. GitHub Pages serves the site from the `gh-pages` branch
+1. Vite optimizes and bundles production assets
+2. gh-pages pushes dist/ to deployment branch
+3. GitHub Pages serves static site
 
-**Base URL Configuration:**
-The site is configured with `base: "/AMajerWebsite/"` in `vite.config.js` to match the GitHub Pages repository path.
+Base URL configured in vite.config.js to match repository path structure.
 
-## Design Decisions
+## Professional Links
 
-### Accessibility
-
-- Semantic HTML5 structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<aside>`)
-- ARIA labels for icon links and navigation controls
-- Keyboard-friendly navigation
-- Screen reader support with `.sr-only` utility class
-- Scroll margin for smooth anchor navigation
-
-### Performance
-
-- Component-based architecture for code splitting
-- Optimized sprite animations using CSS `steps()`
-- Efficient scroll event handling with state management
-- Vite for fast builds and optimized production bundles
-
-### Mobile-First Design
-
-- Responsive typography with `clamp()` for fluid scaling
-- Mobile-optimized character animations with scaled transforms
-- Touch-friendly navigation with hamburger menu
-- Pixel-based scroll calculations for pinch/zoom compatibility
-
-## Customization
-
-### Update Personal Information
-
-- Edit contact links in `App.jsx` (sidebar social section)
-- Modify hero text in `pages/Home.jsx`
-- Update about content in `pages/About.jsx`
-
-### Modify Colors & Styling
-
-- CSS custom properties are defined in `styles/base.css`
-- Component-specific styles are in their respective CSS files
-- Global layout styles are in `styles/layout.css`
-
-### Add/Remove Projects
-
-- Edit the projects array in `pages/Projects.jsx`
-- Add project images to `public/assets/`
-
-## License
-
-This project is open source and available for personal and educational use.
-
-## Connect
-
-- **GitHub**: [@MajerAsh](https://github.com/MajerAsh)
-- **LinkedIn**: [Ashley Majer](https://www.linkedin.com/in/ashleymajer/)
-- **Email**: [majerash@gmail.com](mailto:MajerCoding@gmail.com)
-- **Resume**: [View Resume](https://docs.google.com/document/d/11YKz9bPIxjuucCJu3K-GDEri7xVFniPtqDfNjT_a00s/edit?usp=sharing)
+- GitHub: [@MajerAsh](https://github.com/MajerAsh)
+- LinkedIn: [Ashley Majer](https://www.linkedin.com/in/ashleymajer/)
+- Email: majerash@gmail.com
+- Resume: [View Resume](https://docs.google.com/document/d/11YKz9bPIxjuucCJu3K-GDEri7xVFniPtqDfNjT_a00s/edit?usp=sharing)
 
 ---
 
-**Built with ❤️ by Ashley Majer**
+© 2026 Ashley Majer | Full-Stack Software Engineer
