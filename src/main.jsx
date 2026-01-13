@@ -26,10 +26,7 @@ function adjustViewportForSmallScreens() {
     } else if (mql.addListener) {
       mql.addListener((ev) => apply(ev.matches));
     }
-  } catch (e) {
-    /* no-op if any host blocks meta mutation
-(it'll silently fail and the page will use the default viewport)*/
-  }
+  } catch (e) {}
 }
 
 adjustViewportForSmallScreens();
