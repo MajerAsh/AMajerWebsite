@@ -52,7 +52,7 @@ export default function About() {
           feel purposeful and well considered.
           </p>
         </article>
-        {/* spacer after My Story */}
+        {/* space after My Story */}
         <div style={{ minHeight: "50vh" }} />
 
         <section
