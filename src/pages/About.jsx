@@ -30,27 +30,26 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted">
-            I'm a software developer with a background in full-stack application
-            development and a prior career in nutrition and human services.
-            Before moving into engineering, I spent years working in roles that
-            required clear communication, careful data handling, and solving
-            practical problems for real people. These same skills strongly shape
-            how I approach my engineering today.
+            I am a software developer with a background in full-stack web development and a prior
+            career in nutrition and human services. Before transitioning into engineering, I spent 
+            years working in public benefit programs that required careful data handling, clear 
+            communication, and practical problem-solving for real people.
           </p>
           <p className="muted">
-            My technical work has focused on JavaScript, React, Node.js,
-            Express, and PostgreSQL. I enjoy building interfaces that are
-            visually thoughtful and logically sound. I tend to gravitate toward
-            projects where usability, structure and reliability matter just as
-            much as features.
+          That experience continues to shape how I build software. I care about structure, clarity
+          and reliability, and I am especially interested in projects where usability and thoughtful 
+          design are as important as functionality.
           </p>
           <p className="muted">
-            When I'm not in front of the computer, I spend my time outdoors 
-            hiking, swimming, identifying fungi or simply observing
-            the wildlife around my home. I carry this curiosity and desire for
-            knowledge into my development work as well. I like understanding how
-            things function, improving what already exists and building tools
-            that feel purposeful and well considered.
+          My technical work focuses on JavaScript, React, Node.js, Express, and PostgreSQL. I
+          enjoy building interfaces that are visually considered and logically sound, and I’m 
+          drawn to systems where small improvements can meaningfully improve the user experience.
+          </p>
+          <p className="muted">
+          Outside of development, I spend much of my time outdoors hiking, identifying fungi, and
+          observing the wildlife around my home. I bring that same curiosity into my work — I like
+          understanding how things function, improving what already exists, and building tools that
+          feel purposeful and well considered.
           </p>
         </article>
         {/* spacer after My Story */}
