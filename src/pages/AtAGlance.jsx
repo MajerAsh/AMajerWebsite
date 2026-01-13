@@ -18,16 +18,16 @@ export default function AtAGlance() {
       </header>
       <article className="card about-card about-card--left">
         <p className="muted" style={{ marginBottom: "1.2rem" }}>
-          Fullstack Web Developer with a passion for building clean,
-          user-friendly applications and a creative eye for design. I love
-          solving problems, learning new tools, and creating projects that make
-          a real impact.
+          Software engineer with hands-on experience building full-stack web
+          applications and a background in public benefit programs. Focused on
+          clear communication, thoughtful problem-solving, and building
+          reliable, user-centered systems.
         </p>
         <ul className="list-dots">
-          <li>Based in Atlanta, Georgia</li>
-          <li>Currently learning: TypeScript & testing</li>
-          <li>Fluent in Spanish</li>
-          <li>Open to junior developer roles & freelance</li>
+          <li>Atlanta, GA (remote-friendly)</li>
+          <li>Actively building with TypeScript and testing fundamentals</li>
+          <li>Bilingual: English / Spanish</li>
+          <li>Seeking junior engineering roles</li>
         </ul>
       </article>
     </section>
