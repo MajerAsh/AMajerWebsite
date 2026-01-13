@@ -128,7 +128,6 @@
     gap: 0.3rem;
   }
   .hero-header-row .h1 {
-    /* increase the min size on narrow screens so the header reads larger */
     font-size: 2.8rem;
     line-height: 1.1;
     text-align: left;
@@ -137,6 +136,6 @@
   .hero-lead {
     align-items: flex-start !important;
     text-align: left !important;
-    font-size: 1.15rem; /* slightly larger on small screens */
+    font-size: 1.15rem;
   }
 }
