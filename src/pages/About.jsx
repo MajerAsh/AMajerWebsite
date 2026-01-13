@@ -45,10 +45,10 @@ export default function About() {
             much as features.
           </p>
           <p className="muted">
-            When I'm not in front of the computer, I spend a lot of time
-            outdoors hiking, swimming, identifying fungi or simply, observing
-            the wildlife around my home. I carry this curiosity and hunger for
-            knowledge into my development work as well: I like understanding how
+            When I'm not in front of the computer, I spend my time outdoors 
+            hiking, swimming, identifying fungi or simply observing
+            the wildlife around my home. I carry this curiosity and desire for
+            knowledge into my development work as well. I like understanding how
             things function, improving what already exists and building tools
             that feel purposeful and well considered.
           </p>
