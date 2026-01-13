@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
+
 import "../Projects.css";
 import "../About.css";
 import ProjectCard from "../components/ProjectCard.jsx";
-
 import usePopInOnScroll from "../hooks/usePopInOnScroll";
 
 const projects = [

@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../Home.css";
 import CharacterAnimation from "../components/CharacterAnimation";
 

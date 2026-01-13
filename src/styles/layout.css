@@ -111,7 +111,10 @@
   border-radius: 1rem;
   box-shadow: none;
   color: #055b5c;
-  transition: background 0.2s, color 0.2s, transform 0.15s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.15s;
 }
 .sidebar-social__list button {
   border: 0;

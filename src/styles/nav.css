@@ -33,7 +33,10 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(-0.25rem);
-  transition: max-height 300ms ease, opacity 200ms ease, transform 200ms ease;
+  transition:
+    max-height 300ms ease,
+    opacity 200ms ease,
+    transform 200ms ease;
   will-change: max-height, opacity, transform;
 }
 .nav__list a {
@@ -51,7 +54,9 @@
 .nav__list a:focus-visible {
   color: #8c9eff;
   transform: translateY(-2px) scale(1.08);
-  transition: color 0.2s, transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    color 0.2s,
+    transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__list a.active {
   background: none;

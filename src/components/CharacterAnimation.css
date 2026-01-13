@@ -17,7 +17,9 @@
   height: 950px;
   background-image: url("/assets/walk.png");
   background-size: 3677px 950px;
-  animation: walk-frames 1s steps(8) infinite, walk-move 2s linear forwards;
+  animation:
+    walk-frames 1s steps(8) infinite,
+    walk-move 2s linear forwards;
   transform: scale(0.48); /* 0.6 * 0.8 = 0.48 for 20% smaller */
   transform-origin: bottom left;
 }

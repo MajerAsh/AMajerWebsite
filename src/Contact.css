@@ -2,7 +2,9 @@
 /* .form styles are already defined below for layout, keep only one definition if needed */
 .field input,
 .field textarea {
-  box-shadow: 0 2px 12px 0 rgba(79, 125, 233, 0.1), 0 0 8px 2px #adbfff22;
+  box-shadow:
+    0 2px 12px 0 rgba(79, 125, 233, 0.1),
+    0 0 8px 2px #adbfff22;
 }
 
 .contact-links {
@@ -22,7 +24,10 @@
   border-radius: 12px;
   background: transparent;
   text-decoration: none;
-  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease,
+    box-shadow 0.12s ease;
 }
 
 .contact-link:focus-visible {
@@ -35,7 +40,9 @@
   width: 72px; /* 24px * 3 = 72px (300% larger) */
   height: 72px;
   display: block;
-  transition: transform 0.18s ease, filter 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    filter 0.18s ease;
 }
 
 .contact-link:hover .contact-icon,
@@ -59,8 +66,13 @@ button.btn {
   padding: 0.6rem 1.4rem;
   font-size: 1.08rem;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
-  box-shadow: 0 4px 0 #1c2a4d, 0 2px 8px 0 rgba(79, 125, 233, 0.18);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.1s;
+  box-shadow:
+    0 4px 0 #1c2a4d,
+    0 2px 8px 0 rgba(79, 125, 233, 0.18);
   font-weight: 600;
   text-shadow: 0 1px 2px #1c2a4d44;
   position: relative;
@@ -69,7 +81,9 @@ button.btn:hover,
 button.btn:focus,
 button.btn:hover {
   background: linear-gradient(180deg, #2e4fa2 0%, #1c2a4d 100%);
-  box-shadow: 0 6px 0 #1c2a4d, 0 6px 24px 0 rgba(79, 125, 233, 0.22);
+  box-shadow:
+    0 6px 0 #1c2a4d,
+    0 6px 24px 0 rgba(79, 125, 233, 0.22);
   outline: none;
 }
 

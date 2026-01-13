@@ -30,7 +30,8 @@
 .hero-hi {
   opacity: 0;
   transform: translateY(-80px) translateX(60vw);
-  animation: heroHiIn 1.1s 0.1s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+  animation:
+    heroHiIn 1.1s 0.1s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
     shine 2.5s linear infinite alternate;
   font-weight: 700;
   /* responsive sizing: clamp between small and large screens */
@@ -45,7 +46,8 @@
 .hero-name {
   opacity: 0;
   transform: translateY(-80px) translateX(-60vw);
-  animation: heroNameIn 1.1s 0.3s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+  animation:
+    heroNameIn 1.1s 0.3s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
     shine 2.5s linear infinite alternate;
   font-weight: 700;
   /* responsive sizing: clamp between small and large screens */
@@ -68,7 +70,8 @@
 .hero-lead {
   opacity: 0;
   transform: translateX(-60vw);
-  animation: heroLeadIn 1.1s 1.2s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
+  animation:
+    heroLeadIn 1.1s 1.2s cubic-bezier(0.7, -0.2, 0.3, 1.2) forwards,
     shine 2.5s linear infinite alternate;
   font-size: 1.25rem;
   max-width: 40ch;
