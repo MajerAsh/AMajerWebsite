@@ -157,4 +157,4 @@ Base URL configured in vite.config.js to match repository path structure.
 
 ---
 
-© 2026 Ashley Majer | Full-Stack Software Engineer
+© 2025 Ashley Majer | Full-Stack Software Engineer
