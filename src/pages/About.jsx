@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import "../About.css";
-import Badge from "../components/Badge";
-import GitHubCalendar from "react-github-calendar";
-import Timeline from "../components/Timeline";
 
+import "../About.css";
+import GitHubCalendar from "react-github-calendar";
+
+import Badge from "../components/Badge";
+import Timeline from "../components/Timeline";
 import usePopInOnScroll from "../hooks/usePopInOnScroll";
 
 export default function About() {
@@ -30,26 +31,30 @@ export default function About() {
         </header>
         <article className="card about-card about-card--left">
           <p className="muted">
-            I am a software developer with a background in full-stack web development and a prior
-            career in nutrition and human services. Before transitioning into engineering, I spent 
-            years working in public benefit programs that required careful data handling, clear 
+            I am a software developer with a background in full-stack web
+            development and a prior career in nutrition and human services.
+            Before transitioning into engineering, I spent years working in
+            public benefit programs that required careful data handling, clear
             communication, and practical problem-solving for real people.
           </p>
           <p className="muted">
-          That experience continues to shape how I build software. I care about structure, clarity
-          and reliability, and I am especially interested in projects where usability and thoughtful 
-          design are as important as functionality.
+            That experience continues to shape how I build software. I care
+            about structure, clarity and reliability, and I am especially
+            interested in projects where usability and thoughtful design are as
+            important as functionality.
           </p>
           <p className="muted">
-          My technical work focuses on JavaScript, React, Node.js, Express, and PostgreSQL. I
-          enjoy building interfaces that are visually considered and logically sound, and I’m 
-          drawn to systems where small improvements can meaningfully improve the user experience.
+            My technical work focuses on JavaScript, React, Node.js, Express,
+            and PostgreSQL. I enjoy building interfaces that are visually
+            considered and logically sound, and I’m drawn to systems where small
+            improvements can meaningfully improve the user experience.
           </p>
           <p className="muted">
-          Outside of development, I spend much of my time outdoors hiking, identifying fungi, and
-          observing the wildlife around my home. I bring that same curiosity into my work — I like
-          understanding how things function, improving what already exists, and building tools that
-          feel purposeful and well considered.
+            Outside of development, I spend much of my time outdoors hiking,
+            identifying fungi, and observing the wildlife around my home. I
+            bring that same curiosity into my work — I like understanding how
+            things function, improving what already exists, and building tools
+            that feel purposeful and well considered.
           </p>
         </article>
         {/* space after My Story */}

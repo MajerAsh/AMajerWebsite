@@ -72,7 +72,9 @@
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 0.9rem;
-  box-shadow: 0 4px 32px 0 rgba(79, 125, 233, 0.18), 0 0 24px 8px #adbfff33;
+  box-shadow:
+    0 4px 32px 0 rgba(79, 125, 233, 0.18),
+    0 0 24px 8px #adbfff33;
   transition: box-shadow 0.2s;
 }
 /* Remove underline on hover for project links */
@@ -99,8 +101,13 @@
   padding: 0.6rem 1.4rem;
   font-size: 1.08rem;
   cursor: pointer;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
-  box-shadow: 0 4px 0 #1c2a4d, 0 2px 8px 0 rgba(79, 125, 233, 0.18);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.1s;
+  box-shadow:
+    0 4px 0 #1c2a4d,
+    0 2px 8px 0 rgba(79, 125, 233, 0.18);
   font-weight: 600;
   text-shadow: 0 1px 2px #1c2a4d44;
   position: relative;
@@ -109,13 +116,17 @@
 .project-card-btn:focus,
 .project-card-btn:active {
   background: linear-gradient(180deg, #2e4fa2 0%, #1c2a4d 100%);
-  box-shadow: 0 6px 0 #1c2a4d, 0 6px 24px 0 rgba(79, 125, 233, 0.22);
+  box-shadow:
+    0 6px 0 #1c2a4d,
+    0 6px 24px 0 rgba(79, 125, 233, 0.22);
   outline: none;
   text-decoration: none;
 }
 .project-card-btn:active {
   transform: translateY(2px);
-  box-shadow: 0 2px 0 #1c2a4d, 0 1px 4px 0 rgba(79, 125, 233, 0.18);
+  box-shadow:
+    0 2px 0 #1c2a4d,
+    0 1px 4px 0 rgba(79, 125, 233, 0.18);
 }
 @media (max-width: 900px) {
   .project-card-vertical,
