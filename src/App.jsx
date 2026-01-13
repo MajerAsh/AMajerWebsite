@@ -48,7 +48,7 @@ export default function App() {
           if (section) {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            // Use stricter bounds: highlight only when section is mostly in view
+            // highlight only when section is mostly in view
             if (
               scrollY + windowHeight / 2 >= sectionTop &&
               scrollY + windowHeight / 2 < sectionTop + sectionHeight
@@ -59,8 +59,9 @@ export default function App() {
           }
         }
       }
-      setActiveSection(current);
+
       // Scroll progress
+      setActiveSection(current);
       const progress =
         docHeight - windowHeight > 0
           ? Math.min(1, window.scrollY / (docHeight - windowHeight))
@@ -129,8 +130,8 @@ export default function App() {
           className="glow-scrollbar__glow"
           style={(() => {
             try {
-              // Compute glow position in pixels so pinch/zoom on mobile
-              // can change vh units and doesn't break the scrollbar length.
+              /* Compute glow position in pixels so pinch/zoom on mobile
+               can change vh units and doesn't break the scrollbar length.*/
               const pct = Math.max(0, Math.min(1, scrollProgress));
               const vh = window.innerHeight || 0;
               const glowH = Math.round(vh * 0.14); // 14vh equivalent in px
@@ -209,7 +210,6 @@ export default function App() {
         <section id="home" style={{ scrollMarginTop: "100px" }}>
           <Home showCharacter={activeSection === "home"} />
         </section>
-        {/* AtAGlance sits between Home and Projects, not in nav */}
         <section id="ataglance" style={{ scrollMarginTop: "100px" }}>
           <AtAGlance />
         </section>
