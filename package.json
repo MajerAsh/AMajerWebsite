@@ -12,7 +12,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "clean": "rm -rf dist",
-    "seed": "node db/seed.js"
+    "seed": "node db/seed.js",
+    "lint": "eslint src --ext .js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
