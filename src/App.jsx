@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Home from "./pages/Home";
 import AtAGlance from "./pages/AtAGlance";
@@ -7,13 +7,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const base = import.meta.env.BASE_URL;
+const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
   const [resumeOpen, setResumeOpen] = useState(false);
-  const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
   const resumeHref = `${base}resume/Ashley_Majer_Resume.pdf`;
   const resumeTriggerRef = useRef(null);
   const resumeCloseRef = useRef(null);
@@ -137,7 +137,7 @@ export default function App() {
               const glowH = Math.round(vh * 0.14); // 14vh equivalent in px
               const topPx = Math.round(pct * (vh - glowH));
               return { top: `${topPx}px`, height: `${glowH}px` };
-            } catch (e) {
+            } catch {
               // Default fallback to previous percent-based approach
               return {
                 top: `calc(${
