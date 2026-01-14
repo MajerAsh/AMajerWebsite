@@ -1,3 +1,5 @@
+/*scroll spy, nav bar....*/
+
 import { useState, useEffect, useRef } from "react";
 
 import Home from "./pages/Home";
@@ -37,7 +39,7 @@ export default function App() {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
-      // If at top, set to home
+
       if (scrollY === 0) {
         current = "home";
       } else if (scrollY + windowHeight >= docHeight - 2) {
@@ -48,7 +50,7 @@ export default function App() {
           if (section) {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            // highlight only when section is mostly in view
+            // Top Nav bar highlight
             if (
               scrollY + windowHeight / 2 >= sectionTop &&
               scrollY + windowHeight / 2 < sectionTop + sectionHeight
@@ -77,7 +79,7 @@ export default function App() {
 
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);
-    // Set initial value
+
     requestUpdate();
 
     return () => {
@@ -87,7 +89,6 @@ export default function App() {
     };
   }, []);
 
-  // Smooth scroll for nav links
   function handleNavClick(e, id) {
     e.preventDefault();
     setMenuOpen(false);
@@ -124,7 +125,7 @@ export default function App() {
 
   return (
     <div className="site">
-      {/* Single persistent vertical line with bioluminescent glow segment */}
+      {/* Scrollbar */}
       <div className="glow-scrollbar" aria-hidden="true">
         <div
           className="glow-scrollbar__glow"
