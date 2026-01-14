@@ -71,13 +71,13 @@
   display: block;
   margin-left: auto; /* inside card, around svg */
   margin-right: auto;
-  width: 100px;
-  height: 110px;
+  width: 90px;
+  height: 99px;
 }
 
 .skills-icon-card svg {
-  width: 72px;
-  height: 88px;
+  width: 65px;
+  height: 79px;
 }
 
 .skills-icon-card:hover .badge-icon {
