@@ -1,6 +1,3 @@
-/* Usage: <Badge name="HTML" icon="html" />
-Expects SVGs in public/icons/{icon}.svg*/
-
 const base = import.meta.env.BASE_URL;
 
 export default function Badge({ name, icon }) {
