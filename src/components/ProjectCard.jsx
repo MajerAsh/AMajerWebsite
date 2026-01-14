@@ -1,5 +1,3 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-
 export default function ProjectCard({
   title,
   description,

@@ -1,12 +1,12 @@
 /* Core Concepts text-only cards */
 .core-concept-card {
   display: inline-block;
-  min-width: 110px;
-  padding: 0.7rem 1.1rem;
+  min-width: 70px;
+  padding: 0.5rem 0.75rem;
   margin: 0.5rem 1rem 1rem 1rem;
   background: #4f7de9;
-  border-radius: 1.1rem;
-  font-size: 1.08rem;
+  border-radius: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #000000;
   box-shadow: 0 2px 8px 0 rgba(79, 125, 233, 0.07);
@@ -47,8 +47,6 @@
   justify-content: flex-start;
 }
 
-/* Add vertical spacing below badge rows so subsequent section headers don't sit
-   directly against the badges. Adjust on small screens for balance. */
 .skills-icon-list {
   margin-bottom: 2rem;
 }
@@ -71,20 +69,19 @@
   display: block;
   margin-left: auto; /* inside card, around svg */
   margin-right: auto;
-  width: 100px;
-  height: 110px;
+  width: 75px;
+  height: 84px;
 }
 
 .skills-icon-card svg {
-  width: 72px;
-  height: 88px;
+  width: 55px;
+  height: 69px;
 }
 
 .skills-icon-card:hover .badge-icon {
   filter: drop-shadow(0 0 10px #b6adf088) drop-shadow(0 0 5px #e5e2fc88)
     invert(0%) sepia(0%) saturate(300%) hue-rotate(0deg) brightness(100%);
   transform: scale(1.08);
-  /* For SVGs as <img>, use filter for color */
 }
 
 .skills-tooltip {
@@ -108,8 +105,8 @@
 }
 
 .badge_icon {
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   vertical-align: -0.1em;
 }
 

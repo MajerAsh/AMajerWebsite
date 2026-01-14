@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
-
-import "../About.css";
+import { useRef } from "react";
 import GitHubCalendar from "react-github-calendar";
 
+import "../About.css";
 import Badge from "../components/Badge";
 import Timeline from "../components/Timeline";
 import usePopInOnScroll from "../hooks/usePopInOnScroll";

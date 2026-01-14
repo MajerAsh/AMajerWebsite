@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+/*scroll spy, nav bar....*/
+
+import { useState, useEffect, useRef } from "react";
 
 import Home from "./pages/Home";
 import AtAGlance from "./pages/AtAGlance";
@@ -7,13 +9,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const base = import.meta.env.BASE_URL;
+const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
   const [resumeOpen, setResumeOpen] = useState(false);
-  const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
   const resumeHref = `${base}resume/Ashley_Majer_Resume.pdf`;
   const resumeTriggerRef = useRef(null);
   const resumeCloseRef = useRef(null);
@@ -37,7 +39,7 @@ export default function App() {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
-      // If at top, set to home
+
       if (scrollY === 0) {
         current = "home";
       } else if (scrollY + windowHeight >= docHeight - 2) {
@@ -48,7 +50,7 @@ export default function App() {
           if (section) {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            // highlight only when section is mostly in view
+            // Top Nav bar highlight
             if (
               scrollY + windowHeight / 2 >= sectionTop &&
               scrollY + windowHeight / 2 < sectionTop + sectionHeight
@@ -77,7 +79,7 @@ export default function App() {
 
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);
-    // Set initial value
+
     requestUpdate();
 
     return () => {
@@ -87,7 +89,6 @@ export default function App() {
     };
   }, []);
 
-  // Smooth scroll for nav links
   function handleNavClick(e, id) {
     e.preventDefault();
     setMenuOpen(false);
@@ -124,7 +125,7 @@ export default function App() {
 
   return (
     <div className="site">
-      {/* Single persistent vertical line with bioluminescent glow segment */}
+      {/* Scrollbar */}
       <div className="glow-scrollbar" aria-hidden="true">
         <div
           className="glow-scrollbar__glow"
@@ -137,7 +138,7 @@ export default function App() {
               const glowH = Math.round(vh * 0.14); // 14vh equivalent in px
               const topPx = Math.round(pct * (vh - glowH));
               return { top: `${topPx}px`, height: `${glowH}px` };
-            } catch (e) {
+            } catch {
               // Default fallback to previous percent-based approach
               return {
                 top: `calc(${

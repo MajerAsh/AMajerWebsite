@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "../About.css";
 
 import usePopInOnScroll from "../hooks/usePopInOnScroll";
