@@ -84,6 +84,21 @@ export default function Contact() {
               className="contact-icon"
             />
           </a>
+          <a
+            href={`${base}resume/Ashley_Majer_Resume.pdf`}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Resume"
+            title="Resume"
+            className="contact-link"
+          >
+            <img
+              src={`${base}icons/resume.svg`}
+              alt=""
+              aria-hidden="true"
+              className="contact-icon"
+            />
+          </a>
         </div>
       </div>
 
