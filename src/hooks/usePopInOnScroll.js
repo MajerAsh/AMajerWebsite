@@ -1,4 +1,4 @@
-// Hook used in Timeline.jsx, About.jsx, AtAGlance.jsx, Projects.jsx and Contact.jsx
+// Used in Timeline.jsx, About.jsx, AtAGlance.jsx, Projects.jsx and Contact.jsx
 import { useEffect } from "react";
 
 export function normalizeVisibilityThreshold(value, fallback = 0.85) {
@@ -7,7 +7,7 @@ export function normalizeVisibilityThreshold(value, fallback = 0.85) {
 }
 
 export function getRootMarginForThreshold(threshold) {
-  // Example: threshold=0.85 -> bottom rootMargin = -15%
+  //threshold=0.85 -> bottom rootMargin = -15%
   const rawPct = -((1 - threshold) * 100);
   // Avoid floating-point artifacts like -15.000000000000002
   const roundedPct = Math.round(rawPct * 1000) / 1000;
@@ -29,10 +29,9 @@ export default function usePopInOnScroll(ref, visibilityThreshold = 0.85) {
 
     const threshold = normalizeVisibilityThreshold(visibilityThreshold, 0.85);
 
-    // IntersectionObserver triggers callbacks when the element crosses the root
-    // boundaries. We shrink the bottom boundary so it behaves like:
-    // rect.top < window.innerHeight * threshold
-    // Example: threshold=0.85 -> bottom rootMargin = -15%
+    /* Bottom boundary for IntersectionObserver:
+     rect.top < window.innerHeight * threshold
+    threshold=0.85 -> bottom rootMargin = -15%*/
     const rootMargin = getRootMarginForThreshold(threshold);
 
     if (typeof window !== "undefined" && "IntersectionObserver" in window) {
@@ -56,8 +55,7 @@ export default function usePopInOnScroll(ref, visibilityThreshold = 0.85) {
           const entry = entries[0];
           if (!entry) return;
 
-          // Preserve original behavior: visible whenever element's top is above
-          // the threshold line (including when it's above the viewport).
+          // Top of element relative to viewport
           const top =
             entry.boundingClientRect?.top ?? node.getBoundingClientRect().top;
           applyVisibility(top);
@@ -67,8 +65,7 @@ export default function usePopInOnScroll(ref, visibilityThreshold = 0.85) {
 
       observer.observe(node);
 
-      // Ensure initial state is correct even if the observer callback is delayed
-      // (e.g., scroll restoration on first load).
+      // Ensure initial state is correct
       syncApply();
       rafId = window.requestAnimationFrame(syncApply);
 
