@@ -26,7 +26,9 @@ function adjustViewportForSmallScreens() {
     } else if (mql.addListener) {
       mql.addListener((ev) => apply(ev.matches));
     }
-  } catch (e) {}
+  } catch {
+    // Silently ignore errors in viewport adjustment
+  }
 }
 
 adjustViewportForSmallScreens();

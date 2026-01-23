@@ -93,7 +93,7 @@ export default function Contact() {
             className="contact-link"
           >
             <img
-              src={`${base}icons/resume.svg`}
+              src={`${base}icons/resume2.svg`}
               alt=""
               aria-hidden="true"
               className="contact-icon"
