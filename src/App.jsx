@@ -9,7 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const base = import.meta.env.BASE_URL;
-const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
+const sectionIds = ["home", "ataglance", "projects", "about", "contact"];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -174,10 +174,10 @@ export default function App() {
 
             <li>
               <a
-                href="#Projects"
-                className={activeSection === "Projects" ? "active" : undefined}
-                aria-current={activeSection === "Projects" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "Projects")}
+                href="#projects"
+                className={activeSection === "projects" ? "active" : undefined}
+                aria-current={activeSection === "projects" ? "page" : undefined}
+                onClick={(e) => handleNavClick(e, "projects")}
               >
                 Projects
               </a>
@@ -215,7 +215,7 @@ export default function App() {
           <AtAGlance />
         </section>
         <div style={{ minHeight: "50vh" }} />
-        <section id="Projects" style={{ scrollMarginTop: "100px" }}>
+        <section id="projects" style={{ scrollMarginTop: "100px" }}>
           <Projects />
         </section>
         <section id="about" style={{ scrollMarginTop: "100px" }}>
