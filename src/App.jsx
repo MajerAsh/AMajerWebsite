@@ -217,7 +217,7 @@ export default function App() {
         <section id="ataglance">
           <AtAGlance />
         </section>
-        <div style={{ minHeight: "50vh" }} />
+        <div className="v-spacer" />
         <section id="projects">
           <Projects />
         </section>

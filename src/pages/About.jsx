@@ -57,7 +57,7 @@ export default function About() {
           </p>
         </article>
         {/* space after My Story */}
-        <div style={{ minHeight: "50vh" }} />
+        <div className="v-spacer" />
 
         <section
           className="github-activity container"
@@ -90,7 +90,7 @@ export default function About() {
           </div>
         </section>
         {/* spacer after GitHub Activity */}
-        <div style={{ minHeight: "50vh" }} />
+        <div className="v-spacer" />
 
         <header className="about-header-row about-header-row--right">
           <h2
@@ -180,13 +180,13 @@ export default function About() {
           </div>
         </div>
         {/* spacer after Technologies/Core Concepts */}
-        <div style={{ minHeight: "50vh" }} />
+        <div className="v-spacer" />
       </div>
 
       <Timeline />
-      <div style={{ height: "10rem" }} />
+      <div className="v-spacer--sm" />
       {/* Responsive spacer between About/GitHub area and Contact section to restore negative space */}
-      <div className="spacer-gh-contact" style={{ minHeight: "70vh" }} />
+      <div className="v-spacer--lg" />
     </section>
   );
 }
