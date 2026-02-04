@@ -208,21 +208,21 @@ export default function App() {
       </header>
 
       <main id="main" className="site__main" role="main">
-        <section id="home" style={{ scrollMarginTop: "100px" }}>
+        <section id="home">
           <Home showCharacter={activeSection === "home"} />
         </section>
-        <section id="ataglance" style={{ scrollMarginTop: "100px" }}>
+        <section id="ataglance">
           <AtAGlance />
         </section>
         <div style={{ minHeight: "50vh" }} />
-        <section id="projects" style={{ scrollMarginTop: "100px" }}>
+        <section id="projects">
           <Projects />
         </section>
-        <section id="about" style={{ scrollMarginTop: "100px" }}>
+        <section id="about">
           <About />
         </section>
 
-        <section id="contact" style={{ scrollMarginTop: "100px" }}>
+        <section id="contact">
           <Contact />
         </section>
       </main>
