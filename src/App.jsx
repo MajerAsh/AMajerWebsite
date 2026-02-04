@@ -1,6 +1,6 @@
 /*scroll spy, nav bar....*/
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 import Home from "./pages/Home";
 import AtAGlance from "./pages/AtAGlance";
@@ -17,9 +17,11 @@ export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [resumeOpen, setResumeOpen] = useState(false);
   const resumeHref = `${base}resume/Ashley_Majer_Resume.pdf`;
-  const resumeTriggerRef = useRef(null);
   const resumeCloseRef = useRef(null);
   const lastActiveElementRef = useRef(null);
+  const sectionsRef = useRef(null);
+  const prevActiveSectionRef = useRef("home");
+  const prevScrollProgressRef = useRef(0);
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
@@ -30,11 +32,16 @@ export default function App() {
     let rafId = 0;
     let scheduled = false;
 
+    // Cache sections on mount
+    if (!sectionsRef.current) {
+      sectionsRef.current = sectionIds.map((id) => document.getElementById(id));
+    }
+
     function update() {
       scheduled = false;
       rafId = 0;
       // Scrollspy
-      const sections = sectionIds.map((id) => document.getElementById(id));
+      const sections = sectionsRef.current;
       let current = sectionIds[0];
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -63,12 +70,20 @@ export default function App() {
       }
 
       // Scroll progress
-      setActiveSection(current);
       const progress =
         docHeight - windowHeight > 0
           ? Math.min(1, window.scrollY / (docHeight - windowHeight))
           : 0;
-      setScrollProgress(progress);
+
+      // Only update state if values changed
+      if (current !== prevActiveSectionRef.current) {
+        prevActiveSectionRef.current = current;
+        setActiveSection(current);
+      }
+      if (progress !== prevScrollProgressRef.current) {
+        prevScrollProgressRef.current = progress;
+        setScrollProgress(progress);
+      }
     }
 
     function requestUpdate() {
@@ -89,14 +104,17 @@ export default function App() {
     };
   }, []);
 
-  function handleNavClick(e, id) {
-    e.preventDefault();
-    setMenuOpen(false);
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
+  const handleNavClick = useCallback(
+    (id) => (e) => {
+      e.preventDefault();
+      setMenuOpen(false);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    },
+    []
+  );
 
   useEffect(() => {
     if (!resumeOpen) return;
@@ -151,7 +169,7 @@ export default function App() {
                 href="#home"
                 className={activeSection === "home" ? "active" : undefined}
                 aria-current={activeSection === "home" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "home")}
+                onClick={handleNavClick("home")}
               >
                 Home
               </a>
@@ -162,7 +180,7 @@ export default function App() {
                 href="#projects"
                 className={activeSection === "projects" ? "active" : undefined}
                 aria-current={activeSection === "projects" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "projects")}
+                onClick={handleNavClick("projects")}
               >
                 Projects
               </a>
@@ -172,7 +190,7 @@ export default function App() {
                 href="#about"
                 className={activeSection === "about" ? "active" : undefined}
                 aria-current={activeSection === "about" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "about")}
+                onClick={handleNavClick("about")}
               >
                 About
               </a>
@@ -183,7 +201,7 @@ export default function App() {
                 href="#contact"
                 className={activeSection === "contact" ? "active" : undefined}
                 aria-current={activeSection === "contact" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "contact")}
+                onClick={handleNavClick("contact")}
               >
                 Contact
               </a>
@@ -199,7 +217,7 @@ export default function App() {
         <section id="ataglance">
           <AtAGlance />
         </section>
-        <div style={{ minHeight: "50vh" }} />
+        <div className="v-spacer" />
         <section id="projects">
           <Projects />
         </section>
@@ -246,7 +264,6 @@ export default function App() {
           </li>
           <li>
             <button
-              ref={resumeTriggerRef}
               type="button"
               aria-label="View Resume"
               aria-haspopup="dialog"

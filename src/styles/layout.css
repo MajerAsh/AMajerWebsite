@@ -10,6 +10,17 @@
   margin-top: 1rem;
 }
 
+/* Vertical spacers */
+.v-spacer {
+  min-height: 50vh;
+}
+.v-spacer--lg {
+  min-height: 70vh;
+}
+.v-spacer--sm {
+  height: 10rem;
+}
+
 .grid-2 {
   display: grid;
   gap: 1rem;
