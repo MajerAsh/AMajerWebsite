@@ -1,13 +1,13 @@
-#Projects {
+#projects {
   margin-bottom: 32vh;
 }
 
 @media (min-width: 1200px) {
-  #Projects {
+  #projects {
     margin-bottom: 60vh !important;
   }
 }
-#Projects {
+#projects {
   margin-bottom: 32vh; /* widescreen space below Projects section */
 }
 .projects-vertical-list {

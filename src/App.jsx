@@ -9,7 +9,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const base = import.meta.env.BASE_URL;
-const sectionIds = ["home", "ataglance", "Projects", "about", "contact"];
+const sectionIds = ["home", "ataglance", "projects", "about", "contact"];
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -129,25 +129,10 @@ export default function App() {
       <div className="glow-scrollbar" aria-hidden="true">
         <div
           className="glow-scrollbar__glow"
-          style={(() => {
-            try {
-              /* Compute glow position in pixels so pinch/zoom on mobile
-               can change vh units and doesn't break the scrollbar length.*/
-              const pct = Math.max(0, Math.min(1, scrollProgress));
-              const vh = window.innerHeight || 0;
-              const glowH = Math.round(vh * 0.14); // 14vh equivalent in px
-              const topPx = Math.round(pct * (vh - glowH));
-              return { top: `${topPx}px`, height: `${glowH}px` };
-            } catch {
-              // Default fallback to previous percent-based approach
-              return {
-                top: `calc(${
-                  Math.max(0, Math.min(1, scrollProgress)) * 100
-                }% - 7vh)`,
-                height: "14vh",
-              };
-            }
-          })()}
+          style={{
+            top: `${Math.round(Math.max(0, Math.min(1, scrollProgress)) * (window.innerHeight - window.innerHeight * 0.14))}px`,
+            height: `${Math.round(window.innerHeight * 0.14)}px`,
+          }}
         ></div>
       </div>
       <header className="site__header" role="banner">
@@ -174,10 +159,10 @@ export default function App() {
 
             <li>
               <a
-                href="#Projects"
-                className={activeSection === "Projects" ? "active" : undefined}
-                aria-current={activeSection === "Projects" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "Projects")}
+                href="#projects"
+                className={activeSection === "projects" ? "active" : undefined}
+                aria-current={activeSection === "projects" ? "page" : undefined}
+                onClick={(e) => handleNavClick(e, "projects")}
               >
                 Projects
               </a>
@@ -208,21 +193,21 @@ export default function App() {
       </header>
 
       <main id="main" className="site__main" role="main">
-        <section id="home" style={{ scrollMarginTop: "100px" }}>
+        <section id="home">
           <Home showCharacter={activeSection === "home"} />
         </section>
-        <section id="ataglance" style={{ scrollMarginTop: "100px" }}>
+        <section id="ataglance">
           <AtAGlance />
         </section>
         <div style={{ minHeight: "50vh" }} />
-        <section id="Projects" style={{ scrollMarginTop: "100px" }}>
+        <section id="projects">
           <Projects />
         </section>
-        <section id="about" style={{ scrollMarginTop: "100px" }}>
+        <section id="about">
           <About />
         </section>
 
-        <section id="contact" style={{ scrollMarginTop: "100px" }}>
+        <section id="contact">
           <Contact />
         </section>
       </main>
