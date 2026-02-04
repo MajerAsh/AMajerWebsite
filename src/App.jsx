@@ -129,25 +129,10 @@ export default function App() {
       <div className="glow-scrollbar" aria-hidden="true">
         <div
           className="glow-scrollbar__glow"
-          style={(() => {
-            try {
-              /* Compute glow position in pixels so pinch/zoom on mobile
-               can change vh units and doesn't break the scrollbar length.*/
-              const pct = Math.max(0, Math.min(1, scrollProgress));
-              const vh = window.innerHeight || 0;
-              const glowH = Math.round(vh * 0.14); // 14vh equivalent in px
-              const topPx = Math.round(pct * (vh - glowH));
-              return { top: `${topPx}px`, height: `${glowH}px` };
-            } catch {
-              // Default fallback to previous percent-based approach
-              return {
-                top: `calc(${
-                  Math.max(0, Math.min(1, scrollProgress)) * 100
-                }% - 7vh)`,
-                height: "14vh",
-              };
-            }
-          })()}
+          style={{
+            top: `${Math.round(Math.max(0, Math.min(1, scrollProgress)) * (window.innerHeight - window.innerHeight * 0.14))}px`,
+            height: `${Math.round(window.innerHeight * 0.14)}px`,
+          }}
         ></div>
       </div>
       <header className="site__header" role="banner">
