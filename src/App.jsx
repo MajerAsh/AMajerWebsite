@@ -17,7 +17,6 @@ export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [resumeOpen, setResumeOpen] = useState(false);
   const resumeHref = `${base}resume/Ashley_Majer_Resume.pdf`;
-  const resumeTriggerRef = useRef(null);
   const resumeCloseRef = useRef(null);
   const lastActiveElementRef = useRef(null);
 
@@ -246,7 +245,6 @@ export default function App() {
           </li>
           <li>
             <button
-              ref={resumeTriggerRef}
               type="button"
               aria-label="View Resume"
               aria-haspopup="dialog"
