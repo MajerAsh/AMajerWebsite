@@ -19,6 +19,7 @@ export default function App() {
   const resumeHref = `${base}resume/Ashley_Majer_Resume.pdf`;
   const resumeCloseRef = useRef(null);
   const lastActiveElementRef = useRef(null);
+  const sectionsRef = useRef(null);
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
@@ -29,11 +30,16 @@ export default function App() {
     let rafId = 0;
     let scheduled = false;
 
+    // Cache sections on mount
+    if (!sectionsRef.current) {
+      sectionsRef.current = sectionIds.map((id) => document.getElementById(id));
+    }
+
     function update() {
       scheduled = false;
       rafId = 0;
       // Scrollspy
-      const sections = sectionIds.map((id) => document.getElementById(id));
+      const sections = sectionsRef.current;
       let current = sectionIds[0];
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
