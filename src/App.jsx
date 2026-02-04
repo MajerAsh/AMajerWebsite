@@ -1,6 +1,6 @@
 /*scroll spy, nav bar....*/
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 import Home from "./pages/Home";
 import AtAGlance from "./pages/AtAGlance";
@@ -88,14 +88,17 @@ export default function App() {
     };
   }, []);
 
-  function handleNavClick(e, id) {
-    e.preventDefault();
-    setMenuOpen(false);
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }
+  const handleNavClick = useCallback(
+    (id) => (e) => {
+      e.preventDefault();
+      setMenuOpen(false);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    },
+    []
+  );
 
   useEffect(() => {
     if (!resumeOpen) return;
@@ -150,7 +153,7 @@ export default function App() {
                 href="#home"
                 className={activeSection === "home" ? "active" : undefined}
                 aria-current={activeSection === "home" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "home")}
+                onClick={handleNavClick("home")}
               >
                 Home
               </a>
@@ -161,7 +164,7 @@ export default function App() {
                 href="#projects"
                 className={activeSection === "projects" ? "active" : undefined}
                 aria-current={activeSection === "projects" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "projects")}
+                onClick={handleNavClick("projects")}
               >
                 Projects
               </a>
@@ -171,7 +174,7 @@ export default function App() {
                 href="#about"
                 className={activeSection === "about" ? "active" : undefined}
                 aria-current={activeSection === "about" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "about")}
+                onClick={handleNavClick("about")}
               >
                 About
               </a>
@@ -182,7 +185,7 @@ export default function App() {
                 href="#contact"
                 className={activeSection === "contact" ? "active" : undefined}
                 aria-current={activeSection === "contact" ? "page" : undefined}
-                onClick={(e) => handleNavClick(e, "contact")}
+                onClick={handleNavClick("contact")}
               >
                 Contact
               </a>
