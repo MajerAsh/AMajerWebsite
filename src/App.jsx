@@ -20,6 +20,8 @@ export default function App() {
   const resumeCloseRef = useRef(null);
   const lastActiveElementRef = useRef(null);
   const sectionsRef = useRef(null);
+  const prevActiveSectionRef = useRef("home");
+  const prevScrollProgressRef = useRef(0);
 
   function toggleMenu() {
     setMenuOpen((prev) => !prev);
@@ -68,12 +70,20 @@ export default function App() {
       }
 
       // Scroll progress
-      setActiveSection(current);
       const progress =
         docHeight - windowHeight > 0
           ? Math.min(1, window.scrollY / (docHeight - windowHeight))
           : 0;
-      setScrollProgress(progress);
+
+      // Only update state if values changed
+      if (current !== prevActiveSectionRef.current) {
+        prevActiveSectionRef.current = current;
+        setActiveSection(current);
+      }
+      if (progress !== prevScrollProgressRef.current) {
+        prevScrollProgressRef.current = progress;
+        setScrollProgress(progress);
+      }
     }
 
     function requestUpdate() {
