@@ -32,6 +32,8 @@ export default [
       // React 17+ JSX transform
       "react/react-in-jsx-scope": "off",
       "react/prop-types": "off",
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
 
       // Hooks correctness
       ...reactHooks.configs.recommended.rules,

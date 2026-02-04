@@ -21,7 +21,6 @@ export default function Contact() {
   Email: ${email}
 
   ${message}`);
-    // Open user's email client with prefilled recipient, subject and body.
     const recipient = "MajerCoding@gmail.com";
     window.location.href = `mailto:${recipient}?subject=Portfolio%20contact&body=${body}`;
     setStatus("Opening your email client…");
