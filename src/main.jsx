@@ -38,3 +38,22 @@ createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+
+/* 
+No good:
+1.
+const mql = window.matchMedia("(max-width: 420px)");
+
+This is JS-level CSS logic.
+
+Equivalent of css:
+@media (max-width: 420px)
+
+2.
+If screen ≤ 420px:
+initial-scale=0.95
+otherwise...
+initial-scale=1
+
+So small phones start slightly zoomed out!!!!!
+*/
